@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livo – Gizlilik Politikası</title>
+    <meta name="description" content="Livo IPTV oynatıcı uygulamasının gizlilik politikası. Hangi verilerin toplandığı ve nasıl kullanıldığı hakkında bilgi edinin." />
+    <meta name="theme-color" content="#f5f5f7" />
+    <style>
+        :root {
+            --bg-body: #f5f5f7;
+            --bg-card: #ffffff;
+            --border-card: #e0e0e5;
+            --text-main: #111111;
+            --text-muted: #666777;
+            --accent: #4d5bff;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            background: var(--bg-body);
+            color: var(--text-main);
+            padding: 0 16px 32px;
+        }
+        .shell { max-width: 900px; margin: 0 auto; }
+        header {
+            padding: 32px 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+        }
+        h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .crumbs {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        main {
+            background: var(--bg-card);
+            border-radius: 18px;
+            padding: 22px 22px 26px;
+            border: 1px solid var(--border-card);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+        }
+        h2 {
+            font-size: 18px;
+            margin-top: 18px;
+            margin-bottom: 6px;
+        }
+        h3 {
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+        p, li {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover { text-decoration: underline; }
+        footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 999px;
+            border: 1px solid #d7d7dd;
+            background: #f8f8fb;
+            color: #7a7b88;
+            font-size: 11px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="shell">
+    <header>
+        <img src="livo-logo.png" alt="Livo Logo" class="logo" />
+        <div>
+            <div class="crumbs"><a href="index.html">Livo</a> · Gizlilik Politikası</div>
+            <h1>Gizlilik Politikası</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="badge">Son Güncelleme: 2025</div>
+
+        <p>
+            Bu sayfa, Livo uygulamasının gizlilik yaklaşımını açıklar. Livo, kullanıcının kendi IPTV
+            listelerini (M3U ve Xtream) oynatmasını sağlayan kişisel bir medya oynatıcıdır. Uygulama,
+            herhangi bir IPTV içeriği sağlamaz, yayın sunmaz veya abonelik satmaz.
+        </p>
+
+        <h2>1. Toplanan Veriler</h2>
+        <p>Livo doğrudan isim, e-posta vb. kişisel bilgi toplamaz. Ancak, uygulama içerisinde kullanılan üçüncü taraf hizmetler anonim veriler toplayabilir:</p>
+
+        <h3>Firebase Analytics</h3>
+        <ul>
+            <li>Uygulama kullanım istatistikleri</li>
+            <li>Görüntülenen ekranlar ve olaylar</li>
+            <li>Cihaz tipi, işletim sistemi sürümü</li>
+        </ul>
+
+        <h3>Firebase Crashlytics</h3>
+        <ul>
+            <li>Çökme (crash) raporları</li>
+            <li>Cihaza ait anonim tanımlayıcılar</li>
+        </ul>
+
+        <h3>Google AdMob</h3>
+        <ul>
+            <li>Reklam gösterim ve tıklanma istatistikleri</li>
+            <li>Cihaz reklam tanımlayıcıları (IDFA vb.)</li>
+            <li>Kullanıcı izin verirse kişiselleştirilmiş reklam verileri</li>
+        </ul>
+
+        <p><strong>Livo, kullanıcı tarafından eklenen IPTV listelerini, kanal adreslerini veya içerik bilgisini kendi sunucularında saklamaz.</strong></p>
+
+        <h2>2. Verilerin Kullanım Amaçları</h2>
+        <ul>
+            <li>Uygulama performansını takip etmek ve geliştirmek</li>
+            <li>Hataları ve çökme sorunlarını tespit etmek</li>
+            <li>Kullanıcı deneyimini iyileştirmek</li>
+            <li>Reklam gelirlerini ölçmek ve optimize etmek</li>
+        </ul>
+
+        <h2>3. Verilerin Paylaşımı</h2>
+        <p>
+            Livo geliştiricileri kullanıcı verilerini üçüncü kişilerle satmaz veya paylaşmaz.
+            Ancak Firebase ve Google AdMob gibi üçüncü taraf hizmetler, kendi gizlilik politikaları
+            kapsamında anonim verileri işleyebilir.
+        </p>
+
+        <h2>4. Takip İzni (App Tracking Transparency)</h2>
+        <p>
+            iOS 14.5 ve üzeri sürümlerde, kişiselleştirilmiş reklam göstermek için Apple'ın App Tracking
+            Transparency (ATT) çerçevesi gereği kullanıcıdan izin istenir. Kullanıcı bu izni dilediği
+            zaman reddedebilir veya ayarlardan değiştirebilir.
+        </p>
+
+        <h2>5. IPTV İçerikleri</h2>
+        <p>
+            Livo hiçbir içeriğin sahibi değildir, hiçbir IPTV yayınını barındırmaz veya dağıtmaz. Tüm
+            içerikler kullanıcı tarafından temin edilir. Kullanıcı, eklediği listelerden ve izlediği
+            içeriklerden tamamen kendisi sorumludur.
+        </p>
+
+        <h2>6. Gizlilik Politikası Değişiklikleri</h2>
+        <p>
+            Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler olduğunda, uygulama
+            güncelleme notlarında veya bu sayfada belirtilecektir.
+        </p>
+
+        <h2>7. İletişim</h2>
+        <p>
+            Gizlilik ile ilgili sorularınız için GitHub Issues üzerinden geri bildirim bırakabilirsiniz:
+            <br />
+            <a href="https://github.com/muratoguz/livo/issues" target="_blank">
+                https://github.com/muratoguz/livo/issues
+            </a>
+        </p>
+    </main>
+
+    <footer>
+        © 2025 Livo — Gizlilik Politikasına ilişkin tüm haklar saklıdır.
+    </footer>
+</div>
+</body>
+</html>

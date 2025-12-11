@@ -4,132 +4,258 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Livo – IPTV Oynatıcı</title>
+    <meta name="description" content="Livo, kendi M3U ve Xtream listelerinizle çalışan modern bir IPTV oynatıcıdır. İçerik sağlamaz, sadece sizin sahip olduğunuz IPTV listelerini oynatır." />
+    <meta name="keywords" content="Livo, IPTV, IPTV oynatıcı, M3U, Xtream, canlı TV, media player" />
+    <meta name="theme-color" content="#0b0b0f" />
 
-    <!-- Basit modern stiller -->
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Livo – IPTV Oynatıcı" />
+    <meta property="og:description" content="Kendi M3U ve Xtream listeleriniz için modern IPTV oynatıcı." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://muratoguz.github.io/livo/" />
+    <meta property="og:image" content="https://muratoguz.github.io/livo/livo-logo.png" />
+
     <style>
+        :root {
+            --bg-main: #05060a;
+            --bg-card: #11131a;
+            --border-card: #26293a;
+            --text-main: #ffffff;
+            --text-muted: #a6a8bb;
+            --accent-grad: linear-gradient(135deg, #ff9500, #ff2faa, #a100ff, #4d5bff);
+        }
+
+        * { box-sizing: border-box; }
+
         body {
             margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: #0d0d0d;
-            color: #ffffff;
-            text-align: center;
-            line-height: 1.6;
-            padding: 0 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+            background: radial-gradient(circle at top left, #181b2b 0, #05060a 45%, #020308 100%);
+            color: var(--text-main);
+            padding: 0 16px 40px;
+        }
+
+        .shell {
+            max-width: 980px;
+            margin: 0 auto;
         }
 
         header {
-            padding: 60px 0 30px;
+            padding: 48px 0 24px;
+            text-align: center;
         }
 
-        .logo {
-            width: 160px;
-            margin-bottom: 15px;
+        .logo-wrap {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            border-radius: 24px;
+            background: rgba(0, 0, 0, 0.3);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+            margin-bottom: 16px;
+        }
+
+        .logo-wrap img {
+            width: 96px;
+            height: 96px;
+            border-radius: 24px;
+            display: block;
         }
 
         h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
+            font-size: 32px;
+            margin: 10px 0 6px;
         }
 
-        p.subtitle {
-            font-size: 18px;
-            opacity: 0.8;
-            margin-bottom: 40px;
+        .subtitle {
+            font-size: 17px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
         }
 
-        .section {
-            max-width: 700px;
-            margin: 0 auto 50px;
-            text-align: left;
-            background: #1a1a1a;
-            padding: 25px 30px;
-            border-radius: 16px;
-            border: 1px solid #333;
+        .tagline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-muted);
+            margin-bottom: 8px;
         }
 
-        h2 {
-            font-size: 24px;
+        .tag-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #32d74b;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+            gap: 24px;
+        }
+
+        @media (max-width: 820px) {
+            .grid { grid-template-columns: minmax(0, 1fr); }
+            header { padding-top: 32px; }
+        }
+
+        .card {
+            background: radial-gradient(circle at top left, #1b1e2d 0, var(--bg-card) 40%, #090b12 100%);
+            border-radius: 20px;
+            padding: 20px 20px 22px;
+            border: 1px solid var(--border-card);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+        }
+
+        .card h2 {
             margin-top: 0;
+            font-size: 20px;
+            margin-bottom: 8px;
         }
 
-        a.button {
-            display: inline-block;
-            padding: 14px 28px;
-            background: linear-gradient(135deg, #ff7a00, #ff007a, #6d00ff, #2400ff);
-            color: white;
+        .card p {
+            margin: 6px 0;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .card ul {
+            padding-left: 18px;
+            margin: 8px 0;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.04);
+            font-size: 12px;
+            margin-bottom: 10px;
+            color: var(--text-muted);
+        }
+
+        .button-row {
+            margin-top: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            border-radius: 999px;
+            padding: 12px 24px;
+            border: none;
+            background-image: var(--accent-grad);
+            color: #fff;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
             text-decoration: none;
-            font-weight: bold;
-            border-radius: 30px;
-            margin-top: 25px;
-            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
+        }
+
+        .btn-secondary {
+            border-radius: 999px;
+            padding: 11px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(5, 6, 10, 0.9);
+            color: var(--text-muted);
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
 
         footer {
-            padding: 40px 0;
-            font-size: 14px;
-            opacity: 0.6;
-        }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 28px; }
-            p.subtitle { font-size: 16px; }
+            margin-top: 32px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-muted);
         }
     </style>
 </head>
 <body>
+<div class="shell">
 
-<header>
-    <!-- Logonu buraya koyabilirsin (1024 PNG veya SVG) -->
-    <img src="appicon.png" class="logo" alt="Livo Logo" />
+    <header>
+        <div class="logo-wrap">
+            <img src="livo-logo.png" alt="Livo Logo" />
+        </div>
 
-    <h1>Livo – IPTV Oynatıcı</h1>
-    <p class="subtitle">Kendi M3U ve Xtream listeleriniz için modern IPTV oynatıcı</p>
-</header>
+        <div class="tagline">
+            <span class="tag-dot"></span>
+            <span>Kendi IPTV listelerin için kişisel player</span>
+        </div>
 
-<div class="section">
-    <h2>📺 Livo Nedir?</h2>
-    <p>
-        Livo, kullanıcının kendi IPTV sağlayıcısından aldığı <strong>M3U</strong> veya 
-        <strong>Xtream Codes</strong> hesaplarını oynatmasını sağlayan kişisel bir medya oynatıcıdır.
-    </p>
-    <p>
-        Uygulama <strong>herhangi bir kanal, içerik veya abonelik sağlamaz</strong>.
-        Livo yalnızca kullanıcının kendi sahip olduğu IPTV listelerini oynatır.
-    </p>
+        <h1>Livo – IPTV Oynatıcı</h1>
+        <p class="subtitle">
+            Kendi M3U ve Xtream listelerinle çalışan, sade ve modern bir IPTV oynatıcı.
+        </p>
+    </header>
+
+    <main class="grid">
+        <section class="card">
+            <h2>📺 Livo Nedir?</h2>
+            <p>
+                Livo, kullanıcının kendi IPTV sağlayıcısından aldığı
+                <strong>M3U</strong> veya <strong>Xtream Codes</strong> hesaplarını
+                oynatmasını sağlayan kişisel bir medya oynatıcıdır.
+            </p>
+            <p><strong>Herhangi bir kanal, içerik veya abonelik sağlamaz.</strong></p>
+
+            <h2>⭐ Temel Özellikler</h2>
+            <ul>
+                <li>M3U ve Xtream kaynak ekleme</li>
+                <li>Live / Movies / Series kategorilerine ayırma (uyumlu listelerde)</li>
+                <li>Modern oynatıcı arayüzü</li>
+                <li>Kaldığın yerden devam et (Continue Watching)</li>
+                <li>iCloud ile cihazlar arası senkronizasyon</li>
+                <li>Light & Dark tema</li>
+            </ul>
+        </section>
+
+        <aside class="card">
+            <div class="badge">App Store için resmi sayfa</div>
+            <h2>📲 Yayın ve Destek</h2>
+            <p>
+                Livo, iOS ve iPadOS için geliştirilmiş olup yalnızca
+                içerik sağladığınız kendi IPTV listeleriyle çalışır.
+            </p>
+            <p>
+                Destek için GitHub Issues üzerinden geri bildirim gönderebilirsiniz.
+            </p>
+
+            <div class="button-row">
+                <!-- App Store linkin hazır olduğunda href'i güncelle -->
+                <!-- <a class="btn-primary" href="#" target="_blank">App Store'da Gör</a> -->
+
+                <a class="btn-secondary" href="support.html">
+                    Destek Sayfası
+                </a>
+                <a class="btn-secondary" href="privacy-policy.html">
+                    Gizlilik Politikası
+                </a>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        © 2025 Livo — Bu uygulama herhangi bir IPTV içeriği veya aboneliği sağlamaz.
+    </footer>
 </div>
-
-<div class="section">
-    <h2>⭐ Özellikler</h2>
-    <ul>
-        <li>M3U ve Xtream destekli IPTV kaynağı ekleme</li>
-        <li>Live / Movies / Series otomatik kategori ayrımı</li>
-        <li>Modern oynatıcı arayüzü</li>
-        <li>Kaldığın Yerden Devam Et</li>
-        <li>iCloud ile cihazlar arası senkronizasyon</li>
-        <li>Light & Dark tema</li>
-    </ul>
-</div>
-
-<div class="section">
-    <h2>🔧 Destek</h2>
-    <p>
-        Her türlü teknik destek için GitHub Issues sayfasını kullanabilirsiniz:
-    </p>
-    <p>
-        <a href="https://github.com/muratoguz/livo/issues" target="_blank" style="color:#4da3ff;">
-            GitHub Destek Sayfası →
-        </a>
-    </p>
-</div>
-
-<!-- Buton (App Store yayınlanınca eklenir) -->
-<!--
-<a class="button" href="#" target="_blank">App Store'da Gör</a>
--->
-
-<footer>
-    © 2025 Livo — Bu uygulama herhangi bir IPTV içeriği veya aboneliği sağlamaz.
-</footer>
-
 </body>
 </html>
