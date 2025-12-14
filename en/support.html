@@ -25,7 +25,53 @@
         }
         a { color: #4da3ff; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        footer { margin-top: 30px; text-align: center; color: #777; font-size: 12px; }
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #777;
+            font-size: 12px;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+        .footer-links a {
+            color: #a6a8bb;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer-meta {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            font-size: 12px;
+            color: #777;
+        }
+        .footer-lang {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .footer-lang a {
+            font-size: 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 4px 10px;
+            color: #a6a8bb;
+            text-decoration: none;
+        }
+        .footer-lang a.active {
+            background: rgba(255,255,255,0.15);
+            border-color: transparent;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -58,7 +104,20 @@
 </main>
 
 <footer>
-    © 2025 Livo — This app does not provide IPTV content.
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+    </div>
+    <div class="footer-meta">
+        <div class="footer-lang">
+            <span>Language:</span>
+            <a href="support.html" class="active">EN</a>
+            <a href="../tr/support.html">TR</a>
+        </div>
+        <span>© 2025 Livo — This app does not provide IPTV content.</span>
+    </div>
 </footer>
 
 </div>

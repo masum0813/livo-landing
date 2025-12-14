@@ -22,7 +22,52 @@
         }
         h1 { margin-top: 0; }
         a { color: #4d5bff; }
-        footer { margin-top: 20px; text-align: center; color: #666; font-size: 12px; }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+        .footer-links a {
+            color: #4d5bff;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer-meta {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            font-size: 12px;
+            color: #666;
+        }
+        .footer-lang {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .footer-lang a {
+            font-size: 12px;
+            border-radius: 999px;
+            border: 1px solid #4d5bff;
+            padding: 4px 10px;
+            color: #4d5bff;
+            text-decoration: none;
+        }
+        .footer-lang a.active {
+            background: rgba(77, 91, 255, 0.15);
+            border-color: transparent;
+        }
     </style>
 </head>
 <body>
@@ -106,7 +151,20 @@
 </main>
 
 <footer>
-    © 2025 Livo — All rights reserved.
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+    </div>
+    <div class="footer-meta">
+        <div class="footer-lang">
+            <span>Language:</span>
+            <a href="privacy-policy.html" class="active">EN</a>
+            <a href="../tr/privacy-policy.html">TR</a>
+        </div>
+        <span>© 2025 Livo — All rights reserved.</span>
+    </div>
 </footer>
 
 </div>

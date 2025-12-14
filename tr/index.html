@@ -43,6 +43,7 @@
         header {
             padding: 48px 0 24px;
             text-align: center;
+            position: relative;
         }
 
         .logo-wrap {
@@ -142,6 +143,30 @@
             margin-bottom: 10px;
             color: var(--text-muted);
         }
+        .lang-switch {
+            position: absolute;
+            top: 24px;
+            right: 18px;
+            display: flex;
+            gap: 6px;
+        }
+        .lang-btn {
+            padding: 6px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            font-size: 12px;
+            color: var(--text-muted);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .lang-btn.active {
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            border-color: transparent;
+        }
+        .lang-btn:hover {
+            border-color: rgba(255, 255, 255, 0.6);
+        }
 
         .button-row {
             margin-top: 18px;
@@ -186,6 +211,54 @@
             font-size: 12px;
             color: var(--text-muted);
         }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 13px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer-meta {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        .footer-lang {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .footer-lang a {
+            font-size: 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 4px 10px;
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+        .footer-lang a.active {
+            background: rgba(255,255,255,0.15);
+            border-color: transparent;
+            color: #fff;
+        }
+        @media (max-width: 640px) {
+            .lang-switch {
+                position: static;
+                justify-content: center;
+                margin-top: 12px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -201,10 +274,14 @@
             <span>Kendi IPTV listelerin için kişisel player</span>
         </div>
 
-        <h1>Livo – IPTV Oynatıcı</h1>
-        <p class="subtitle">
-            Kendi M3U ve Xtream listelerinle çalışan, sade ve modern bir IPTV oynatıcı.
-        </p>
+    <h1>Livo – IPTV Oynatıcı</h1>
+    <p class="subtitle">
+        Kendi M3U ve Xtream listelerinle çalışan, sade ve modern bir IPTV oynatıcı.
+    </p>
+    <nav class="lang-switch">
+        <a href="index.html" class="lang-btn active">TR</a>
+        <a href="../en/index.html" class="lang-btn">EN</a>
+    </nav>
     </header>
 
     <main class="grid">
@@ -254,7 +331,20 @@
     </main>
 
     <footer>
-        © 2025 Livo — Bu uygulama herhangi bir IPTV içeriği veya aboneliği sağlamaz.
+        <div class="footer-links">
+            <a href="index.html">Ana Sayfa</a>
+            <a href="support.html">Destek</a>
+            <a href="privacy-policy.html">Gizlilik Politikası</a>
+            <a href="terms.html">Kullanım Şartları</a>
+        </div>
+        <div class="footer-meta">
+            <div class="footer-lang">
+                <span>Dil:</span>
+                <a href="index.html" class="active">TR</a>
+                <a href="../en/index.html">EN</a>
+            </div>
+            <span>© 2025 Livo — Bu uygulama herhangi bir IPTV içeriği veya aboneliği sağlamaz.</span>
+        </div>
     </footer>
 </div>
 </body>
