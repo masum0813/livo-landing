@@ -12,154 +12,22 @@
     <meta property="og:title" content="Livo – IPTV Player" />
     <meta property="og:description" content="A modern IPTV player for your personal M3U & Xtream lists." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="livo-logo.png" />
+    <meta property="og:image" content="../livo-logo.png" />
 
-    <style>
-        :root {
-            --bg-main: #05060a;
-            --bg-card: #11131a;
-            --border-card: #26293a;
-            --text-main: #ffffff;
-            --text-muted: #a6a8bb;
-            --accent-grad: linear-gradient(135deg, #ff9500, #ff2faa, #a100ff, #4d5bff);
-        }
-        body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-            background: radial-gradient(circle at top left, #181b2b 0, #05060a 45%, #020308 100%);
-            color: var(--text-main);
-            padding: 0 18px 40px;
-        }
-        .shell { max-width: 980px; margin: auto; }
-        header {
-            text-align: center;
-            padding: 48px 0 20px;
-            position: relative;
-        }
-        .logo-wrap img { width: 110px; height: 110px; border-radius: 26px; }
-        h1 { font-size: 32px; margin-bottom: 10px; }
-        .subtitle { color: var(--text-muted); margin-top: 6px; }
-        .lang-switch {
-            position: absolute;
-            top: 18px;
-            right: 18px;
-            display: flex;
-            gap: 6px;
-        }
-        .lang-btn {
-            padding: 6px 12px;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            font-size: 12px;
-            color: var(--text-muted);
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-        .lang-btn.active {
-            background: rgba(255, 255, 255, 0.15);
-            color: #fff;
-            border-color: transparent;
-        }
-        .lang-btn:hover {
-            border-color: rgba(255, 255, 255, 0.6);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 3fr 2.5fr;
-            gap: 24px;
-        }
-        @media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
-
-        .card {
-            background: var(--bg-card);
-            border-radius: 20px;
-            padding: 20px;
-            border: 1px solid var(--border-card);
-            box-shadow: 0 16px 40px rgba(0,0,0,0.55);
-        }
-        h2 { margin-top: 0; }
-        a.btn-primary {
-            display: inline-block;
-            padding: 12px 26px;
-            background-image: var(--accent-grad);
-            border-radius: 999px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 16px;
-        }
-        a.btn-secondary {
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 999px;
-            border: 1px solid rgba(255,255,255,0.2);
-            color: var(--text-muted);
-            text-decoration: none;
-            margin-top: 10px;
-        }
-        footer {
-            margin-top: 30px;
-            text-align: center;
-            font-size: 12px;
-            color: var(--text-muted);
-        }
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 18px;
-            flex-wrap: wrap;
-            margin-bottom: 8px;
-        }
-        .footer-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 13px;
-        }
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-        .footer-meta {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            font-size: 12px;
-            color: var(--text-muted);
-        }
-        .footer-lang {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .footer-lang a {
-            font-size: 12px;
-            border-radius: 999px;
-            border: 1px solid rgba(255,255,255,0.2);
-            padding: 4px 10px;
-            color: var(--text-muted);
-            text-decoration: none;
-        }
-        .footer-lang a.active {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: transparent;
-            color: #fff;
-        }
-        @media (max-width: 640px) {
-            .lang-switch {
-                position: static;
-                justify-content: center;
-                margin-top: 12px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../shared/index.css" />
 </head>
 <body>
 <div class="shell">
 
 <header>
-    <div class="logo-wrap">
-        <img src="livo-logo.png" alt="Livo Logo" />
+    <div class="logo-stack">
+        <div class="logo-wrap">
+            <img src="../livo-logo.png" alt="Livo Logo" />
+        </div>
+        <div class="tagline">
+            <span class="tag-dot"></span>
+            <span>A personal player for your IPTV lists</span>
+        </div>
     </div>
     <h1>Livo – IPTV Player</h1>
     <p class="subtitle">A clean and modern IPTV player for your own M3U & Xtream lists.</p>
@@ -210,7 +78,7 @@
             <a href="index.html" class="active">EN</a>
             <a href="../tr/index.html">TR</a>
         </div>
-        <span>© 2025 Livo — This app does not provide any IPTV content or subscription.</span>
+        <span>© 2025 Livo IPTV — This app does not provide any IPTV content or subscription.</span>
     </div>
 </footer>
 

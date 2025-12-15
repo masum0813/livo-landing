@@ -15,266 +15,23 @@
     <meta property="og:url" content="https://muratoguz.github.io/livo/" />
     <meta property="og:image" content="https://muratoguz.github.io/livo/livo-logo.png" />
 
-    <style>
-        :root {
-            --bg-main: #05060a;
-            --bg-card: #11131a;
-            --border-card: #26293a;
-            --text-main: #ffffff;
-            --text-muted: #a6a8bb;
-            --accent-grad: linear-gradient(135deg, #ff9500, #ff2faa, #a100ff, #4d5bff);
-        }
-
-        * { box-sizing: border-box; }
-
-        body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
-            background: radial-gradient(circle at top left, #181b2b 0, #05060a 45%, #020308 100%);
-            color: var(--text-main);
-            padding: 0 16px 40px;
-        }
-
-        .shell {
-            max-width: 980px;
-            margin: 0 auto;
-        }
-
-        header {
-            padding: 48px 0 24px;
-            text-align: center;
-            position: relative;
-        }
-
-        .logo-wrap {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px;
-            border-radius: 24px;
-            background: rgba(0, 0, 0, 0.3);
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
-            margin-bottom: 16px;
-        }
-
-        .logo-wrap img {
-            width: 96px;
-            height: 96px;
-            border-radius: 24px;
-            display: block;
-        }
-
-        h1 {
-            font-size: 32px;
-            margin: 10px 0 6px;
-        }
-
-        .subtitle {
-            font-size: 17px;
-            color: var(--text-muted);
-            margin-bottom: 24px;
-        }
-
-        .tagline {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 13px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            color: var(--text-muted);
-            margin-bottom: 8px;
-        }
-
-        .tag-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #32d74b;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-            gap: 24px;
-        }
-
-        @media (max-width: 820px) {
-            .grid { grid-template-columns: minmax(0, 1fr); }
-            header { padding-top: 32px; }
-        }
-
-        .card {
-            background: radial-gradient(circle at top left, #1b1e2d 0, var(--bg-card) 40%, #090b12 100%);
-            border-radius: 20px;
-            padding: 20px 20px 22px;
-            border: 1px solid var(--border-card);
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
-        }
-
-        .card h2 {
-            margin-top: 0;
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
-
-        .card p {
-            margin: 6px 0;
-            font-size: 14px;
-            color: var(--text-muted);
-        }
-
-        .card ul {
-            padding-left: 18px;
-            margin: 8px 0;
-            color: var(--text-muted);
-            font-size: 14px;
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            padding: 4px 10px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.04);
-            font-size: 12px;
-            margin-bottom: 10px;
-            color: var(--text-muted);
-        }
-        .lang-switch {
-            position: absolute;
-            top: 24px;
-            right: 18px;
-            display: flex;
-            gap: 6px;
-        }
-        .lang-btn {
-            padding: 6px 12px;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            font-size: 12px;
-            color: var(--text-muted);
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-        .lang-btn.active {
-            background: rgba(255, 255, 255, 0.15);
-            color: #fff;
-            border-color: transparent;
-        }
-        .lang-btn:hover {
-            border-color: rgba(255, 255, 255, 0.6);
-        }
-
-        .button-row {
-            margin-top: 18px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .btn-primary {
-            border-radius: 999px;
-            padding: 12px 24px;
-            border: none;
-            background-image: var(--accent-grad);
-            color: #fff;
-            font-weight: 600;
-            font-size: 15px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
-        }
-
-        .btn-secondary {
-            border-radius: 999px;
-            padding: 11px 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            background: rgba(5, 6, 10, 0.9);
-            color: var(--text-muted);
-            font-size: 14px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        footer {
-            margin-top: 32px;
-            text-align: center;
-            font-size: 12px;
-            color: var(--text-muted);
-        }
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 18px;
-            flex-wrap: wrap;
-            margin-bottom: 8px;
-        }
-        .footer-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 13px;
-        }
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-        .footer-meta {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            font-size: 12px;
-            color: var(--text-muted);
-        }
-        .footer-lang {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .footer-lang a {
-            font-size: 12px;
-            border-radius: 999px;
-            border: 1px solid rgba(255,255,255,0.2);
-            padding: 4px 10px;
-            color: var(--text-muted);
-            text-decoration: none;
-        }
-        .footer-lang a.active {
-            background: rgba(255,255,255,0.15);
-            border-color: transparent;
-            color: #fff;
-        }
-        @media (max-width: 640px) {
-            .lang-switch {
-                position: static;
-                justify-content: center;
-                margin-top: 12px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../shared/index.css" />
 </head>
 <body>
 <div class="shell">
 
     <header>
-        <div class="logo-wrap">
-            <img src="livo-logo.png" alt="Livo Logo" />
+        <div class="logo-stack">
+            <div class="logo-wrap">
+                <img src="../livo-logo.png" alt="Livo Logo" />
+            </div>
+            <div class="tagline">
+                <span class="tag-dot"></span>
+                <span>Kendi IPTV listelerin için kişisel player</span>
+            </div>
         </div>
 
-        <div class="tagline">
-            <span class="tag-dot"></span>
-            <span>Kendi IPTV listelerin için kişisel player</span>
-        </div>
-
-    <h1>Livo – IPTV Oynatıcı</h1>
+        <h1>Livo – IPTV Oynatıcı</h1>
     <p class="subtitle">
         Kendi M3U ve Xtream listelerinle çalışan, sade ve modern bir IPTV oynatıcı.
     </p>
@@ -343,7 +100,7 @@
                 <a href="index.html" class="active">TR</a>
                 <a href="../en/index.html">EN</a>
             </div>
-            <span>© 2025 Livo — Bu uygulama herhangi bir IPTV içeriği veya aboneliği sağlamaz.</span>
+            <span>© 2025 Livo IPTV — Bu uygulama herhangi bir IPTV içeriği veya aboneliği sağlamaz.</span>
         </div>
     </footer>
 </div>
