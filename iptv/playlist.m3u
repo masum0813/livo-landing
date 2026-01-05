@@ -1,0 +1,27 @@
+#EXTM3U x-tvg-url="https://epg.tvcdn.net/guide/tr-guide.xml"
+#EXTINF:-1 tvg-id="TRT 1" tvg-name="TRT 1" tvg-logo="https://assets.tvcdn.net/80eb8816-1855-41f5-9002-7a05cc93fe4f.png" group-title="Turkey",TRT 1
+https://tv-trt1.m3u8
+#EXTINF:-1 tvg-id="TRT Haber" tvg-name="TRT Haber" tvg-logo="https://assets.tvcdn.net/4e6e32b1-4b6f-4c5d-8f3b-ff1bb5b88e8e.png" group-title="Turkey",TRT Haber
+https://tv-trthaber.m3u8
+#EXTINF:-1 tvg-id="TRT Spor" tvg-name="TRT Spor" tvg-logo="https://assets.tvcdn.net/9cbb18c5-1b4d-4c64-9e58-bb8d1b3f0d5f.png" group-title="Turkey",TRT Spor
+https://tv-trtspor.m3u8
+#EXTINF:-1 tvg-id="Kanal D" tvg-name="Kanal D" tvg-logo="https://assets.tvcdn.net/kanald.png" group-title="Turkey",Kanal D
+https://tv-kanald.m3u8
+#EXTINF:-1 tvg-id="ATV" tvg-name="ATV" tvg-logo="https://assets.tvcdn.net/atv.png" group-title="Turkey",ATV
+https://tv-atv.m3u8
+#EXTINF:-1 tvg-id="FOX" tvg-name="FOX" tvg-logo="https://assets.tvcdn.net/fox.png" group-title="Turkey",FOX
+https://tv-fox.m3u8
+#EXTINF:-1 tvg-id="TV8" tvg-name="TV8" tvg-logo="https://assets.tvcdn.net/tv8.png" group-title="Turkey",TV8
+https://tv-tv8.m3u8
+#EXTINF:-1 tvg-id="Show TV" tvg-name="Show TV" tvg-logo="https://assets.tvcdn.net/showtv.png" group-title="Turkey",Show TV
+https://tv-showtv.m3u8
+#EXTINF:-1 tvg-id="Star TV" tvg-name="Star TV" tvg-logo="https://assets.tvcdn.net/startv.png" group-title="Turkey",Star TV
+https://tv-startv.m3u8
+#EXTINF:-1 tvg-id="NTV" tvg-name="NTV" tvg-logo="https://assets.tvcdn.net/ntv.png" group-title="Turkey",NTV
+https://tv-ntv.m3u8
+#EXTINF:-1 tvg-id="CNN Turk" tvg-name="CNN Turk" tvg-logo="https://assets.tvcdn.net/cnnturk.png" group-title="Turkey",CNN Türk
+https://tv-cnnturk.m3u8
+#EXTINF:-1 tvg-id="Haberturk" tvg-name="Haberturk" tvg-logo="https://assets.tvcdn.net/haberturk.png" group-title="Turkey",Habertürk
+https://tv-haberturk.m3u8
+#EXTINF:-1 tvg-id="Bloomberg HT" tvg-name="Bloomberg HT" tvg-logo="https://assets.tvcdn.net/bloomberght.png" group-title="Turkey",Bloomberg HT
+https://tv-bloomberght.m3u8
