@@ -1,42 +1,36 @@
 #EXTM3U x-tvg-url="https://example.com/epg.xml"
 #PLAYLIST:Archive.org - Public Domain (VOD Samples)
-#EXTINF:0 tvg-id="archive.night" group-title="Movies (Public Domain)",Night of the Living Dead (1968)
-https://archive.org/download/night_of_the_living_dead/night_of_the_living_dead.mp4
+#EXTINF:0 tvg-id="archive.night" group-title="Movies (Public Domain)",Black Christmas (1974) Trailer HD 1080p
+https://archive.org/download/black-christmas-1974-hd-1080p/Black%20Christmas%201974%20HD%201080p.mp4
 #EXTINF:0 tvg-id="archive.metropolis" group-title="Movies (Public Domain)",Metropolis (1927)
-https://archive.org/download/Metropolis1927/Metropolis_1927.mp4
+https://archive.org/download/metropolis-1927-bdrip-1080p-x-265-dts-hd-ma-5.1-d-0ct-0r-lew-sev/Metropolis%201927%20BDrip%201080p%20x265%20DTS-HD%20MA%205.1%20D0ct0rLew%5BSEV%5D.mp4
 #EXTINF:0 tvg-id="archive.thegeneral" group-title="Movies (Public Domain)",The General (1926)
-https://archive.org/download/the_general_1926/the_general_1926.mp4
+https://archive.org/download/TheGeneral1926/The_General_1926_720p.mp4
 #EXTINF:0 tvg-id="archive.tripmoon" group-title="Short Films",A Trip to the Moon (1902)
-https://archive.org/download/LeVoyageDansLaLune_1902/LeVoyageDansLaLune_1902.mp4
+https://archive.org/download/a-trip-to-the-moon-1902-colorized/A%20Trip%20to%20the%20Moon%20%281902%29%20colorized.mp4
 #EXTINF:0 group-title="Movies | Horror",Night of the Living Dead (1968)
-https://archive.org/download/night_of_the_living_dead/night_of_the_living_dead.mp4
-#EXTINF:0 group-title="Movies | Sci-Fi",Metropolis (1927)
-https://archive.org/download/Metropolis1927/Metropolis_1927.mp4
-#EXTINF:0 group-title="Movies | Action / Comedy",The General (1926)
-https://archive.org/download/the_general_1926/the_general_1926.mp4
+https://archive.org/download/night-of-the-living-dead-1968_202312/Night%20of%20the%20Living%20Dead%20%281968%29.mp4
 #EXTINF:0 group-title="Movies | Drama",His Girl Friday (1940)
-https://archive.org/download/his_girl_friday/his_girl_friday.mp4
+https://archive.org/download/HisGirlFriday1940_201505/His%20Girl%20Friday%20%281940%29.mp4
 #EXTINF:0 group-title="Movies | Western",Stagecoach (1939)
-https://archive.org/download/stagecoach_1939/stagecoach_1939.mp4
+https://archive.org/download/stagecoach-colorized-1939-720p/Stagecoach%20%28Colorized%2C%201939%29%20720p.mp4
 #EXTINF:0 group-title="Movies | Drama",Sherlock Holmes – The Woman in Green (1945)
-https://archive.org/download/sherlock_holmes_the_woman_in_green/sherlock_holmes_the_woman_in_green.mp4
-#EXTINF:0 group-title="Shorts | Sci-Fi",A Trip to the Moon (1902)
-https://archive.org/download/LeVoyageDansLaLune_1902/LeVoyageDansLaLune_1902.mp4
+https://archive.org/download/TheWomanInGreen_894/TheWomanInGreenPresentedByMoviePowder.mp4
 #EXTINF:0 group-title="Shorts | Animation",Gertie the Dinosaur (1914)
-https://archive.org/download/GertieTheDinosaur1914/GertieTheDinosaur.mp4
+https://archive.org/download/GertieTheDinosaur/Gertie%20the%20Dinosaur%20%281914%29%20-%20World%27s%201st%20Keyframe%20Animation%20Cartoon%20-%20Winsor%20McCay-TGXC8gXOPoU.mp4
 #EXTINF:0 group-title="Shorts | Comedy",Charlie Chaplin – The Adventurer (1917)
-https://archive.org/download/CC_The_Adventurer_1917/CC_The_Adventurer_1917.mp4
+https://archive.org/download/TheAdventurer1917/The-Adventurer-v2.mp4
 #EXTINF:0 group-title="Shorts | Comedy",Charlie Chaplin – Easy Street (1917)
-https://archive.org/download/CC_Easy_Street_1917/CC_Easy_Street_1917.mp4
+https://archive.org/download/EasyStreet1917_201708/Easy%20Street%20%281917%29.mp4
 #EXTINF:0 group-title="Shorts | Experimental",Meshes of the Afternoon (1943)
-https://archive.org/download/meshes_of_the_afternoon/meshes_of_the_afternoon.mp4
+https://archive.org/download/Meshes_Of_The_Afternoon_Maya_Deren/Meshes_of_the_Afternoon_Maya_Deren.mp4
 #EXTINF:0 group-title="TV | Sci-Fi",Flash Gordon – Episode 1 (1936)
-https://archive.org/download/flash_gordon_serial/Flash_Gordon_Episode_01.mp4
+https://archive.org/download/flash-gordon-episode-1-1936-colorized-serial-720p-hd/flash%20gordon-episode1-1936-colorized%20serial-720p-hd.mkv
 #EXTINF:0 group-title="TV | Sci-Fi",Flash Gordon – Episode 2 (1936)
-https://archive.org/download/flash_gordon_serial/Flash_Gordon_Episode_02.mp4
-#EXTINF:0 group-title="TV | Comedy",The Lucy Show – S01E01
-https://archive.org/download/the_lucy_show_s01e01/the_lucy_show_s01e01.mp4
-#EXTINF:0 group-title="TV | Western",The Lone Ranger – S01E01
-https://archive.org/download/the_lone_ranger_s01e01/the_lone_ranger_s01e01.mp4
-#EXTINF:0 group-title="TV | Drama",Dragnet – S01E01
-https://archive.org/download/dragnet_s01e01/dragnet_s01e01.mp4
+https://archive.org/download/flash-gordon-episode-1-1936-colorized-serial-720p-hd/flash%20gordon-episode2-1936-colorized%20serial-720p-hd.mkv
+#EXTINF:0 group-title="TV | Sci-Fi",Flash Gordon – Episode 3 (1936)
+https://archive.org/download/flash-gordon-episode-1-1936-colorized-serial-720p-hd/flash%20gordon-episode3-1936-colorized%20serial-720p-hd.mkv
+#EXTINF:0 group-title="TV | Sci-Fi",Flash Gordon – Episode 4 (1936)
+https://archive.org/download/flash-gordon-episode-1-1936-colorized-serial-720p-hd/flash%20gordon-episode4-1936-colorized%20serial-720p-hd.mkv
+#EXTINF:0 group-title="TV | Sci-Fi",Flash Gordon – Episode 5 (1936)
+https://archive.org/download/flash-gordon-episode-1-1936-colorized-serial-720p-hd/flash%20gordon-episode5-1936-colorized%20serial-720p-hd.mkv
