@@ -1,6 +1,6 @@
 #EXTM3U x-tvg-url="https://example.com/epg.xml"
 #PLAYLIST:Archive.org - Public Domain (VOD Samples)
-#EXTINF:0 tvg-id="archive.night" group-title="Movies (Public Domain)",Black Christmas (1974) Trailer HD 1080p
+#EXTINF:0 tvg-id="archive.night" group-title="Movies (Public Domain)",Black Christmas (1974)
 https://archive.org/download/black-christmas-1974-hd-1080p/Black%20Christmas%201974%20HD%201080p.mp4
 #EXTINF:0 tvg-id="archive.metropolis" group-title="Movies (Public Domain)",Metropolis (1927)
 https://archive.org/download/metropolis-1927-bdrip-1080p-x-265-dts-hd-ma-5.1-d-0ct-0r-lew-sev/Metropolis%201927%20BDrip%201080p%20x265%20DTS-HD%20MA%205.1%20D0ct0rLew%5BSEV%5D.mp4
