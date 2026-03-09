@@ -140,3 +140,34 @@ footer {
         margin-top: 12px;
     }
 }
+
+/* App store / Play store badges */
+.app-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    align-items: center;
+}
+/* Badge container: give both badges a subtle dark rounded panel so PNG white areas are less visible and sizes match */
+.app-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+.app-links a img {
+    height: 30px;
+    width: auto;
+    display: block;
+}
+/* No CSS filter for local PNG badges — use original artwork */
+.app-links a.apple img {
+    filter: none;
+}
+@media (max-width: 420px) {
+    .app-links a { padding: 0; }
+    .app-links a img { height: 24px; }
+}
