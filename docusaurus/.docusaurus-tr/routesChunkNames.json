@@ -45,14 +45,14 @@
   "/tr/android-tv-iptv-player-deb": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
-      "plugin": "plugin---tr-privacy-policya-74-120"
+      "plugin": "plugin---tr-android-tv-iptv-playera-74-d3b"
     },
     "content": "content---tr-android-tv-iptv-playerc-62-168"
   },
   "/tr/apple-tv-iptv-player-389": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
-      "plugin": "plugin---tr-privacy-policya-74-120"
+      "plugin": "plugin---tr-android-tv-iptv-playera-74-d3b"
     },
     "content": "content---tr-apple-tv-iptv-player-715-d99"
   },
@@ -137,28 +137,28 @@
   "/tr/m3u-iptv-player-6d0": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
-      "plugin": "plugin---tr-privacy-policya-74-120"
+      "plugin": "plugin---tr-android-tv-iptv-playera-74-d3b"
     },
     "content": "content---tr-m-3-u-iptv-player-7-b-2-1a1"
   },
   "/tr/privacy-policy-0b3": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
-      "plugin": "plugin---tr-privacy-policya-74-120"
+      "plugin": "plugin---tr-android-tv-iptv-playera-74-d3b"
     },
     "content": "content---tr-privacy-policye-16-357"
   },
   "/tr/support-dc9": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
-      "plugin": "plugin---tr-privacy-policya-74-120"
+      "plugin": "plugin---tr-android-tv-iptv-playera-74-d3b"
     },
     "content": "content---tr-supportff-4-871"
   },
   "/tr/terms-ef2": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
-      "plugin": "plugin---tr-privacy-policya-74-120"
+      "plugin": "plugin---tr-android-tv-iptv-playera-74-d3b"
     },
     "content": "content---tr-termsf-39-0d2"
   },
@@ -238,7 +238,7 @@
   "/tr/-90b": {
     "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
     "__context": {
-      "plugin": "plugin---tr-privacy-policya-74-120"
+      "plugin": "plugin---tr-android-tv-iptv-playera-74-d3b"
     },
     "config": "config---tr-5-e-9-039"
   }

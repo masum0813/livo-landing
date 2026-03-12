@@ -75,91 +75,8 @@
   border-bottom: 1px solid var(--site-border-color);
 }
 
-.homepage {
-  overflow: hidden;
-}
-
 .main-wrapper {
   background: var(--site-bg-gradient);
-}
-
-.livoHero {
-  padding: 5rem 0 3rem;
-  background: var(--site-hero-gradient);
-  color: var(--ifm-font-color-base);
-}
-
-.livoHero .container {
-  display: grid;
-  gap: 2rem;
-  align-items: center;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.hero-kicker {
-  display: inline-block;
-  margin-bottom: 1rem;
-  padding: 0.4rem 0.75rem;
-  border: 1px solid var(--site-kicker-border);
-  border-radius: 999px;
-  color: var(--site-kicker-color);
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.livoHero .hero__subtitle {
-  color: var(--site-text-secondary);
-}
-
-.hero-actions {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-top: 1.5rem;
-}
-
-.storeBadges {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-top: 1.5rem;
-  align-items: center;
-}
-
-.storeBadges a {
-  display: inline-flex;
-  align-items: center;
-}
-
-.storeBadges picture {
-  display: block;
-}
-
-.storeBadges img {
-  height: 3rem;
-  display: block;
-  vertical-align: middle;
-}
-
-.hero__visualFrame {
-  padding: 1rem;
-  border: 1px solid var(--site-border-color);
-  border-radius: 1.5rem;
-  background: var(--site-surface-elevated);
-  box-shadow: var(--site-shadow-hero);
-}
-
-.hero__visualFrame img {
-  display: block;
-  width: 100%;
-  border-radius: 1rem;
-}
-
-.hero__highlights {
-  margin: 1rem 0 0;
-  padding-left: 1rem;
-  color: var(--site-text-secondary);
 }
 
 .footer {
@@ -264,10 +181,4 @@
 .theme-doc-markdown,
 .markdown {
   max-width: 860px;
-}
-
-@media (max-width: 996px) {
-  .livoHero .container {
-    grid-template-columns: 1fr;
-  }
 }

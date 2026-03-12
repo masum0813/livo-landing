@@ -45,14 +45,14 @@
   "/android-tv-iptv-player-fc9": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
-      "plugin": "plugin---privacy-policya-74-5ec"
+      "plugin": "plugin---android-tv-iptv-playera-74-a51"
     },
     "content": "content---android-tv-iptv-playerc-62-d69"
   },
   "/apple-tv-iptv-player-a16": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
-      "plugin": "plugin---privacy-policya-74-5ec"
+      "plugin": "plugin---android-tv-iptv-playera-74-a51"
     },
     "content": "content---apple-tv-iptv-player-715-24e"
   },
@@ -137,28 +137,28 @@
   "/m3u-iptv-player-40e": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
-      "plugin": "plugin---privacy-policya-74-5ec"
+      "plugin": "plugin---android-tv-iptv-playera-74-a51"
     },
     "content": "content---m-3-u-iptv-player-7-b-2-a08"
   },
   "/privacy-policy-524": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
-      "plugin": "plugin---privacy-policya-74-5ec"
+      "plugin": "plugin---android-tv-iptv-playera-74-a51"
     },
     "content": "content---privacy-policybdd-a68"
   },
   "/support-f2e": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
-      "plugin": "plugin---privacy-policya-74-5ec"
+      "plugin": "plugin---android-tv-iptv-playera-74-a51"
     },
     "content": "content---supporte-13-63b"
   },
   "/terms-3b9": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
-      "plugin": "plugin---privacy-policya-74-5ec"
+      "plugin": "plugin---android-tv-iptv-playera-74-a51"
     },
     "content": "content---terms-649-ba0"
   },
@@ -238,7 +238,7 @@
   "/-e5f": {
     "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
     "__context": {
-      "plugin": "plugin---privacy-policya-74-5ec"
+      "plugin": "plugin---android-tv-iptv-playera-74-a51"
     },
     "config": "config---5-e-9-4f3"
   }

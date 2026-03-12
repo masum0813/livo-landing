@@ -80,7 +80,7 @@ export default function Home(): JSX.Element {
                 Add M3U sources instantly and continue watching across Apple TV, Android TV, iPhone
                 and tablets.
               </p>
-              <div className="storeBadges" id="get-livo">
+              <div className={styles.storeBadges} id="get-livo">
                 <a
                   href="https://apps.apple.com/tr/app/livo-iptv/id6755977918"
                   target="_blank"
