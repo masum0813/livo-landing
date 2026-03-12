@@ -81,7 +81,9 @@ export default {
       "title": "Livo",
       "logo": {
         "alt": "Livo logo",
-        "src": "img/livo-logo.png"
+        "src": "img/livo-logo-128.webp",
+        "width": 32,
+        "height": 32
       },
       "items": [
         {

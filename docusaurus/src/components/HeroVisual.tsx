@@ -1,4 +1,5 @@
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import {HERO_IMAGE_ASSETS} from './heroImageAssets';
 import styles from './HeroVisual.module.css';
 
 type DeviceShot = {
@@ -6,8 +7,14 @@ type DeviceShot = {
   frameClassName: string;
   wrapClassName: string;
   imageClassName: string;
-  imagePath: string;
+  src: string;
+  srcSet: string;
+  width: number;
+  height: number;
+  sizes: string;
   alt: string;
+  loading: 'eager' | 'lazy';
+  fetchPriority?: 'high' | 'low';
 };
 
 export default function HeroVisual(): JSX.Element {
@@ -17,24 +24,42 @@ export default function HeroVisual(): JSX.Element {
       frameClassName: styles.tvFrame,
       wrapClassName: styles.landscapeScreenWrap,
       imageClassName: styles.tvImage,
-      imagePath: useBaseUrl('/img/hero/AppleTV-4K.App.png'),
-      alt: 'IPTV player interface on Apple TV',
+      src: useBaseUrl(HERO_IMAGE_ASSETS.tv.src1x),
+      srcSet: `${useBaseUrl(HERO_IMAGE_ASSETS.tv.src1x)} 1x, ${useBaseUrl(HERO_IMAGE_ASSETS.tv.src2x)} 2x`,
+      width: HERO_IMAGE_ASSETS.tv.width,
+      height: HERO_IMAGE_ASSETS.tv.height,
+      sizes: '(max-width: 640px) 74vw, (max-width: 996px) 76vw, 42vw',
+      alt: HERO_IMAGE_ASSETS.tv.alt,
+      loading: 'eager',
+      fetchPriority: 'high',
     },
     {
       key: 'tablet',
       frameClassName: styles.tabletFrame,
       wrapClassName: styles.tabletScreenWrap,
       imageClassName: styles.tabletImage,
-      imagePath: useBaseUrl('/img/hero/iPadPro11-M4-SpaceGray-Landscape.png'),
-      alt: 'IPTV player interface on tablet',
+      src: useBaseUrl(HERO_IMAGE_ASSETS.tablet.src1x),
+      srcSet: `${useBaseUrl(HERO_IMAGE_ASSETS.tablet.src1x)} 1x, ${useBaseUrl(HERO_IMAGE_ASSETS.tablet.src2x)} 2x`,
+      width: HERO_IMAGE_ASSETS.tablet.width,
+      height: HERO_IMAGE_ASSETS.tablet.height,
+      sizes: '(max-width: 640px) 37vw, (max-width: 996px) 35vw, 16vw',
+      alt: HERO_IMAGE_ASSETS.tablet.alt,
+      loading: 'lazy',
+      fetchPriority: 'low',
     },
     {
       key: 'phone',
       frameClassName: styles.phoneFrame,
       wrapClassName: styles.phoneScreenWrap,
       imageClassName: styles.phoneImage,
-      imagePath: useBaseUrl('/img/hero/iPhone17ProMax-Silver-Portrait.png'),
-      alt: 'Continue watching IPTV on mobile',
+      src: useBaseUrl(HERO_IMAGE_ASSETS.phone.src1x),
+      srcSet: `${useBaseUrl(HERO_IMAGE_ASSETS.phone.src1x)} 1x, ${useBaseUrl(HERO_IMAGE_ASSETS.phone.src2x)} 2x`,
+      width: HERO_IMAGE_ASSETS.phone.width,
+      height: HERO_IMAGE_ASSETS.phone.height,
+      sizes: '(max-width: 640px) 32vw, (max-width: 996px) 31vw, 11vw',
+      alt: HERO_IMAGE_ASSETS.phone.alt,
+      loading: 'lazy',
+      fetchPriority: 'low',
     },
   ];
 
@@ -49,9 +74,14 @@ export default function HeroVisual(): JSX.Element {
             <div className={`${styles.screenWrap} ${shot.wrapClassName}`}>
               <img
                 className={`${styles.screenImage} ${shot.imageClassName}`}
-                src={shot.imagePath}
+                src={shot.src}
+                srcSet={shot.srcSet}
+                sizes={shot.sizes}
                 alt={shot.alt}
-                loading="eager"
+                width={shot.width}
+                height={shot.height}
+                loading={shot.loading}
+                fetchPriority={shot.fetchPriority}
                 decoding="async"
               />
             </div>
