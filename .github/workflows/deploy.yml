@@ -18,6 +18,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: docusaurus/package-lock.json
+
       - name: Resolve IMAGE_NAME
         run: |
           if [ -n "${{ vars.IMAGE_NAME }}" ]; then
