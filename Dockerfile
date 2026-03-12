@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.7
 
-ARG BUILDPLATFORM
+ARG BUILDPLATFORM=linux/amd64
 
 FROM --platform=$BUILDPLATFORM node:20-alpine AS base
 WORKDIR /app/docusaurus
