@@ -1,5 +1,6 @@
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import HeroVisual from '@site/src/components/HeroVisual';
 import SyncVisual from '@site/src/components/SyncVisual';
@@ -58,6 +59,10 @@ export default function Home(): JSX.Element {
   const {i18n} = useDocusaurusContext();
   const locale = normalizeLocale(i18n.currentLocale);
   const badges = BADGE_MAP[locale];
+  const homepageTitle = 'Modern IPTV Player for Apple TV, Android TV & Mobile';
+  const homepageDescription =
+    'Livo Player is a clean and fast IPTV player supporting M3U playlists, live TV streaming and continue watching across devices. Available for Apple TV and Android TV.';
+  const socialImage = 'https://www.livoplayer.com/img/livo-logo.png';
   const googlePlayBadge = `/badges/${badges.googlePlay}`;
   const appStoreSources = {
     light: `/badges/${badges.appStore.light}`,
@@ -68,8 +73,20 @@ export default function Home(): JSX.Element {
 
   return (
     <Layout
-      title="Modern IPTV Player for Apple TV, Android TV & Mobile"
-      description="Livo Player is a clean and fast IPTV player supporting M3U playlists, live TV streaming and continue watching across devices. Available for Apple TV and Android TV.">
+      title={homepageTitle}
+      description={homepageDescription}>
+      <Head>
+        <meta
+          name="keywords"
+          content="iptv player, m3u player, apple tv iptv app, android tv iptv player, streaming player, cross device streaming, cloud sync video player"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={homepageTitle} />
+        <meta name="twitter:description" content={homepageDescription} />
+        <meta name="twitter:image" content={socialImage} />
+        <meta name="twitter:site" content="@LivoPlayer" />
+        <meta name="twitter:creator" content="@LivoPlayer" />
+      </Head>
       <main className={styles.page}>
         <section className={styles.heroSection}>
           <div className={`container ${styles.heroGrid}`}>
