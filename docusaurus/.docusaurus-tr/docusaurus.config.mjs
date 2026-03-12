@@ -7,7 +7,7 @@ export default {
   "title": "Livo Player",
   "tagline": "Marketing, support, product guides and release updates for Livo.",
   "favicon": "img/livo-logo.png",
-  "url": "https://example.com",
+  "url": "https://www.livoplayer.com",
   "baseUrl": "/tr/",
   "organizationName": "livo",
   "projectName": "livo-site",
@@ -64,6 +64,11 @@ export default {
           "blogSidebarTitle": "Recent posts"
         },
         "pages": {},
+        "sitemap": {
+          "changefreq": "weekly",
+          "priority": 0.5,
+          "filename": "sitemap.xml"
+        },
         "theme": {
           "customCss": "./src/css/custom.css"
         }
@@ -155,6 +160,19 @@ export default {
             {
               "label": "Google Play",
               "href": "https://play.google.com/store/apps/details?id=com.livo.android"
+            }
+          ]
+        },
+        {
+          "title": "Sosyal",
+          "items": [
+            {
+              "label": "X",
+              "href": "https://x.com/LivoPlayer"
+            },
+            {
+              "label": "Instagram",
+              "href": "https://www.instagram.com/livoplayer/"
             }
           ]
         }

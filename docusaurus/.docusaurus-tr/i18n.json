@@ -14,7 +14,7 @@
       "calendar": "gregory",
       "path": "en",
       "translate": false,
-      "url": "https://example.com",
+      "url": "https://www.livoplayer.com",
       "baseUrl": "/"
     },
     "tr": {
@@ -24,7 +24,7 @@
       "calendar": "gregory",
       "path": "tr",
       "translate": true,
-      "url": "https://example.com",
+      "url": "https://www.livoplayer.com",
       "baseUrl": "/tr/"
     }
   }

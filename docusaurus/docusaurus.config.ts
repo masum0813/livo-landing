@@ -5,7 +5,7 @@ const config: Config = {
   title: 'Livo Player',
   tagline: 'Marketing, support, product guides and release updates for Livo.',
   favicon: 'img/livo-logo.png',
-  url: 'https://example.com',
+  url: 'https://www.livoplayer.com',
   baseUrl: '/',
   organizationName: 'livo',
   projectName: 'livo-site',
@@ -48,6 +48,11 @@ const config: Config = {
           editUrl: undefined,
         },
         pages: {},
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          filename: 'sitemap.xml',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -102,6 +107,19 @@ const config: Config = {
             {
               label: 'Google Play',
               href: 'https://play.google.com/store/apps/details?id=com.livo.android',
+            },
+          ],
+        },
+        {
+          title: 'Social',
+          items: [
+            {
+              label: 'X',
+              href: 'https://x.com/LivoPlayer',
+            },
+            {
+              label: 'Instagram',
+              href: 'https://www.instagram.com/livoplayer/',
             },
           ],
         },

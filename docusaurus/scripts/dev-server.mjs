@@ -4,6 +4,8 @@ import process from 'node:process';
 import httpProxy from 'http-proxy';
 
 const PUBLIC_PORT = 3000;
+const EN_TARGET = 'http://localhost:3001';
+const TR_TARGET = 'http://localhost:3002';
 
 const proxy = httpProxy.createProxyServer({
   ws: true,
@@ -169,6 +171,9 @@ server.on('error', (error) => {
 
 process.on('SIGINT', () => shutdown(0));
 process.on('SIGTERM', () => shutdown(0));
+
+startLocaleServer('en', 3001, '.docusaurus-en');
+startLocaleServer('tr', 3002, '.docusaurus-tr');
 
 server.listen(PUBLIC_PORT, () => {
   log(`Starting development site on http://localhost:${PUBLIC_PORT}`);
