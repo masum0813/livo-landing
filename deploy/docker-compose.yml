@@ -6,3 +6,9 @@ services:
       - "${HOST_PORT:-3002}:3000"
     environment:
       NODE_ENV: production
+    networks:
+      - livoplayer_net
+
+networks:
+  livoplayer_net:
+    external: true

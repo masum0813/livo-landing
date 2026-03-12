@@ -1,10 +1,7 @@
-.git
-.gitignore
-node_modules
-docusaurus/node_modules
-docusaurus/build
-docusaurus/.docusaurus
-docusaurus/.cache
-dist
-*.log
-.DS_Store
+*
+!Dockerfile
+!.dockerignore
+!docusaurus/
+!docusaurus/**
+docusaurus/.docusaurus-en
+docusaurus/.docusaurus-tr

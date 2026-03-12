@@ -1,9 +1,11 @@
-# syntax=docker/dockerfile:1
+# syntax=docker/dockerfile:1.7
 
-FROM node:20-alpine AS base
+ARG BUILDPLATFORM
+
+FROM --platform=$BUILDPLATFORM node:20-alpine AS base
 WORKDIR /app/docusaurus
 COPY docusaurus/package*.json ./
-RUN npm install
+RUN --mount=type=cache,target=/root/.npm npm ci
 
 FROM base AS dev
 COPY docusaurus ./
