@@ -3,6 +3,6 @@ services:
     image: ${IMAGE_NAME:-livo-landing}:${IMAGE_TAG:-latest}
     restart: unless-stopped
     ports:
-      - "${HOST_PORT:-3000}:3000"
+      - "${HOST_PORT:-3001}:3002" # Prod ortamda çok fazla docker container'ı çalıştırmak istemediğimiz için port mapping'i 3002 olarak değiştirdik.
     environment:
       NODE_ENV: production
