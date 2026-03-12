@@ -119,6 +119,6 @@ jobs:
               export GHCR_TOKEN='${{ secrets.GHCR_PAT }}'
             fi
 
-            export HOST_PORT='${{ vars.HOST_PORT || '3000' }}'
+            export HOST_PORT='${{ vars.HOST_PORT || '3002' }}'
             export SKIP_ENV_FILE=1
             ./deploy.sh "${{ env.IMAGE_NAME }}" "${{ github.ref_name }}-${{ github.run_number }}" "${{ env.APP_DIR }}"

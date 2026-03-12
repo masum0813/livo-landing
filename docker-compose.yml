@@ -20,6 +20,12 @@ services:
       target: prod
     container_name: livo-docs-prod
     ports:
-      - "3001:3000"
+      - "3002:3000"
     profiles:
       - prod
+    networks:
+      - livoplayer_net
+
+networks:
+  livoplayer_net:
+    external: true

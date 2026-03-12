@@ -31,7 +31,7 @@ if [ "${SKIP_ENV_FILE:-0}" != "1" ]; then
     {
       echo "IMAGE_NAME=$IMAGE_NAME"
       echo "IMAGE_TAG=$TAG"
-      echo "HOST_PORT=${HOST_PORT:-3000}"
+      echo "HOST_PORT=${HOST_PORT:-3002}"
     } > "$ENV_FILE"
   fi
 else
@@ -55,7 +55,7 @@ if [ ! -f docker-compose.yml ]; then
 fi
 
 echo "Starting compose stack"
-IMAGE_NAME="${IMAGE_NAME}" IMAGE_TAG="${TAG}" HOST_PORT="${HOST_PORT:-3000}" \
+IMAGE_NAME="${IMAGE_NAME}" IMAGE_TAG="${TAG}" HOST_PORT="${HOST_PORT:-3002}" \
   docker compose -f docker-compose.yml up -d --remove-orphans
 
 echo "Deployment complete."
