@@ -1,15 +1,14 @@
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import {HERO_IMAGE_ASSETS} from './heroImageAssets';
 import styles from './SyncVisual.module.css';
 
 export default function SyncVisual(): JSX.Element {
   const buildSrcSet = (asset: (typeof HERO_IMAGE_ASSETS)[keyof typeof HERO_IMAGE_ASSETS]) =>
-    asset.sources.map((source) => `${useBaseUrl(source.src)} ${source.width}w`).join(', ');
-  const tvImage = useBaseUrl(HERO_IMAGE_ASSETS.tv.src);
+    asset.sources.map((source) => `${source.src} ${source.width}w`).join(', ');
+  const tvImage = HERO_IMAGE_ASSETS.tv.src;
   const tvImageSet = buildSrcSet(HERO_IMAGE_ASSETS.tv);
-  const phoneImage = useBaseUrl(HERO_IMAGE_ASSETS.phone.src);
+  const phoneImage = HERO_IMAGE_ASSETS.phone.src;
   const phoneImageSet = buildSrcSet(HERO_IMAGE_ASSETS.phone);
-  const tabletImage = useBaseUrl(HERO_IMAGE_ASSETS.tablet.src);
+  const tabletImage = HERO_IMAGE_ASSETS.tablet.src;
   const tabletImageSet = buildSrcSet(HERO_IMAGE_ASSETS.tablet);
 
   return (

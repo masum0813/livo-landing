@@ -1,8 +1,6 @@
 import Layout from '@theme/Layout';
-import ThemedImage from '@theme/ThemedImage';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import HeroVisual from '@site/src/components/HeroVisual';
 import SyncVisual from '@site/src/components/SyncVisual';
 import styles from './index.module.css';
@@ -60,11 +58,13 @@ export default function Home(): JSX.Element {
   const {i18n} = useDocusaurusContext();
   const locale = normalizeLocale(i18n.currentLocale);
   const badges = BADGE_MAP[locale];
-  const googlePlayBadge = useBaseUrl(`/badges/${badges.googlePlay}`);
+  const googlePlayBadge = `/badges/${badges.googlePlay}`;
   const appStoreSources = {
-    light: useBaseUrl(`/badges/${badges.appStore.light}`),
-    dark: useBaseUrl(`/badges/${badges.appStore.dark}`),
+    light: `/badges/${badges.appStore.light}`,
+    dark: `/badges/${badges.appStore.dark}`,
   };
+  const appStoreLabel = 'Download Livo Player on the App Store';
+  const playStoreLabel = 'Get Livo Player on Google Play';
 
   return (
     <Layout
@@ -85,23 +85,25 @@ export default function Home(): JSX.Element {
                   href="https://apps.apple.com/tr/app/livo-iptv/id6755977918"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Download Livo Player on the App Store"
-                  title="Download Livo Player on the App Store">
-                  <ThemedImage
-                    alt="Download Livo Player on the App Store"
-                    sources={appStoreSources}
-                  />
+                  aria-label={appStoreLabel}
+                  title={appStoreLabel}>
+                  <picture>
+                    <source media="(prefers-color-scheme: dark)" srcSet={appStoreSources.dark} />
+                    <img
+                      src={appStoreSources.light}
+                      alt={appStoreLabel}
+                      width={180}
+                      height={60}
+                    />
+                  </picture>
                 </a>
                 <a
                   href="https://play.google.com/store/apps/details?id=com.livo.android"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Get Livo Player on Google Play"
-                  title="Get Livo Player on Google Play">
-                  <img
-                    src={googlePlayBadge}
-                    alt="Get Livo Player on Google Play"
-                  />
+                  aria-label={playStoreLabel}
+                  title={playStoreLabel}>
+                  <img src={googlePlayBadge} alt={playStoreLabel} width={180} height={53} />
                 </a>
               </div>
               <p className={styles.storeTrustLine}>
@@ -215,23 +217,25 @@ export default function Home(): JSX.Element {
                   href="https://apps.apple.com/tr/app/livo-iptv/id6755977918"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Download Livo Player on the App Store"
-                  title="Download Livo Player on the App Store">
-                  <ThemedImage
-                    alt="Download Livo Player on the App Store"
-                    sources={appStoreSources}
-                  />
+                  aria-label={appStoreLabel}
+                  title={appStoreLabel}>
+                  <picture>
+                    <source media="(prefers-color-scheme: dark)" srcSet={appStoreSources.dark} />
+                    <img
+                      src={appStoreSources.light}
+                      alt={appStoreLabel}
+                      width={180}
+                      height={60}
+                    />
+                  </picture>
                 </a>
                 <a
                   href="https://play.google.com/store/apps/details?id=com.livo.android"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Get Livo Player on Google Play"
-                  title="Get Livo Player on Google Play">
-                  <img
-                    src={googlePlayBadge}
-                    alt="Get Livo Player on Google Play"
-                  />
+                  aria-label={playStoreLabel}
+                  title={playStoreLabel}>
+                  <img src={googlePlayBadge} alt={playStoreLabel} width={180} height={53} />
                 </a>
               </div>
             </div>

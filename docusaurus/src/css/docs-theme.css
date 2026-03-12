@@ -1,0 +1,39 @@
+.theme-doc-sidebar-container,
+.pagination-nav__link,
+.table-of-contents,
+.theme-doc-toc-desktop,
+.menu {
+  background-color: var(--site-surface-panel);
+  border-color: var(--site-border-color);
+  color: var(--ifm-font-color-base);
+}
+
+.theme-doc-sidebar-container,
+.pagination-nav__link,
+.table-of-contents {
+  box-shadow: var(--site-shadow-soft);
+}
+
+.menu__link,
+.table-of-contents__link,
+.pagination-nav__label,
+.pagination-nav__sublabel {
+  color: var(--ifm-font-color-base);
+}
+
+.table-of-contents__link--active,
+.menu__link--active {
+  color: var(--ifm-color-primary);
+}
+
+.theme-doc-markdown :is(p, li),
+.markdown :is(p, li),
+.menu__link,
+.table-of-contents__link {
+  color: var(--site-text-secondary);
+}
+
+.theme-doc-markdown,
+.markdown {
+  max-width: 860px;
+}

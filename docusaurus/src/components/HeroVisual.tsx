@@ -1,4 +1,3 @@
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import {HERO_IMAGE_ASSETS} from './heroImageAssets';
 import styles from './HeroVisual.module.css';
 
@@ -19,7 +18,7 @@ type DeviceShot = {
 
 export default function HeroVisual(): JSX.Element {
   const buildSrcSet = (asset: (typeof HERO_IMAGE_ASSETS)[keyof typeof HERO_IMAGE_ASSETS]) =>
-    asset.sources.map((source) => `${useBaseUrl(source.src)} ${source.width}w`).join(', ');
+    asset.sources.map((source) => `${source.src} ${source.width}w`).join(', ');
 
   const shots: DeviceShot[] = [
     {
@@ -27,7 +26,7 @@ export default function HeroVisual(): JSX.Element {
       frameClassName: styles.tvFrame,
       wrapClassName: styles.landscapeScreenWrap,
       imageClassName: styles.tvImage,
-      src: useBaseUrl(HERO_IMAGE_ASSETS.tv.src),
+      src: HERO_IMAGE_ASSETS.tv.src,
       srcSet: buildSrcSet(HERO_IMAGE_ASSETS.tv),
       width: HERO_IMAGE_ASSETS.tv.width,
       height: HERO_IMAGE_ASSETS.tv.height,
@@ -41,7 +40,7 @@ export default function HeroVisual(): JSX.Element {
       frameClassName: styles.tabletFrame,
       wrapClassName: styles.tabletScreenWrap,
       imageClassName: styles.tabletImage,
-      src: useBaseUrl(HERO_IMAGE_ASSETS.tablet.src),
+      src: HERO_IMAGE_ASSETS.tablet.src,
       srcSet: buildSrcSet(HERO_IMAGE_ASSETS.tablet),
       width: HERO_IMAGE_ASSETS.tablet.width,
       height: HERO_IMAGE_ASSETS.tablet.height,
@@ -55,7 +54,7 @@ export default function HeroVisual(): JSX.Element {
       frameClassName: styles.phoneFrame,
       wrapClassName: styles.phoneScreenWrap,
       imageClassName: styles.phoneImage,
-      src: useBaseUrl(HERO_IMAGE_ASSETS.phone.src),
+      src: HERO_IMAGE_ASSETS.phone.src,
       srcSet: buildSrcSet(HERO_IMAGE_ASSETS.phone),
       width: HERO_IMAGE_ASSETS.phone.width,
       height: HERO_IMAGE_ASSETS.phone.height,
