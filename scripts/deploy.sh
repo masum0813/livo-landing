@@ -18,6 +18,7 @@ cd "$APP_DIR"
 
 ENV_FILE="$APP_DIR/.env"
 tmpfile=$(mktemp)
+trap 'rm -f "$tmpfile"' EXIT
 
 if [ "${SKIP_ENV_FILE:-0}" != "1" ]; then
   if [ -f "$ENV_FILE" ]; then
@@ -38,14 +39,22 @@ else
   echo "SKIP_ENV_FILE=1 set; not creating or modifying ${ENV_FILE}"
 fi
 
-if [ -n "${GHCR_USER:-}" ] && [ -n "${GHCR_TOKEN:-}" ]; then
+GHCR_AUTH_TOKEN=${GHCR_TOKEN:-${GHCR_PAT:-}}
+
+if [ -n "${GHCR_USER:-}" ] && [ -n "${GHCR_AUTH_TOKEN:-}" ]; then
   echo "Logging into ghcr.io as ${GHCR_USER}"
-  echo "$GHCR_TOKEN" | docker login ghcr.io -u "$GHCR_USER" --password-stdin
+  if ! echo "$GHCR_AUTH_TOKEN" | docker login ghcr.io -u "$GHCR_USER" --password-stdin; then
+    echo "WARNING: ghcr.io login failed for ${GHCR_USER}" >&2
+    echo "Continuing with docker pull in case the image is public or the host already has valid credentials." >&2
+  fi
+elif [ -n "${GHCR_USER:-}" ] || [ -n "${GHCR_TOKEN:-}" ] || [ -n "${GHCR_PAT:-}" ]; then
+  echo "WARNING: incomplete GHCR credentials provided; skipping docker login." >&2
 fi
 
 echo "Pulling image ${IMAGE_NAME}:${TAG}"
 if ! docker pull "${IMAGE_NAME}:${TAG}"; then
   echo "ERROR: failed to pull ${IMAGE_NAME}:${TAG}" >&2
+  echo "If this image is private, verify GHCR_USER and GHCR_TOKEN/GHCR_PAT have package read access." >&2
   exit 1
 fi
 
