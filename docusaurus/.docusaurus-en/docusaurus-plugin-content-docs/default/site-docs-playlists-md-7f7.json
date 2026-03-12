@@ -1,0 +1,27 @@
+{
+  "id": "playlists",
+  "title": "Playlists",
+  "description": "This page collects the main playlist import and playback setup articles for Livo Player.",
+  "source": "@site/docs/playlists.md",
+  "sourceDirName": ".",
+  "slug": "/playlists",
+  "permalink": "/docs/playlists",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/playlists",
+    "sidebar_position": 3
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Setup",
+    "permalink": "/docs/setup"
+  },
+  "next": {
+    "title": "Troubleshooting",
+    "permalink": "/docs/troubleshooting"
+  }
+}

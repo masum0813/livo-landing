@@ -38,6 +38,16 @@ export default [
     exact: true
   },
   {
+    path: '/tr/android-tv-iptv-player',
+    component: ComponentCreator('/tr/android-tv-iptv-player', 'deb'),
+    exact: true
+  },
+  {
+    path: '/tr/apple-tv-iptv-player',
+    component: ComponentCreator('/tr/apple-tv-iptv-player', '389'),
+    exact: true
+  },
+  {
     path: '/tr/blog',
     component: ComponentCreator('/tr/blog', '58c'),
     exact: true
@@ -73,6 +83,11 @@ export default [
     exact: true
   },
   {
+    path: '/tr/m3u-iptv-player',
+    component: ComponentCreator('/tr/m3u-iptv-player', '6d0'),
+    exact: true
+  },
+  {
     path: '/tr/privacy-policy',
     component: ComponentCreator('/tr/privacy-policy', '0b3'),
     exact: true
@@ -89,15 +104,15 @@ export default [
   },
   {
     path: '/tr/docs',
-    component: ComponentCreator('/tr/docs', '2cc'),
+    component: ComponentCreator('/tr/docs', '872'),
     routes: [
       {
         path: '/tr/docs',
-        component: ComponentCreator('/tr/docs', 'bc7'),
+        component: ComponentCreator('/tr/docs', 'd01'),
         routes: [
           {
             path: '/tr/docs',
-            component: ComponentCreator('/tr/docs', '17d'),
+            component: ComponentCreator('/tr/docs', '235'),
             routes: [
               {
                 path: '/tr/docs/faq',
@@ -126,6 +141,24 @@ export default [
               {
                 path: '/tr/docs/intro',
                 component: ComponentCreator('/tr/docs/intro', 'fa8'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/tr/docs/playlists',
+                component: ComponentCreator('/tr/docs/playlists', '061'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/tr/docs/setup',
+                component: ComponentCreator('/tr/docs/setup', 'bf2'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/tr/docs/troubleshooting',
+                component: ComponentCreator('/tr/docs/troubleshooting', 'e8f'),
                 exact: true,
                 sidebar: "docsSidebar"
               },

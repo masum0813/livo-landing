@@ -7,6 +7,7 @@ type DeviceShot = {
   wrapClassName: string;
   imageClassName: string;
   imagePath: string;
+  alt: string;
 };
 
 export default function HeroVisual(): JSX.Element {
@@ -17,6 +18,7 @@ export default function HeroVisual(): JSX.Element {
       wrapClassName: styles.landscapeScreenWrap,
       imageClassName: styles.tvImage,
       imagePath: useBaseUrl('/img/hero/AppleTV-4K.App.png'),
+      alt: 'IPTV player interface on Apple TV',
     },
     {
       key: 'tablet',
@@ -24,6 +26,7 @@ export default function HeroVisual(): JSX.Element {
       wrapClassName: styles.tabletScreenWrap,
       imageClassName: styles.tabletImage,
       imagePath: useBaseUrl('/img/hero/iPadPro11-M4-SpaceGray-Landscape.png'),
+      alt: 'IPTV player interface on tablet',
     },
     {
       key: 'phone',
@@ -31,6 +34,7 @@ export default function HeroVisual(): JSX.Element {
       wrapClassName: styles.phoneScreenWrap,
       imageClassName: styles.phoneImage,
       imagePath: useBaseUrl('/img/hero/iPhone17ProMax-Silver-Portrait.png'),
+      alt: 'Continue watching IPTV on mobile',
     },
   ];
 
@@ -46,7 +50,7 @@ export default function HeroVisual(): JSX.Element {
               <img
                 className={`${styles.screenImage} ${shot.imageClassName}`}
                 src={shot.imagePath}
-                alt=""
+                alt={shot.alt}
                 loading="eager"
                 decoding="async"
               />

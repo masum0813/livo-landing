@@ -42,6 +42,20 @@
       "plugin": "plugin---docusaurus-debugb-38-ad3"
     }
   },
+  "/android-tv-iptv-player-fc9": {
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__context": {
+      "plugin": "plugin---privacy-policya-74-5ec"
+    },
+    "content": "content---android-tv-iptv-playerc-62-d69"
+  },
+  "/apple-tv-iptv-player-a16": {
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__context": {
+      "plugin": "plugin---privacy-policya-74-5ec"
+    },
+    "content": "content---apple-tv-iptv-player-715-24e"
+  },
   "/blog-040": {
     "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
     "__context": {
@@ -120,6 +134,13 @@
     ],
     "__props": "__props---blog-tags-websitea-30-966"
   },
+  "/m3u-iptv-player-40e": {
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__context": {
+      "plugin": "plugin---privacy-policya-74-5ec"
+    },
+    "content": "content---m-3-u-iptv-player-7-b-2-a08"
+  },
   "/privacy-policy-524": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
@@ -141,17 +162,17 @@
     },
     "content": "content---terms-649-ba0"
   },
-  "/docs-d91": {
+  "/docs-9a9": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---docsaba-d7c"
     }
   },
-  "/docs-868": {
+  "/docs-6bb": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---docs-005-788"
   },
-  "/docs-85f": {
+  "/docs-66a": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/docs/faq-ec8": {
@@ -173,6 +194,18 @@
   "/docs/intro-058": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-intro-0-e-3-be1"
+  },
+  "/docs/playlists-76b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-playlists-7-f-7-45e"
+  },
+  "/docs/setup-636": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-setup-384-edd"
+  },
+  "/docs/troubleshooting-ca4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-troubleshooting-9-d-9-0bf"
   },
   "/docs/troubleshooting/login-errors-9cf": {
     "__comp": "__comp---theme-doc-item-178-a40",

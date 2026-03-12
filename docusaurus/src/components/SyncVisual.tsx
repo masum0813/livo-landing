@@ -17,7 +17,7 @@ export default function SyncVisual(): JSX.Element {
             <img
               className={`${styles.cardImage} ${styles.tvImage}`}
               src={tvImage}
-              alt="Livo TV playback preview"
+              alt="IPTV player interface on Apple TV"
             />
           </div>
         </div>
@@ -27,7 +27,7 @@ export default function SyncVisual(): JSX.Element {
             <img
               className={`${styles.cardImage} ${styles.phoneImage}`}
               src={phoneImage}
-              alt="Livo phone continue watching preview"
+              alt="Continue watching IPTV on mobile"
             />
           </div>
         </div>
@@ -37,7 +37,7 @@ export default function SyncVisual(): JSX.Element {
             <img
               className={`${styles.cardImage} ${styles.tabletImage}`}
               src={tabletImage}
-              alt="Livo tablet layout preview"
+              alt="IPTV player interface on tablet"
             />
           </div>
         </div>

@@ -42,6 +42,20 @@
       "plugin": "plugin---tr-docusaurus-debugb-38-07b"
     }
   },
+  "/tr/android-tv-iptv-player-deb": {
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__context": {
+      "plugin": "plugin---tr-privacy-policya-74-120"
+    },
+    "content": "content---tr-android-tv-iptv-playerc-62-168"
+  },
+  "/tr/apple-tv-iptv-player-389": {
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__context": {
+      "plugin": "plugin---tr-privacy-policya-74-120"
+    },
+    "content": "content---tr-apple-tv-iptv-player-715-d99"
+  },
   "/tr/blog-58c": {
     "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
     "__context": {
@@ -120,6 +134,13 @@
     ],
     "__props": "__props---tr-blog-tags-web-3-ca-c3d"
   },
+  "/tr/m3u-iptv-player-6d0": {
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__context": {
+      "plugin": "plugin---tr-privacy-policya-74-120"
+    },
+    "content": "content---tr-m-3-u-iptv-player-7-b-2-1a1"
+  },
   "/tr/privacy-policy-0b3": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
@@ -141,17 +162,17 @@
     },
     "content": "content---tr-termsf-39-0d2"
   },
-  "/tr/docs-2cc": {
+  "/tr/docs-872": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---tr-docsaba-2e3"
     }
   },
-  "/tr/docs-bc7": {
+  "/tr/docs-d01": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---tr-docsd-71-184"
   },
-  "/tr/docs-17d": {
+  "/tr/docs-235": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/tr/docs/faq-4a2": {
@@ -173,6 +194,18 @@
   "/tr/docs/intro-fa8": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---tr-docs-introc-80-4e5"
+  },
+  "/tr/docs/playlists-061": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tr-docs-playlists-7-f-7-731"
+  },
+  "/tr/docs/setup-bf2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tr-docs-setup-384-11e"
+  },
+  "/tr/docs/troubleshooting-e8f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tr-docs-troubleshooting-9-d-9-44e"
   },
   "/tr/docs/troubleshooting/login-errors-131": {
     "__comp": "__comp---theme-doc-item-178-a40",

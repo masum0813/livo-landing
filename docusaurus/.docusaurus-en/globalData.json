@@ -36,6 +36,21 @@
               "sidebar": "docsSidebar"
             },
             {
+              "id": "playlists",
+              "path": "/docs/playlists",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "setup",
+              "path": "/docs/setup",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "troubleshooting",
+              "path": "/docs/troubleshooting",
+              "sidebar": "docsSidebar"
+            },
+            {
               "id": "troubleshooting/login-errors",
               "path": "/docs/troubleshooting/login-errors",
               "sidebar": "docsSidebar"

@@ -38,6 +38,16 @@ export default [
     exact: true
   },
   {
+    path: '/android-tv-iptv-player',
+    component: ComponentCreator('/android-tv-iptv-player', 'fc9'),
+    exact: true
+  },
+  {
+    path: '/apple-tv-iptv-player',
+    component: ComponentCreator('/apple-tv-iptv-player', 'a16'),
+    exact: true
+  },
+  {
     path: '/blog',
     component: ComponentCreator('/blog', '040'),
     exact: true
@@ -73,6 +83,11 @@ export default [
     exact: true
   },
   {
+    path: '/m3u-iptv-player',
+    component: ComponentCreator('/m3u-iptv-player', '40e'),
+    exact: true
+  },
+  {
     path: '/privacy-policy',
     component: ComponentCreator('/privacy-policy', '524'),
     exact: true
@@ -89,15 +104,15 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', 'd91'),
+    component: ComponentCreator('/docs', '9a9'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', '868'),
+        component: ComponentCreator('/docs', '6bb'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', '85f'),
+            component: ComponentCreator('/docs', '66a'),
             routes: [
               {
                 path: '/docs/faq',
@@ -126,6 +141,24 @@ export default [
               {
                 path: '/docs/intro',
                 component: ComponentCreator('/docs/intro', '058'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/docs/playlists',
+                component: ComponentCreator('/docs/playlists', '76b'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/docs/setup',
+                component: ComponentCreator('/docs/setup', '636'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/docs/troubleshooting',
+                component: ComponentCreator('/docs/troubleshooting', 'ca4'),
                 exact: true,
                 sidebar: "docsSidebar"
               },

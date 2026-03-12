@@ -3,20 +3,7 @@ import ThemedImage from '@theme/ThemedImage';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import {
-  Check,
-  CloudCheck,
-  LayoutDashboard,
-  ListVideo,
-  ShieldCheck,
-  Smartphone,
-  Tablet,
-  Tv,
-  Zap,
-} from 'lucide-react';
-import Translate, { translate } from '@docusaurus/Translate';
 import HeroVisual from '@site/src/components/HeroVisual';
-import PremiumPlanCard from '@site/src/components/PremiumPlanCard';
 import SyncVisual from '@site/src/components/SyncVisual';
 import styles from './index.module.css';
 
@@ -70,254 +57,56 @@ function normalizeLocale(locale: string): SupportedLocale {
 }
 
 export default function Home(): JSX.Element {
-  const { i18n } = useDocusaurusContext();
+  const {i18n} = useDocusaurusContext();
   const locale = normalizeLocale(i18n.currentLocale);
   const badges = BADGE_MAP[locale];
   const googlePlayBadge = useBaseUrl(`/badges/${badges.googlePlay}`);
-  const googlePlayLabel = translate({
-    id: 'homepage.badge.googlePlay.alt',
-    message: 'Get it on Google Play',
-  });
-  const appStoreLabel = translate({
-    id: 'homepage.badge.appStore.alt',
-    message: 'Download on the App Store',
-  });
-  const storeTrustLine = translate({
-    id: 'homepage.storeTrustLine',
-    message: 'Works on iPhone • iPad • Apple TV • Android • Android TV',
-  });
-  const coreFeatures = [
-    {
-      icon: Tv,
-      title: translate({
-        id: 'homepage.coreFeatures.continueWatching.title',
-        message: 'Continue Watching Across Devices',
-      }),
-      body: translate({
-        id: 'homepage.coreFeatures.continueWatching.body',
-        message:
-          'Start watching on your TV and instantly continue on your phone or tablet with your account.',
-      }),
-    },
-    {
-      icon: Zap,
-      title: translate({
-        id: 'homepage.coreFeatures.fastPlayback.title',
-        message: 'Ultra Fast Playback',
-      }),
-      body: translate({
-        id: 'homepage.coreFeatures.fastPlayback.body',
-        message:
-          'Enjoy smooth channel switching and optimized playback performance for a seamless experience.',
-      }),
-    },
-    {
-      icon: ListVideo,
-      title: translate({
-        id: 'homepage.coreFeatures.playlists.title',
-        message: 'Flexible Playlist Support',
-      }),
-      body: translate({
-        id: 'homepage.coreFeatures.playlists.body',
-        message:
-          'Add and manage multiple playlists easily in one clean and modern interface.',
-      }),
-    },
-    {
-      icon: CloudCheck,
-      title: translate({
-        id: 'homepage.coreFeatures.sync.title',
-        message: 'Secure Cloud Sync',
-      }),
-      body: translate({
-        id: 'homepage.coreFeatures.sync.body',
-        message:
-          'Keep your favorites, history, and playlists safely synced across all your devices.',
-      }),
-    },
-    {
-      icon: LayoutDashboard,
-      title: translate({
-        id: 'homepage.coreFeatures.organization.title',
-        message: 'Smart Content Organization',
-      }),
-      body: translate({
-        id: 'homepage.coreFeatures.organization.body',
-        message:
-          'Organize channels, movies, and series with customizable sidebar groups.',
-      }),
-    },
-    {
-      icon: ShieldCheck,
-      title: translate({
-        id: 'homepage.coreFeatures.adFree.title',
-        message: 'Ad-Free Experience',
-      }),
-      body: translate({
-        id: 'homepage.coreFeatures.adFree.body',
-        message:
-          'Focus on your content with a clean interface and no intrusive ads.',
-      }),
-    },
-  ];
-  const ecosystemBullets = [
-    translate({
-      id: 'homepage.ecosystem.bullet.one',
-      message: 'Continue watching across devices',
-    }),
-    translate({
-      id: 'homepage.ecosystem.bullet.two',
-      message: 'Sync your favorites and playlists',
-    }),
-    translate({
-      id: 'homepage.ecosystem.bullet.three',
-      message: 'Enjoy the same clean experience everywhere',
-    }),
-  ];
-  const deviceCards = [
-    {
-      icon: Smartphone,
-      title: translate({
-        id: 'homepage.ecosystem.device.mobile.title',
-        message: 'Mobile Experience',
-      }),
-      body: translate({
-        id: 'homepage.ecosystem.device.mobile.body',
-        message: 'Watch on the go and continue instantly with your synced playlists and history.',
-      }),
-    },
-    {
-      icon: Tablet,
-      title: translate({
-        id: 'homepage.ecosystem.device.tablet.title',
-        message: 'Tablet Experience',
-      }),
-      body: translate({
-        id: 'homepage.ecosystem.device.tablet.body',
-        message: 'Enjoy a larger viewing area with the same clean layout and smooth navigation.',
-      }),
-    },
-    {
-      icon: Tv,
-      title: translate({
-        id: 'homepage.ecosystem.device.tv.title',
-        message: 'Big Screen Experience',
-      }),
-      body: translate({
-        id: 'homepage.ecosystem.device.tv.body',
-        message: 'Lean back and enjoy the full Livo experience on your living room screen.',
-      }),
-    },
-  ];
-  const syncValuePoints = [
-    translate({
-      id: 'homepage.sync.value.one',
-      message: 'Continue watching without losing your place',
-    }),
-    translate({
-      id: 'homepage.sync.value.two',
-      message: 'Access your favorites instantly on any device',
-    }),
-    translate({
-      id: 'homepage.sync.value.three',
-      message: 'Keep your playlists organized and always up to date',
-    }),
-  ];
-  const freePlanFeatures = [
-    translate({
-      id: 'homepage.subscription.free.feature.one',
-      message: 'Add and watch playlists',
-    }),
-    translate({
-      id: 'homepage.subscription.free.feature.two',
-      message: 'Basic playback experience',
-    }),
-    translate({
-      id: 'homepage.subscription.free.feature.three',
-      message: 'Manual device usage',
-    }),
-    translate({
-      id: 'homepage.subscription.free.feature.four',
-      message: 'Limited sync',
-    }),
-  ];
-  const premiumPlanFeatures = [
-    translate({
-      id: 'homepage.subscription.premium.feature.zero',
-      message: 'Best experience for multi-device watching',
-    }),
-    translate({
-      id: 'homepage.subscription.premium.feature.one',
-      message: 'Continue watching across devices',
-    }),
-    translate({
-      id: 'homepage.subscription.premium.feature.two',
-      message: 'Secure cloud sync',
-    }),
-    translate({
-      id: 'homepage.subscription.premium.feature.three',
-      message: 'Ad-free experience',
-    }),
-    translate({
-      id: 'homepage.subscription.premium.feature.four',
-      message: 'Unlimited playlists',
-    }),
-    translate({
-      id: 'homepage.subscription.premium.feature.five',
-      message: 'Priority updates',
-    }),
-  ];
+  const appStoreSources = {
+    light: useBaseUrl(`/badges/${badges.appStore.light}`),
+    dark: useBaseUrl(`/badges/${badges.appStore.dark}`),
+  };
+
   return (
     <Layout
-      title={translate({
-        id: 'homepage.meta.title',
-        message: 'Livo Player',
-      })}
-      description={translate({
-        id: 'homepage.meta.description',
-        message:
-          'Marketing site, support center, user guides and product updates for the Livo IPTV player.',
-      })}>
+      title="Modern IPTV Player for Apple TV, Android TV & Mobile"
+      description="Livo Player is a clean and fast IPTV player supporting M3U playlists, live TV streaming and continue watching across devices. Available for Apple TV and Android TV.">
       <main className={`${styles.page} homepage`}>
         <section className={styles.heroSection}>
           <div className={`container ${styles.heroGrid}`}>
             <div className={styles.heroCopy}>
-              <h1 className={styles.heroTitle}>
-                <Translate id="homepage.title">Your modern player for live TV and playlists.</Translate>
-              </h1>
+              <h1 className={styles.heroTitle}>Modern IPTV Player for Live TV and Playlists</h1>
               <p className={styles.heroSubtitle}>
-                <Translate id="homepage.subtitle">
-                  Add your playlists, enjoy fast playback, and continue watching seamlessly on your phone, tablet, or TV.
-                </Translate>
+                Livo Player is a modern IPTV player designed for live TV, movies and series playlists.
+                Add M3U sources instantly and continue watching across Apple TV, Android TV, iPhone
+                and tablets.
               </p>
               <div className="storeBadges" id="get-livo">
                 <a
                   href="https://apps.apple.com/tr/app/livo-iptv/id6755977918"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={appStoreLabel}
-                  title={appStoreLabel}>
+                  aria-label="Download Livo Player on the App Store"
+                  title="Download Livo Player on the App Store">
                   <ThemedImage
-                    alt={appStoreLabel}
-                    sources={{
-                      light: useBaseUrl(`/badges/${badges.appStore.light}`),
-                      dark: useBaseUrl(`/badges/${badges.appStore.dark}`),
-                    }}
+                    alt="Download Livo Player on the App Store"
+                    sources={appStoreSources}
                   />
                 </a>
                 <a
                   href="https://play.google.com/store/apps/details?id=com.livo.android"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={googlePlayLabel}
-                  title={googlePlayLabel}>
+                  aria-label="Get Livo Player on Google Play"
+                  title="Get Livo Player on Google Play">
                   <img
                     src={googlePlayBadge}
-                    alt={googlePlayLabel}
+                    alt="Get Livo Player on Google Play"
                   />
                 </a>
               </div>
-              <p className={styles.storeTrustLine}>{storeTrustLine}</p>
+              <p className={styles.storeTrustLine}>
+                Works on iPhone, iPad, Apple TV, Android phones and Android TV.
+              </p>
             </div>
             <div className={styles.heroShowcase}>
               <HeroVisual />
@@ -328,61 +117,18 @@ export default function Home(): JSX.Element {
         <section className={styles.featureSection}>
           <div className="container">
             <div className={styles.sectionIntro}>
-              <span className={styles.sectionKicker}>
-                <Translate id="homepage.section.features.kicker">Built for daily watching</Translate>
-              </span>
-              <h2>
-                <Translate id="homepage.section.features.title">Everything you need for modern streaming</Translate>
-              </h2>
-            </div>
-            <div className={styles.featureGrid}>
-              {coreFeatures.map((item) => {
-                const Icon = item.icon;
-
-                return (
-                  <article key={item.title} className={styles.featureCard}>
-                    <div className={styles.featureIconWrap}>
-                      <Icon className={styles.featureIcon} size={24} strokeWidth={2} />
-                    </div>
-                    <h3>{item.title}</h3>
-                    <p>{item.body}</p>
-                  </article>
-                );
-              })}
-            </div>
-            <div className={styles.featureCtaRow}>
-              <p className={styles.featureCtaText}>
-                <Translate id="homepage.section.features.cta.text">
-                  Download Livo today and start watching smarter
-                </Translate>
+              <h2>Watch IPTV on Every Device</h2>
+              <p>
+                Livo Player brings the same polished IPTV player experience to the screens you use
+                most. Open live TV channels on your couch, browse series on a tablet in the kitchen,
+                or check movies on your phone while traveling. The interface stays clean and familiar
+                across Apple TV IPTV setups, Android TV IPTV boxes, touch devices and larger tablet
+                layouts, so moving between devices feels natural instead of fragmented.
               </p>
-              <div className={styles.featureStoreLinks}>
-                <a
-                  href="https://apps.apple.com/tr/app/livo-iptv/id6755977918"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={appStoreLabel}
-                  title={appStoreLabel}>
-                  <ThemedImage
-                    alt={appStoreLabel}
-                    sources={{
-                      light: useBaseUrl(`/badges/${badges.appStore.light}`),
-                      dark: useBaseUrl(`/badges/${badges.appStore.dark}`),
-                    }}
-                  />
-                </a>
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.livo.android"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={googlePlayLabel}
-                  title={googlePlayLabel}>
-                  <img
-                    src={googlePlayBadge}
-                    alt={googlePlayLabel}
-                  />
-                </a>
-              </div>
+              <p className={styles.featureCtaText}>
+                Start with the <Link to="/docs/setup">setup guide</Link> to install the app and learn
+                how the IPTV player fits into your daily viewing routine.
+              </p>
             </div>
           </div>
         </section>
@@ -390,49 +136,21 @@ export default function Home(): JSX.Element {
         <section className={styles.ecosystemSection}>
           <div className={`container ${styles.ecosystemGrid}`}>
             <div className={styles.ecosystemCopy}>
-              <span className={styles.sectionKicker}>
-                <Translate id="homepage.section.ecosystem.kicker">Built for every screen</Translate>
-              </span>
-              <h2 className={styles.ecosystemTitle}>
-                <Translate id="homepage.section.ecosystem.title">One account. All your screens.</Translate>
-              </h2>
+              <h2 className={styles.ecosystemTitle}>Continue Watching Across Phone, Tablet and TV</h2>
               <p className={styles.ecosystemBody}>
-                <Translate id="homepage.section.ecosystem.body">
-                  Enjoy a seamless experience across mobile, tablet, and TV. Start watching on one device and instantly continue on another.
-                </Translate>
+                Continue watching is where Livo stands out as a modern IPTV player. Start a live TV
+                stream on the living room screen, pause it, then pick up your M3U playlists on mobile
+                without hunting for the same title again. This matters for Apple TV IPTV users who
+                switch to iPhone on the go, and for Android TV IPTV households that also watch on
+                tablets. Your viewing flow stays connected instead of restarting from scratch.
               </p>
-              <ul className={styles.ecosystemBullets}>
-                {ecosystemBullets.map((item) => (
-                  <li key={item}>
-                    <Check size={18} strokeWidth={2.25} />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className={styles.featureCtaText}>
+                Need help keeping progress in sync? Visit <Link to="/docs/troubleshooting">troubleshooting</Link>{' '}
+                for common playback and device handoff issues.
+              </p>
             </div>
-
             <div className={styles.deviceVisualWrap}>
               <SyncVisual />
-            </div>
-          </div>
-          <div className={`container ${styles.deviceCardsBlock}`}>
-            <span className={styles.deviceCardsLabel}>
-              <Translate id="homepage.ecosystem.cards.kicker">How you watch</Translate>
-            </span>
-            <div className={styles.deviceCardGrid}>
-              {deviceCards.map((item) => {
-                const Icon = item.icon;
-
-                return (
-                  <article key={item.title} className={styles.deviceCard}>
-                    <div className={styles.deviceCardIcon}>
-                      <Icon size={20} strokeWidth={2} />
-                    </div>
-                    <h3>{item.title}</h3>
-                    <p>{item.body}</p>
-                  </article>
-                );
-              })}
             </div>
           </div>
         </section>
@@ -440,27 +158,19 @@ export default function Home(): JSX.Element {
         <section className={styles.syncSection}>
           <div className={`container ${styles.syncGrid}`}>
             <div className={styles.syncCopy}>
-              <span className={styles.syncKicker}>
-                <Translate id="homepage.section.sync.kicker">Synced for you</Translate>
-              </span>
-              <h2 className={styles.syncTitle}>
-                <Translate id="homepage.section.sync.title">Your playlists stay with you</Translate>
-              </h2>
+              <h2 className={styles.syncTitle}>Add M3U Playlists in Seconds</h2>
               <p className={styles.syncBody}>
-                <Translate id="homepage.section.sync.body">
-                  Favorites, history, and playlists are securely synced to your account — so you can continue watching anytime, anywhere. Your progress moves with you.
-                </Translate>
+                A good IPTV player should make playlist setup feel immediate, not technical. Livo is
+                designed so you can add M3U playlists quickly, organize sources cleanly, and move from
+                import to playback with very little friction. Whether you manage one main list or
+                several separate M3U playlists for live TV, movies and series, the app keeps the flow
+                simple on Apple TV IPTV screens, Android TV IPTV remotes and handheld devices alike.
               </p>
-              <ul className={styles.syncValueList}>
-                {syncValuePoints.map((item) => (
-                  <li key={item}>
-                    <Check size={18} strokeWidth={2.25} />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className={styles.featureCtaText}>
+                Follow the <Link to="/docs/playlists">playlist guide</Link> for M3U setup, source tips
+                and the next steps after import.
+              </p>
             </div>
-
             <div className={styles.syncVisualWrap}>
               <SyncVisual />
             </div>
@@ -470,108 +180,63 @@ export default function Home(): JSX.Element {
         <section className={styles.subscriptionSection}>
           <div className="container">
             <div className={styles.sectionIntro}>
-              <span className={styles.sectionKicker}>
-                <Translate id="homepage.section.subscription.kicker">Choose your plan</Translate>
-              </span>
-              <h2>
-                <Translate id="homepage.section.subscription.title">Unlock the full Livo experience</Translate>
-              </h2>
+              <h2>Clean and Fast IPTV Experience</h2>
               <p className={styles.subscriptionIntroBody}>
-                <Translate id="homepage.section.subscription.body">
-                  Use Livo for free or upgrade to Premium for seamless sync, ad-free watching, and advanced features.
-                </Translate>
+                Livo focuses on speed, clarity and comfort. The IPTV player layout keeps channels,
+                movies and series easy to browse without turning the screen into a cluttered control
+                panel. Fast navigation matters when switching among M3U playlists, especially on TV
+                platforms where remote input can slow everything down. That is why Apple TV IPTV and
+                Android TV IPTV use cases benefit from a clean visual hierarchy, quicker decisions and
+                less time spent digging through menus before playback starts.
+              </p>
+              <p className={styles.featureCtaText}>
+                Explore <Link to="/docs/setup">setup</Link>, <Link to="/docs/playlists">playlists</Link>{' '}
+                and <Link to="/docs/troubleshooting">troubleshooting</Link> to get the most from the
+                experience.
               </p>
             </div>
+          </div>
+        </section>
 
-            <div className={styles.subscriptionGrid}>
-              <article className={styles.planCard}>
-                <div className={styles.planHeader}>
-                  <span className={styles.planLabel}>
-                    <Translate id="homepage.subscription.free.label">Free plan</Translate>
-                  </span>
-                  <h3>
-                    <Translate id="homepage.subscription.free.title">Free</Translate>
-                  </h3>
-                </div>
-                <div className={styles.planPrice}>
-                  <span className={styles.planAmount}>$0</span>
-                </div>
-                <ul className={styles.planFeatureList}>
-                  {freePlanFeatures.map((item) => (
-                    <li key={item}>
-                      <Check size={18} strokeWidth={2.25} />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-
-              <PremiumPlanCard
-                label={translate({
-                  id: 'homepage.subscription.premium.label',
-                  message: 'Premium plan',
-                })}
-                title={translate({
-                  id: 'homepage.subscription.premium.title',
-                  message: 'Premium',
-                })}
-                subtitle={translate({
-                  id: 'homepage.subscription.premium.feature.zero',
-                  message: 'Best experience for multi-device watching',
-                })}
-                trialBadge={translate({
-                  id: 'homepage.subscription.premium.trialBadge',
-                  message: '7-day free Premium trial',
-                })}
-                priceText={translate({
-                  id: 'homepage.subscription.premium.price',
-                  message: 'Available via App Store & Google Play subscriptions',
-                })}
-                features={premiumPlanFeatures}
-                footnote={translate({
-                  id: 'homepage.subscription.premium.footnote',
-                  message: 'Cancel anytime. No commitment.',
-                })}
-              />
-            </div>
-
-            <div className={styles.subscriptionStoreShell}>
-              <p className={styles.subscriptionStoreText}>
-                <Translate id="homepage.subscription.store.text">
-                  Get started free. Upgrade to Premium anytime via App Store or Google Play.
-                </Translate>
+        <section className={styles.featureSection}>
+          <div className="container">
+            <div className={styles.sectionIntro}>
+              <h2>IPTV Player for Apple TV and Android TV</h2>
+              <p>
+                If you are looking specifically for an IPTV player built around television viewing,
+                Livo is optimized for that environment while still staying flexible on mobile. Apple TV
+                IPTV viewers get a familiar big-screen interface with fast navigation and easy return
+                to recent content. Android TV IPTV users get the same focus on responsiveness and clean
+                browsing. Combined with M3U playlists support and cross-device continuity, the app fits
+                both dedicated TV setups and households that watch everywhere.
               </p>
-              <div className={styles.subscriptionStoreRow}>
+              <div className={styles.featureStoreLinks}>
                 <a
                   href="https://apps.apple.com/tr/app/livo-iptv/id6755977918"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={appStoreLabel}
-                  title={appStoreLabel}>
+                  aria-label="Download Livo Player on the App Store"
+                  title="Download Livo Player on the App Store">
                   <ThemedImage
-                    alt={appStoreLabel}
-                    sources={{
-                      light: useBaseUrl(`/badges/${badges.appStore.light}`),
-                      dark: useBaseUrl(`/badges/${badges.appStore.dark}`),
-                    }}
+                    alt="Download Livo Player on the App Store"
+                    sources={appStoreSources}
                   />
                 </a>
                 <a
                   href="https://play.google.com/store/apps/details?id=com.livo.android"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={googlePlayLabel}
-                  title={googlePlayLabel}>
+                  aria-label="Get Livo Player on Google Play"
+                  title="Get Livo Player on Google Play">
                   <img
                     src={googlePlayBadge}
-                    alt={googlePlayLabel}
+                    alt="Get Livo Player on Google Play"
                   />
                 </a>
               </div>
             </div>
           </div>
         </section>
-
       </main>
     </Layout>
   );
