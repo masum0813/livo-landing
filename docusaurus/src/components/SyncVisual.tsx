@@ -3,12 +3,14 @@ import {HERO_IMAGE_ASSETS} from './heroImageAssets';
 import styles from './SyncVisual.module.css';
 
 export default function SyncVisual(): JSX.Element {
-  const tvImage = useBaseUrl(HERO_IMAGE_ASSETS.tv.src1x);
-  const tvImageSet = `${useBaseUrl(HERO_IMAGE_ASSETS.tv.src1x)} 1x, ${useBaseUrl(HERO_IMAGE_ASSETS.tv.src2x)} 2x`;
-  const phoneImage = useBaseUrl(HERO_IMAGE_ASSETS.phone.src1x);
-  const phoneImageSet = `${useBaseUrl(HERO_IMAGE_ASSETS.phone.src1x)} 1x, ${useBaseUrl(HERO_IMAGE_ASSETS.phone.src2x)} 2x`;
-  const tabletImage = useBaseUrl(HERO_IMAGE_ASSETS.tablet.src1x);
-  const tabletImageSet = `${useBaseUrl(HERO_IMAGE_ASSETS.tablet.src1x)} 1x, ${useBaseUrl(HERO_IMAGE_ASSETS.tablet.src2x)} 2x`;
+  const buildSrcSet = (asset: (typeof HERO_IMAGE_ASSETS)[keyof typeof HERO_IMAGE_ASSETS]) =>
+    asset.sources.map((source) => `${useBaseUrl(source.src)} ${source.width}w`).join(', ');
+  const tvImage = useBaseUrl(HERO_IMAGE_ASSETS.tv.src);
+  const tvImageSet = buildSrcSet(HERO_IMAGE_ASSETS.tv);
+  const phoneImage = useBaseUrl(HERO_IMAGE_ASSETS.phone.src);
+  const phoneImageSet = buildSrcSet(HERO_IMAGE_ASSETS.phone);
+  const tabletImage = useBaseUrl(HERO_IMAGE_ASSETS.tablet.src);
+  const tabletImageSet = buildSrcSet(HERO_IMAGE_ASSETS.tablet);
 
   return (
     <div className={styles.visualShell}>
@@ -22,7 +24,7 @@ export default function SyncVisual(): JSX.Element {
               className={`${styles.cardImage} ${styles.tvImage}`}
               src={tvImage}
               srcSet={tvImageSet}
-              sizes="(max-width: 640px) 100vw, (max-width: 996px) 74vw, 35vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 996px) 58vw, 35vw"
               alt={HERO_IMAGE_ASSETS.tv.alt}
               width={HERO_IMAGE_ASSETS.tv.width}
               height={HERO_IMAGE_ASSETS.tv.height}
@@ -38,7 +40,7 @@ export default function SyncVisual(): JSX.Element {
               className={`${styles.cardImage} ${styles.phoneImage}`}
               src={phoneImage}
               srcSet={phoneImageSet}
-              sizes="(max-width: 640px) 50vw, (max-width: 996px) 21vw, 10vw"
+              sizes="(max-width: 640px) 50vw, (max-width: 996px) 18vw, 10vw"
               alt={HERO_IMAGE_ASSETS.phone.alt}
               width={HERO_IMAGE_ASSETS.phone.width}
               height={HERO_IMAGE_ASSETS.phone.height}
@@ -54,7 +56,7 @@ export default function SyncVisual(): JSX.Element {
               className={`${styles.cardImage} ${styles.tabletImage}`}
               src={tabletImage}
               srcSet={tabletImageSet}
-              sizes="(max-width: 640px) 50vw, (max-width: 996px) 30vw, 14vw"
+              sizes="(max-width: 640px) 50vw, (max-width: 996px) 24vw, 14vw"
               alt={HERO_IMAGE_ASSETS.tablet.alt}
               width={HERO_IMAGE_ASSETS.tablet.width}
               height={HERO_IMAGE_ASSETS.tablet.height}

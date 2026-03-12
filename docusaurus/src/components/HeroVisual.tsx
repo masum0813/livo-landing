@@ -18,17 +18,20 @@ type DeviceShot = {
 };
 
 export default function HeroVisual(): JSX.Element {
+  const buildSrcSet = (asset: (typeof HERO_IMAGE_ASSETS)[keyof typeof HERO_IMAGE_ASSETS]) =>
+    asset.sources.map((source) => `${useBaseUrl(source.src)} ${source.width}w`).join(', ');
+
   const shots: DeviceShot[] = [
     {
       key: 'tv',
       frameClassName: styles.tvFrame,
       wrapClassName: styles.landscapeScreenWrap,
       imageClassName: styles.tvImage,
-      src: useBaseUrl(HERO_IMAGE_ASSETS.tv.src1x),
-      srcSet: `${useBaseUrl(HERO_IMAGE_ASSETS.tv.src1x)} 1x, ${useBaseUrl(HERO_IMAGE_ASSETS.tv.src2x)} 2x`,
+      src: useBaseUrl(HERO_IMAGE_ASSETS.tv.src),
+      srcSet: buildSrcSet(HERO_IMAGE_ASSETS.tv),
       width: HERO_IMAGE_ASSETS.tv.width,
       height: HERO_IMAGE_ASSETS.tv.height,
-      sizes: '(max-width: 640px) 74vw, (max-width: 996px) 76vw, 42vw',
+      sizes: '(max-width: 640px) 74vw, (max-width: 996px) 56vw, 42vw',
       alt: HERO_IMAGE_ASSETS.tv.alt,
       loading: 'eager',
       fetchPriority: 'high',
@@ -38,11 +41,11 @@ export default function HeroVisual(): JSX.Element {
       frameClassName: styles.tabletFrame,
       wrapClassName: styles.tabletScreenWrap,
       imageClassName: styles.tabletImage,
-      src: useBaseUrl(HERO_IMAGE_ASSETS.tablet.src1x),
-      srcSet: `${useBaseUrl(HERO_IMAGE_ASSETS.tablet.src1x)} 1x, ${useBaseUrl(HERO_IMAGE_ASSETS.tablet.src2x)} 2x`,
+      src: useBaseUrl(HERO_IMAGE_ASSETS.tablet.src),
+      srcSet: buildSrcSet(HERO_IMAGE_ASSETS.tablet),
       width: HERO_IMAGE_ASSETS.tablet.width,
       height: HERO_IMAGE_ASSETS.tablet.height,
-      sizes: '(max-width: 640px) 37vw, (max-width: 996px) 35vw, 16vw',
+      sizes: '(max-width: 640px) 37vw, (max-width: 996px) 26vw, 16vw',
       alt: HERO_IMAGE_ASSETS.tablet.alt,
       loading: 'lazy',
       fetchPriority: 'low',
@@ -52,11 +55,11 @@ export default function HeroVisual(): JSX.Element {
       frameClassName: styles.phoneFrame,
       wrapClassName: styles.phoneScreenWrap,
       imageClassName: styles.phoneImage,
-      src: useBaseUrl(HERO_IMAGE_ASSETS.phone.src1x),
-      srcSet: `${useBaseUrl(HERO_IMAGE_ASSETS.phone.src1x)} 1x, ${useBaseUrl(HERO_IMAGE_ASSETS.phone.src2x)} 2x`,
+      src: useBaseUrl(HERO_IMAGE_ASSETS.phone.src),
+      srcSet: buildSrcSet(HERO_IMAGE_ASSETS.phone),
       width: HERO_IMAGE_ASSETS.phone.width,
       height: HERO_IMAGE_ASSETS.phone.height,
-      sizes: '(max-width: 640px) 32vw, (max-width: 996px) 31vw, 11vw',
+      sizes: '(max-width: 640px) 32vw, (max-width: 996px) 22vw, 11vw',
       alt: HERO_IMAGE_ASSETS.phone.alt,
       loading: 'lazy',
       fetchPriority: 'low',

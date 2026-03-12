@@ -18,19 +18,12 @@
   --site-bg-gradient:
     radial-gradient(circle at top left, rgba(245, 179, 120, 0.16), transparent 24%),
     linear-gradient(180deg, #fff9f1 0%, #f8f1e8 48%, #eef5eb 100%);
-  --site-hero-gradient:
-    radial-gradient(circle at top left, rgba(245, 179, 120, 0.3), transparent 30%),
-    radial-gradient(circle at top right, rgba(125, 232, 182, 0.26), transparent 28%),
-    linear-gradient(180deg, #fff9f1 0%, #f7f1e7 52%, #eef5eb 100%);
-  --site-surface-elevated: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 241, 231, 0.96));
   --site-surface-card: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 239, 229, 0.96));
   --site-surface-panel: rgba(255, 255, 255, 0.74);
   --site-border-color: rgba(16, 53, 40, 0.08);
   --site-shadow-soft: 0 18px 60px rgba(163, 112, 64, 0.1);
-  --site-shadow-hero: 0 28px 80px rgba(163, 112, 64, 0.12);
   --site-text-secondary: rgba(16, 53, 40, 0.74);
   --site-footer-gradient: linear-gradient(180deg, #f4ebdf 0%, #eee3d6 100%);
-  --site-kicker-border: rgba(38, 200, 130, 0.28);
   --site-kicker-color: #1d6a4e;
 }
 
@@ -52,19 +45,12 @@
     radial-gradient(circle at top left, rgba(244, 170, 102, 0.14), transparent 26%),
     radial-gradient(circle at bottom right, rgba(61, 220, 151, 0.12), transparent 30%),
     linear-gradient(180deg, #12191d 0%, #0e1519 46%, #0a1114 100%);
-  --site-hero-gradient:
-    radial-gradient(circle at top left, rgba(244, 170, 102, 0.16), transparent 28%),
-    radial-gradient(circle at top right, rgba(61, 220, 151, 0.14), transparent 24%),
-    linear-gradient(180deg, #162026 0%, #10191f 55%, #0b1318 100%);
-  --site-surface-elevated: linear-gradient(180deg, rgba(29, 39, 47, 0.92), rgba(18, 28, 34, 0.96));
   --site-surface-card: linear-gradient(180deg, rgba(27, 36, 44, 0.94), rgba(18, 27, 33, 0.98));
   --site-surface-panel: rgba(23, 33, 40, 0.88);
   --site-border-color: rgba(179, 235, 208, 0.14);
   --site-shadow-soft: 0 18px 60px rgba(0, 0, 0, 0.28);
-  --site-shadow-hero: 0 28px 90px rgba(0, 0, 0, 0.34);
   --site-text-secondary: rgba(231, 244, 237, 0.76);
   --site-footer-gradient: linear-gradient(180deg, #121a20 0%, #0d1318 100%);
-  --site-kicker-border: rgba(61, 220, 151, 0.34);
   --site-kicker-color: #8ff0c1;
   color-scheme: dark;
 }
@@ -85,14 +71,12 @@
 }
 
 .footer__title,
-.footer__item,
 .footer__link-item,
 .footer__copyright {
   color: var(--ifm-font-color-base);
 }
 
-.footer__link-item[href='https://x.com/LivoPlayer'],
-.footer__link-item[href='https://www.instagram.com/livoplayer/'] {
+.footer__link-item:is([href='https://x.com/LivoPlayer'], [href='https://www.instagram.com/livoplayer/']) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -102,8 +86,7 @@
   line-height: 0;
 }
 
-.footer__link-item[href='https://x.com/LivoPlayer']::before,
-.footer__link-item[href='https://www.instagram.com/livoplayer/']::before {
+.footer__link-item:is([href='https://x.com/LivoPlayer'], [href='https://www.instagram.com/livoplayer/'])::before {
   content: '';
   display: block;
   width: 1.25rem;
@@ -117,8 +100,7 @@
   -webkit-mask-size: contain;
 }
 
-.footer__link-item[href='https://x.com/LivoPlayer'] svg,
-.footer__link-item[href='https://www.instagram.com/livoplayer/'] svg {
+.footer__link-item:is([href='https://x.com/LivoPlayer'], [href='https://www.instagram.com/livoplayer/']) svg {
   display: none;
 }
 
@@ -164,10 +146,8 @@
   color: var(--ifm-color-primary);
 }
 
-.theme-doc-markdown p,
-.theme-doc-markdown li,
-.markdown p,
-.markdown li,
+.theme-doc-markdown :is(p, li),
+.markdown :is(p, li),
 .menu__link,
 .table-of-contents__link {
   color: var(--site-text-secondary);

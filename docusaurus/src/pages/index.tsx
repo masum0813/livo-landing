@@ -70,7 +70,7 @@ export default function Home(): JSX.Element {
     <Layout
       title="Modern IPTV Player for Apple TV, Android TV & Mobile"
       description="Livo Player is a clean and fast IPTV player supporting M3U playlists, live TV streaming and continue watching across devices. Available for Apple TV and Android TV.">
-      <main className={`${styles.page} homepage`}>
+      <main className={styles.page}>
         <section className={styles.heroSection}>
           <div className={`container ${styles.heroGrid}`}>
             <div className={styles.heroCopy}>
