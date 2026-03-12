@@ -1,0 +1,171 @@
+.visualShell {
+  position: relative;
+  width: 100%;
+  max-width: 46rem;
+  margin-left: auto;
+  isolation: isolate;
+  transform: translateY(-0.75rem);
+}
+
+.stage {
+  position: relative;
+  aspect-ratio: 1.2 / 1;
+  min-height: 30rem;
+}
+
+.card {
+  position: absolute;
+  overflow: hidden;
+  border-radius: .75rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 22px 54px rgba(27, 22, 16, 0.16);
+  isolation: isolate;
+}
+
+.tvCard {
+  top: 1%;
+  right: 2%;
+  width: 76%;
+  aspect-ratio: 4300 / 2780;
+  z-index: 1;
+  transform: rotate(0.25deg);
+}
+
+.phoneCard {
+  left: 6%;
+  bottom: 20%;
+  width: 20%;
+  aspect-ratio: 1470 / 3000;
+  z-index: 3;
+  transform: rotate(4deg);
+}
+
+.tabletCard {
+  right: 19%;
+  bottom: 20%;
+  width: 29%;
+  aspect-ratio: 2640 / 1880;
+  z-index: 2;
+  opacity: 0.84;
+  transform: rotate(-2deg);
+}
+
+.glowA,
+.glowB {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(48px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glowA {
+  top: 14%;
+  right: 14%;
+  width: 14rem;
+  height: 14rem;
+  background: rgba(91, 183, 133, 0.06);
+}
+
+.glowB {
+  bottom: 20%;
+  left: 24%;
+  width: 10rem;
+  height: 10rem;
+  background: rgba(168, 124, 255, 0.045);
+}
+
+.cardImageWrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.cardImage {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-repeat: no-repeat;
+}
+
+.tvImage {
+  object-position: center center;
+}
+
+.phoneImage {
+  object-position: center center;
+}
+
+.tabletImage {
+  object-position: center center;
+}
+
+.tabletCard .cardImage {
+  filter: saturate(0.76) brightness(0.94);
+}
+
+@media (max-width: 996px) {
+  .visualShell {
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .stage {
+    aspect-ratio: 1.08 / 1;
+    min-height: 29rem;
+  }
+
+  .tvCard {
+    width: 74%;
+    right: 2%;
+  }
+
+  .phoneCard {
+    width: 21%;
+    left: 5%;
+    bottom: 6%;
+  }
+
+  .tabletCard {
+    width: 30%;
+    right: 4%;
+    bottom: 6%;
+  }
+}
+
+@media (max-width: 640px) {
+  .stage {
+    aspect-ratio: auto;
+    min-height: 0;
+    display: grid;
+    gap: 0.9rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    position: relative;
+    width: auto;
+    min-height: 0;
+    right: auto;
+    left: auto;
+    top: auto;
+    bottom: auto;
+    transform: none;
+  }
+
+  .tvCard {
+    grid-column: 1 / -1;
+    padding: 1rem;
+  }
+
+  .phoneCard,
+  .tabletCard {
+    opacity: 1;
+  }
+}

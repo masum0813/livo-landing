@@ -1,0 +1,12 @@
+{
+  "type": "mdx",
+  "permalink": "/tr/terms",
+  "source": "@site/i18n/tr/docusaurus-plugin-content-pages/terms.mdx",
+  "title": "Kullanım Şartları",
+  "description": "Livo, kişisel bir IPTV oynatıcısı olarak hangi kullanım koşullarıyla sunulur.",
+  "frontMatter": {
+    "title": "Kullanım Şartları",
+    "description": "Livo, kişisel bir IPTV oynatıcısı olarak hangi kullanım koşullarıyla sunulur."
+  },
+  "unlisted": false
+}

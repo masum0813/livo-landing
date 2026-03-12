@@ -1,0 +1,26 @@
+{
+  "id": "getting-started/add-m3u-playlist",
+  "title": "Add an M3U playlist",
+  "description": "Use this page for the exact in-app flow once the UI is finalized.",
+  "source": "@site/docs/getting-started/add-m3u-playlist.md",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/add-m3u-playlist",
+  "permalink": "/docs/getting-started/add-m3u-playlist",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Install and open Livo",
+    "permalink": "/docs/getting-started/install-and-open"
+  },
+  "next": {
+    "title": "Add an Xtream account",
+    "permalink": "/docs/getting-started/add-xtream-account"
+  }
+}

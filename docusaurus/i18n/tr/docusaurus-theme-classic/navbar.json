@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "Livo",
+    "description": "The title in the navbar"
+  },
+  "item.label.Home": {
+    "message": "Ana Sayfa",
+    "description": "Navbar item with label Home"
+  },
+  "item.label.Docs": {
+    "message": "Dokümanlar",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.Support": {
+    "message": "Destek",
+    "description": "Navbar item with label Support"
+  }
+}

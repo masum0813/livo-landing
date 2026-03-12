@@ -1,0 +1,12 @@
+{
+  "type": "mdx",
+  "permalink": "/privacy-policy",
+  "source": "@site/src/pages/privacy-policy.mdx",
+  "title": "Privacy Policy",
+  "description": "Livo privacy policy for the personal IPTV player.",
+  "frontMatter": {
+    "title": "Privacy Policy",
+    "description": "Livo privacy policy for the personal IPTV player."
+  },
+  "unlisted": false
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livo – Reproductor IPTV</title>
+    <meta name="description" content="Livo es un reproductor IPTV personal para tus listas M3U y Xtream Codes. No ofrece contenido ni suscripciones." />
+    <meta name="keywords" content="Livo, IPTV, reproductor IPTV, M3U, Xtream, app de streaming, reproductor" />
+    <meta name="theme-color" content="#0b0b0f" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Livo – Reproductor IPTV" />
+    <meta property="og:description" content="Un reproductor IPTV moderno para tus listas M3U y Xtream." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../livo-logo.png" />
+
+    <link rel="stylesheet" href="../shared/index.css" />
+</head>
+<body>
+<div class="shell">
+
+<header>
+    <div class="logo-stack">
+        <div class="logo-wrap">
+            <img src="../livo-logo.png" alt="Livo Logo" />
+        </div>
+        <div class="tagline">
+            <span class="tag-dot"></span>
+            <span>Un reproductor personal para tus listas IPTV</span>
+        </div>
+    </div>
+    <h1>Livo – Reproductor IPTV</h1>
+    <p class="subtitle">Un reproductor IPTV limpio y moderno para tus propias listas M3U y Xtream.</p>
+    <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    <div class="app-links hero-badges">
+        <a class="play" href="https://play.google.com/store/apps/details?id=com.livo.android" target="_blank" rel="noopener noreferrer">
+            <img src="../shared/badges/GetItOnGooglePlay_Badge_Web_color_Spanish.svg" alt="Get it on Google Play" />
+        </a>
+        <a class="apple" href="https://apps.apple.com/tr/app/livo-iptv/id6755977918" target="_blank" rel="noopener noreferrer">
+            <img src="../shared/badges/Download_on_the_App_Store_Badge_ES_RGB_wht_100217.svg" alt="Download on the App Store" />
+        </a>
+        <a class="android-tv" href="#" target="_blank" rel="noopener noreferrer">
+            <img src="../shared/badges/badge-android-tv.svg" alt="Android TV" />
+        </a>
+        <a class="apple-tv" href="#" target="_blank" rel="noopener noreferrer">
+            <img src="../shared/badges/badge-apple-tv.svg" alt="Apple TV" />
+        </a>
+    </div>
+        <div class="hero-media">
+            <video class="hero-video" playsinline autoplay muted loop poster="../shared/hero/hero-poster.svg">
+                <source src="../shared/hero/hero-preview.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de vídeo.
+            </video>
+            <img class="hero-screenshot" src="../shared/hero/hero-screenshot.svg" alt="Hero screenshot" />
+            <script>
+                (function(){
+                    var video = document.querySelector('.hero-video');
+                    var img = document.querySelector('.hero-screenshot');
+                    if (!video) return;
+                    function hideIfPlayable(){ img.style.display = 'none'; }
+                    function showIfError(){ img.style.display = 'block'; }
+                    img.style.display = 'block';
+                    video.addEventListener('canplay', hideIfPlayable);
+                    video.addEventListener('error', showIfError);
+                    if (video.readyState >= 3) hideIfPlayable();
+                })();
+            </script>
+        </div>
+        <nav class="lang-switch">
+            <a href="index.html" class="lang-btn active" aria-current="page">ES</a>
+            <a href="../en/index.html" class="lang-btn">EN</a>
+            <a href="../tr/index.html" class="lang-btn">TR</a>
+            <a href="../zh/index.html" class="lang-btn">ZH</a>
+        </nav>
+</header>
+
+<div class="grid">
+    <section class="card">
+        <h2>📺 ¿Qué es Livo?</h2>
+        <p>
+            Livo es un reproductor IPTV personal que te permite reproducir tus propias listas
+            <strong>M3U</strong> y <strong>Xtream Codes</strong>.
+        </p>
+        <p><strong>Livo NO proporciona ningún canal, contenido ni suscripción.</strong></p>
+
+        <h2>⭐ Características</h2>
+        <ul>
+            <li>Agregar y gestionar fuentes M3U / Xtream</li>
+            <li>Categorización automática de Live / Movies / Series (si la lista lo soporta)</li>
+            <li>Interfaz moderna para reproducir contenido</li>
+            <li>Retoma la reproducción donde la dejaste</li>
+            <li>Modo claro y oscuro</li>
+        </ul>
+    </section>
+
+    <aside class="card">
+        <h2>📲 Soporte e Información</h2>
+        <p>Envía preguntas o comentarios a <a href="mailto:livoiptv@gmail.com">livoiptv@gmail.com</a>.</p>
+        <a href="support.html" class="btn-secondary">Página de Soporte</a>
+        <a href="privacy-policy.html" class="btn-secondary">Política de Privacidad</a>
+    </aside>
+</div>
+
+<footer>
+        <div class="app-links">
+            <a class="play" href="https://play.google.com/store/apps/details?id=com.livo.android" target="_blank" rel="noopener noreferrer">
+                <img src="../shared/GooglePlayStore.png" alt="Google Play" />
+            </a>
+            <a class="apple" href="https://apps.apple.com/tr/app/livo-iptv/id6755977918" target="_blank" rel="noopener noreferrer">
+                <img src="../shared/badges/Download_on_the_App_Store_Badge_ES_RGB_wht_100217.svg" alt="Download on the App Store" />
+            </a>
+        </div>
+    <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="support.html">Soporte</a>
+        <a href="privacy-policy.html">Política de Privacidad</a>
+        <a href="terms.html">Términos</a>
+    </div>
+    <div class="footer-meta">
+        <span>© 2026 Livo Player — Esta app no ofrece contenido ni suscripciones IPTV.</span>
+    </div>
+</footer>
+
+</div>
+<script src="../shared/theme.js" defer></script>
+</body>
+</html>

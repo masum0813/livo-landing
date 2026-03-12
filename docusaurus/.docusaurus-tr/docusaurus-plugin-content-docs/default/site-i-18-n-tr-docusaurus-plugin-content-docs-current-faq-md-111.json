@@ -1,0 +1,26 @@
+{
+  "id": "faq",
+  "title": "SSS",
+  "description": "Livo kanal sagliyor mu?",
+  "source": "@site/i18n/tr/docusaurus-plugin-content-docs/current/faq.md",
+  "sourceDirName": ".",
+  "slug": "/faq",
+  "permalink": "/tr/docs/faq",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "sidebar_position": 12
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Livo Dokumantasyonu",
+    "permalink": "/tr/docs/intro"
+  },
+  "next": {
+    "title": "Livo'yu kur ve ac",
+    "permalink": "/tr/docs/getting-started/install-and-open"
+  }
+}

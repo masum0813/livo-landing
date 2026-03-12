@@ -1,0 +1,26 @@
+{
+  "id": "usage/favorites-and-history",
+  "title": "Favorites and watch history",
+  "description": "This page should explain how users save frequently watched content and continue where they left off.",
+  "source": "@site/docs/usage/favorites-and-history.md",
+  "sourceDirName": "usage",
+  "slug": "/usage/favorites-and-history",
+  "permalink": "/docs/usage/favorites-and-history",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "sidebar_position": 7
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Browse movies and series",
+    "permalink": "/docs/usage/movies-and-series"
+  },
+  "next": {
+    "title": "Appearance and theme",
+    "permalink": "/docs/usage/appearance-and-theme"
+  }
+}

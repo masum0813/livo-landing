@@ -1,0 +1,22 @@
+{
+  "id": "usage/appearance-and-theme",
+  "title": "Appearance and theme",
+  "description": "Use this page for interface preferences.",
+  "source": "@site/docs/usage/appearance-and-theme.md",
+  "sourceDirName": "usage",
+  "slug": "/usage/appearance-and-theme",
+  "permalink": "/docs/usage/appearance-and-theme",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "sidebar_position": 8
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Favorites and watch history",
+    "permalink": "/docs/usage/favorites-and-history"
+  }
+}

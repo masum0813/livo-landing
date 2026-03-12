@@ -1,0 +1,22 @@
+.features {
+  padding: 2rem 0 4rem;
+}
+
+.featureCard {
+  height: 100%;
+  padding: 1.5rem;
+  border: 1px solid var(--site-border-color);
+  border-radius: 1.25rem;
+  background: var(--site-surface-card);
+  box-shadow: var(--site-shadow-soft);
+}
+
+.featureCard h3 {
+  margin-bottom: 0.75rem;
+  color: var(--ifm-heading-color);
+}
+
+.featureCard p {
+  margin: 0;
+  color: var(--site-text-secondary);
+}

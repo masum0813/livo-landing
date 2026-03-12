@@ -1,0 +1,26 @@
+{
+  "id": "troubleshooting/playlist-not-loading",
+  "title": "Liste yuklenmiyor",
+  "description": "Hizli kontroller",
+  "source": "@site/i18n/tr/docusaurus-plugin-content-docs/current/troubleshooting/playlist-not-loading.md",
+  "sourceDirName": "troubleshooting",
+  "slug": "/troubleshooting/playlist-not-loading",
+  "permalink": "/tr/docs/troubleshooting/playlist-not-loading",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "sidebar_position": 9
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Xtream hesabi ekle",
+    "permalink": "/tr/docs/getting-started/add-xtream-account"
+  },
+  "next": {
+    "title": "Giris veya kimlik dogrulama hatalari",
+    "permalink": "/tr/docs/troubleshooting/login-errors"
+  }
+}

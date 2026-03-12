@@ -1,0 +1,60 @@
+name: Build and deploy to VM via SSH
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install and build Docusaurus
+        working-directory: docusaurus
+        run: |
+          npm ci
+          npm run build
+
+      - name: Build Docker image
+        run: |
+          docker build -t livo-landing:${{ github.sha }} .
+          docker save livo-landing:${{ github.sha }} -o livo-image.tar
+
+      - name: Copy image and compose to VM
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USER }}
+          key: ${{ secrets.VM_SSH_KEY }}
+          port: ${{ secrets.VM_SSH_PORT }}
+          source: |
+            livo-image.tar
+            deploy/docker-compose.yml
+          target: ~/deploy/
+
+      - name: Deploy on VM via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USER }}
+          key: ${{ secrets.VM_SSH_KEY }}
+          port: ${{ secrets.VM_SSH_PORT }}
+          script: |
+            set -e
+            mkdir -p ~/deploy
+            cd ~/deploy
+            # load image and tag as latest for compose
+            docker load -i livo-image.tar
+            docker tag livo-landing:${{ github.sha }} livo-landing:latest || true
+            # run compose (expects `docker compose` available on VM)
+            docker compose up -d --remove-orphans
+            # cleanup
+            rm -f livo-image.tar

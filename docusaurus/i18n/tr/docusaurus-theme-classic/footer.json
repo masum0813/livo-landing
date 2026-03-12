@@ -1,0 +1,46 @@
+{
+  "link.title.Product": {
+    "message": "Ürün",
+    "description": "The title of the footer links column with title=Product in the footer"
+  },
+  "link.title.Support": {
+    "message": "Destek",
+    "description": "The title of the footer links column with title=Support in the footer"
+  },
+  "link.title.Stores": {
+    "message": "Mağazalar",
+    "description": "The title of the footer links column with title=Stores in the footer"
+  },
+  "link.item.label.Home": {
+    "message": "Ana Sayfa",
+    "description": "The label of footer link with label=Home linking to /"
+  },
+  "link.item.label.Docs": {
+    "message": "Dokümanlar",
+    "description": "The label of footer link with label=Docs linking to /docs/intro"
+  },
+  "link.item.label.Blog": {
+    "message": "Blog",
+    "description": "The label of footer link with label=Blog linking to /blog"
+  },
+  "link.item.label.Support": {
+    "message": "Destek",
+    "description": "The label of footer link with label=Support linking to /support"
+  },
+  "link.item.label.Privacy Policy": {
+    "message": "Gizlilik Politikası",
+    "description": "The label of footer link with label=Privacy Policy linking to /privacy-policy"
+  },
+  "link.item.label.Terms": {
+    "message": "Kullanım Şartları",
+    "description": "The label of footer link with label=Terms linking to /terms"
+  },
+  "link.item.label.App Store": {
+    "message": "App Store",
+    "description": "The label of footer link with label=App Store linking to the store"
+  },
+  "link.item.label.Google Play": {
+    "message": "Google Play",
+    "description": "The label of footer link with label=Google Play linking to the store"
+  }
+}
