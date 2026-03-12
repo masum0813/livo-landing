@@ -22,4 +22,4 @@ COPY docusaurus ./
 COPY --from=build /app/docusaurus/build ./build
 COPY --from=base /app/docusaurus/node_modules ./node_modules
 EXPOSE 3000
-CMD ["npm", "run", "serve", "--", "--host", "0.0.0.0", "--port", "3000"]
+CMD ["node", "scripts/serve-static.mjs"]
