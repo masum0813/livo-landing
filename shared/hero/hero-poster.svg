@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff9500"/>
+      <stop offset="1" stop-color="#4d5bff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="#06060a" />
+  <rect x="40" y="40" width="1120" height="595" rx="18" fill="url(#g)" opacity="0.08" />
+  <text x="80" y="120" font-family="Inter, Arial, sans-serif" font-size="44" fill="#fff">Livo — Hero Preview</text>
+  <rect x="80" y="160" width="520" height="300" rx="12" fill="#0b0b0f" />
+  <text x="96" y="200" font-family="Inter, Arial, sans-serif" font-size="16" fill="#a6a8bb">Autoplay muted preview (replace with MP4)</text>
+</svg>

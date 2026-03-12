@@ -1,0 +1,88 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/tr/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/tr/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "faq",
+              "path": "/tr/docs/faq",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "getting-started/add-m3u-playlist",
+              "path": "/tr/docs/getting-started/add-m3u-playlist",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "getting-started/add-xtream-account",
+              "path": "/tr/docs/getting-started/add-xtream-account",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "getting-started/install-and-open",
+              "path": "/tr/docs/getting-started/install-and-open",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/tr/docs/intro",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "troubleshooting/login-errors",
+              "path": "/tr/docs/troubleshooting/login-errors",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "troubleshooting/playback-issues",
+              "path": "/tr/docs/troubleshooting/playback-issues",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "troubleshooting/playlist-not-loading",
+              "path": "/tr/docs/troubleshooting/playlist-not-loading",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "usage/appearance-and-theme",
+              "path": "/tr/docs/usage/appearance-and-theme",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "usage/favorites-and-history",
+              "path": "/tr/docs/usage/favorites-and-history",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "usage/live-tv",
+              "path": "/tr/docs/usage/live-tv",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "usage/movies-and-series",
+              "path": "/tr/docs/usage/movies-and-series",
+              "sidebar": "docsSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "docsSidebar": {
+              "link": {
+                "path": "/tr/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

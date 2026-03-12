@@ -1,0 +1,232 @@
+:root {
+  --ifm-color-primary: #3ddc97;
+  --ifm-color-primary-dark: #26c882;
+  --ifm-color-primary-darker: #21b676;
+  --ifm-color-primary-darkest: #1a945f;
+  --ifm-color-primary-light: #63e4aa;
+  --ifm-color-primary-lighter: #7de8b6;
+  --ifm-color-primary-lightest: #a9f0ce;
+  --ifm-background-color: #fbf5ed;
+  --ifm-background-surface-color: #fffdf9;
+  --ifm-navbar-background-color: rgba(251, 245, 237, 0.9);
+  --ifm-footer-background-color: #f4ebdf;
+  --ifm-font-family-base: "Avenir Next", "Segoe UI", sans-serif;
+  --ifm-heading-font-family: "Avenir Next", "Segoe UI", sans-serif;
+  --ifm-code-font-size: 95%;
+  --ifm-font-color-base: #103528;
+  --ifm-heading-color: #0f2f24;
+  --site-bg-gradient:
+    radial-gradient(circle at top left, rgba(245, 179, 120, 0.16), transparent 24%),
+    linear-gradient(180deg, #fff9f1 0%, #f8f1e8 48%, #eef5eb 100%);
+  --site-hero-gradient:
+    radial-gradient(circle at top left, rgba(245, 179, 120, 0.3), transparent 30%),
+    radial-gradient(circle at top right, rgba(125, 232, 182, 0.26), transparent 28%),
+    linear-gradient(180deg, #fff9f1 0%, #f7f1e7 52%, #eef5eb 100%);
+  --site-surface-elevated: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 241, 231, 0.96));
+  --site-surface-card: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 239, 229, 0.96));
+  --site-surface-panel: rgba(255, 255, 255, 0.74);
+  --site-border-color: rgba(16, 53, 40, 0.08);
+  --site-shadow-soft: 0 18px 60px rgba(163, 112, 64, 0.1);
+  --site-shadow-hero: 0 28px 80px rgba(163, 112, 64, 0.12);
+  --site-text-secondary: rgba(16, 53, 40, 0.74);
+  --site-footer-gradient: linear-gradient(180deg, #f4ebdf 0%, #eee3d6 100%);
+  --site-kicker-border: rgba(38, 200, 130, 0.28);
+  --site-kicker-color: #1d6a4e;
+}
+
+[data-theme='light'] {
+  --ifm-background-color: #fdf7ef;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-navbar-background-color: rgba(253, 247, 239, 0.92);
+  --ifm-footer-background-color: #f3eadf;
+}
+
+[data-theme='dark'] {
+  --ifm-background-color: #10161a;
+  --ifm-background-surface-color: #182128;
+  --ifm-navbar-background-color: rgba(16, 22, 26, 0.88);
+  --ifm-footer-background-color: #121a20;
+  --ifm-font-color-base: #e7f4ed;
+  --ifm-heading-color: #f2fbf6;
+  --site-bg-gradient:
+    radial-gradient(circle at top left, rgba(244, 170, 102, 0.14), transparent 26%),
+    radial-gradient(circle at bottom right, rgba(61, 220, 151, 0.12), transparent 30%),
+    linear-gradient(180deg, #12191d 0%, #0e1519 46%, #0a1114 100%);
+  --site-hero-gradient:
+    radial-gradient(circle at top left, rgba(244, 170, 102, 0.16), transparent 28%),
+    radial-gradient(circle at top right, rgba(61, 220, 151, 0.14), transparent 24%),
+    linear-gradient(180deg, #162026 0%, #10191f 55%, #0b1318 100%);
+  --site-surface-elevated: linear-gradient(180deg, rgba(29, 39, 47, 0.92), rgba(18, 28, 34, 0.96));
+  --site-surface-card: linear-gradient(180deg, rgba(27, 36, 44, 0.94), rgba(18, 27, 33, 0.98));
+  --site-surface-panel: rgba(23, 33, 40, 0.88);
+  --site-border-color: rgba(179, 235, 208, 0.14);
+  --site-shadow-soft: 0 18px 60px rgba(0, 0, 0, 0.28);
+  --site-shadow-hero: 0 28px 90px rgba(0, 0, 0, 0.34);
+  --site-text-secondary: rgba(231, 244, 237, 0.76);
+  --site-footer-gradient: linear-gradient(180deg, #121a20 0%, #0d1318 100%);
+  --site-kicker-border: rgba(61, 220, 151, 0.34);
+  --site-kicker-color: #8ff0c1;
+  color-scheme: dark;
+}
+
+.navbar {
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--site-border-color);
+}
+
+.homepage {
+  overflow: hidden;
+}
+
+.main-wrapper {
+  background: var(--site-bg-gradient);
+}
+
+.livoHero {
+  padding: 5rem 0 3rem;
+  background: var(--site-hero-gradient);
+  color: var(--ifm-font-color-base);
+}
+
+.livoHero .container {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.hero-kicker {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--site-kicker-border);
+  border-radius: 999px;
+  color: var(--site-kicker-color);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.livoHero .hero__subtitle {
+  color: var(--site-text-secondary);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.storeBadges {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  align-items: center;
+}
+
+.storeBadges a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.storeBadges picture {
+  display: block;
+}
+
+.storeBadges img {
+  height: 3rem;
+  display: block;
+  vertical-align: middle;
+}
+
+.hero__visualFrame {
+  padding: 1rem;
+  border: 1px solid var(--site-border-color);
+  border-radius: 1.5rem;
+  background: var(--site-surface-elevated);
+  box-shadow: var(--site-shadow-hero);
+}
+
+.hero__visualFrame img {
+  display: block;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.hero__highlights {
+  margin: 1rem 0 0;
+  padding-left: 1rem;
+  color: var(--site-text-secondary);
+}
+
+.footer {
+  background: var(--site-footer-gradient);
+  color: var(--ifm-font-color-base);
+}
+
+.footer__title,
+.footer__item,
+.footer__link-item,
+.footer__copyright {
+  color: var(--ifm-font-color-base);
+}
+
+.card,
+.theme-doc-sidebar-container,
+.pagination-nav__link,
+.table-of-contents,
+.theme-doc-toc-desktop,
+.menu {
+  background-color: var(--site-surface-panel);
+  border-color: var(--site-border-color);
+  color: var(--ifm-font-color-base);
+}
+
+.theme-doc-sidebar-container,
+.pagination-nav__link,
+.table-of-contents {
+  box-shadow: var(--site-shadow-soft);
+}
+
+.menu__link,
+.navbar__link,
+.footer__link-item,
+.table-of-contents__link,
+.pagination-nav__label,
+.pagination-nav__sublabel {
+  color: var(--ifm-font-color-base);
+}
+
+.table-of-contents__link--active,
+.menu__link--active,
+.navbar__link--active {
+  color: var(--ifm-color-primary);
+}
+
+.theme-doc-markdown p,
+.theme-doc-markdown li,
+.markdown p,
+.markdown li,
+.menu__link,
+.table-of-contents__link {
+  color: var(--site-text-secondary);
+}
+
+[data-theme='dark'] .navbar-sidebar,
+[data-theme='dark'] .navbar-sidebar__backdrop {
+  background: rgba(10, 17, 20, 0.72);
+}
+
+.theme-doc-markdown,
+.markdown {
+  max-width: 860px;
+}
+
+@media (max-width: 996px) {
+  .livoHero .container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,114 @@
+name: CI/CD - build and deploy (tag-triggered)
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE_NAME: ${{ vars.IMAGE_NAME || format('ghcr.io/{0}/livo-landing', github.repository_owner) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Resolve IMAGE_NAME
+        run: |
+          if [ -n "${{ vars.IMAGE_NAME }}" ]; then
+            if [[ "${{ vars.IMAGE_NAME }}" == */* ]]; then
+              echo "IMAGE_NAME=${{ vars.IMAGE_NAME }}" >> "$GITHUB_ENV"
+            else
+              echo "IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/${{ vars.IMAGE_NAME }}" >> "$GITHUB_ENV"
+            fi
+          else
+            echo "IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/livo-landing" >> "$GITHUB_ENV"
+          fi
+
+      - name: Log in to GHCR using GITHUB_TOKEN
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build prod image via docker compose
+        env:
+          IMAGE_TAG: ${{ github.ref_name }}-${{ github.run_number }}
+        run: |
+          IMAGE_NAME="${IMAGE_NAME}" IMAGE_TAG="${IMAGE_TAG}" \
+            docker compose --profile prod build livo-docs-prod
+
+      - name: Push tagged image
+        env:
+          IMAGE_TAG: ${{ github.ref_name }}-${{ github.run_number }}
+        run: |
+          docker push "${IMAGE_NAME}:${IMAGE_TAG}"
+          docker tag "${IMAGE_NAME}:${IMAGE_TAG}" "${IMAGE_NAME}:latest"
+          docker push "${IMAGE_NAME}:latest"
+
+  deploy:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    env:
+      IMAGE_NAME: ${{ vars.IMAGE_NAME || format('ghcr.io/{0}/livo-landing', github.repository_owner) }}
+      APP_DIR: ${{ vars.DEPLOY_APP_DIR || format('/home/{0}/deploy/livo-landing', secrets.VM_USER) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Resolve IMAGE_NAME
+        run: |
+          if [ -n "${{ vars.IMAGE_NAME }}" ]; then
+            if [[ "${{ vars.IMAGE_NAME }}" == */* ]]; then
+              echo "IMAGE_NAME=${{ vars.IMAGE_NAME }}" >> "$GITHUB_ENV"
+            else
+              echo "IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/${{ vars.IMAGE_NAME }}" >> "$GITHUB_ENV"
+            fi
+          else
+            echo "IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/livo-landing" >> "$GITHUB_ENV"
+          fi
+
+      - name: Check deployment files exist
+        run: |
+          test -f deploy/docker-compose.yml
+          test -f scripts/deploy.sh
+          ls -lah deploy/docker-compose.yml scripts/deploy.sh
+
+      - name: Copy deploy files to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USER }}
+          key: ${{ secrets.VM_SSH_KEY }}
+          port: ${{ secrets.VM_SSH_PORT || 22 }}
+          source: "deploy/docker-compose.yml,scripts/deploy.sh"
+          target: ${{ env.APP_DIR }}
+          strip_components: 1
+
+      - name: SSH deploy - pull image and restart
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USER }}
+          key: ${{ secrets.VM_SSH_KEY }}
+          port: ${{ secrets.VM_SSH_PORT || 22 }}
+          script: |
+            set -euo pipefail
+            mkdir -p "${{ env.APP_DIR }}"
+            cd "${{ env.APP_DIR }}"
+            chmod +x ./deploy.sh
+
+            if [ -n "${{ secrets.GHCR_USER }}" ] && [ -n "${{ secrets.GHCR_PAT }}" ]; then
+              export GHCR_USER='${{ secrets.GHCR_USER }}'
+              export GHCR_TOKEN='${{ secrets.GHCR_PAT }}'
+            fi
+
+            export HOST_PORT='${{ vars.HOST_PORT || '3000' }}'
+            export SKIP_ENV_FILE=1
+            ./deploy.sh "${{ env.IMAGE_NAME }}" "${{ github.ref_name }}-${{ github.run_number }}" "${{ env.APP_DIR }}"

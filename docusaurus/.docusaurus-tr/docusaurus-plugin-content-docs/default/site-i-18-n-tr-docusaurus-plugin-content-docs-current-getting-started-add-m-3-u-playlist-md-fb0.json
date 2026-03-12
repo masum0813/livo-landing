@@ -1,0 +1,26 @@
+{
+  "id": "getting-started/add-m3u-playlist",
+  "title": "M3U listesi ekle",
+  "description": "Bu sayfada uygulama arayuzu netlestiginde gercek akis anlatilmalidir.",
+  "source": "@site/i18n/tr/docusaurus-plugin-content-docs/current/getting-started/add-m3u-playlist.md",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/add-m3u-playlist",
+  "permalink": "/tr/docs/getting-started/add-m3u-playlist",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Livo'yu kur ve ac",
+    "permalink": "/tr/docs/getting-started/install-and-open"
+  },
+  "next": {
+    "title": "Xtream hesabi ekle",
+    "permalink": "/tr/docs/getting-started/add-xtream-account"
+  }
+}

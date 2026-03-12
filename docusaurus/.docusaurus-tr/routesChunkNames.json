@@ -1,0 +1,212 @@
+{
+  "/tr/__docusaurus/debug-815": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---tr-docusaurus-debugb-38-07b"
+    }
+  },
+  "/tr/__docusaurus/debug/config-891": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---tr-docusaurus-debugb-38-07b"
+    }
+  },
+  "/tr/__docusaurus/debug/content-768": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---tr-docusaurus-debugb-38-07b"
+    },
+    "__props": "__props---tr-docusaurus-debug-content-8-c-8-e4d"
+  },
+  "/tr/__docusaurus/debug/globalData-8a5": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---tr-docusaurus-debugb-38-07b"
+    }
+  },
+  "/tr/__docusaurus/debug/metadata-0fc": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---tr-docusaurus-debugb-38-07b"
+    }
+  },
+  "/tr/__docusaurus/debug/registry-a86": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---tr-docusaurus-debugb-38-07b"
+    }
+  },
+  "/tr/__docusaurus/debug/routes-25f": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---tr-docusaurus-debugb-38-07b"
+    }
+  },
+  "/tr/blog-58c": {
+    "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
+    "__context": {
+      "plugin": "plugin---tr-blog-369-122"
+    },
+    "sidebar": "sidebar---tr-blog-814-4b9",
+    "items": [
+      {
+        "content": "content---tr-blog-141-182"
+      }
+    ],
+    "__props": "__props---tr-blog-0-ab-ab0"
+  },
+  "/tr/blog/archive-ad6": {
+    "__comp": "__comp---theme-blog-archive-page-9-e-4-1d8",
+    "__context": {
+      "plugin": "plugin---tr-blog-369-122"
+    },
+    "__props": "__props---tr-blog-archive-506-211"
+  },
+  "/tr/blog/product-portal-launch-7d6": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "data": {
+        "blogMetadata": "blogMetadata---tr-blog-product-portal-launchace-2c5"
+      },
+      "plugin": "plugin---tr-blog-369-122"
+    },
+    "sidebar": "sidebar---tr-blog-814-4b9",
+    "content": "content---tr-blog-product-portal-launch-228-fb2"
+  },
+  "/tr/blog/tags-8c7": {
+    "__comp": "__comp---theme-blog-tags-list-page-01-a-d0b",
+    "__context": {
+      "plugin": "plugin---tr-blog-369-122"
+    },
+    "sidebar": "sidebar---tr-blog-814-4b9",
+    "__props": "__props---tr-blog-tagsd-4-b-3a9"
+  },
+  "/tr/blog/tags/acilis-1ea": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---tr-blog-369-122"
+    },
+    "sidebar": "sidebar---tr-blog-814-4b9",
+    "items": [
+      {
+        "content": "content---tr-blog-141-182"
+      }
+    ],
+    "__props": "__props---tr-blog-tags-acilis-0-d-7-603"
+  },
+  "/tr/blog/tags/docs-5c9": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---tr-blog-369-122"
+    },
+    "sidebar": "sidebar---tr-blog-814-4b9",
+    "items": [
+      {
+        "content": "content---tr-blog-141-182"
+      }
+    ],
+    "__props": "__props---tr-blog-tags-docsa-6-d-fd4"
+  },
+  "/tr/blog/tags/web-bd8": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---tr-blog-369-122"
+    },
+    "sidebar": "sidebar---tr-blog-814-4b9",
+    "items": [
+      {
+        "content": "content---tr-blog-141-182"
+      }
+    ],
+    "__props": "__props---tr-blog-tags-web-3-ca-c3d"
+  },
+  "/tr/privacy-policy-0b3": {
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__context": {
+      "plugin": "plugin---tr-privacy-policya-74-120"
+    },
+    "content": "content---tr-privacy-policye-16-357"
+  },
+  "/tr/support-dc9": {
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__context": {
+      "plugin": "plugin---tr-privacy-policya-74-120"
+    },
+    "content": "content---tr-supportff-4-871"
+  },
+  "/tr/terms-ef2": {
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__context": {
+      "plugin": "plugin---tr-privacy-policya-74-120"
+    },
+    "content": "content---tr-termsf-39-0d2"
+  },
+  "/tr/docs-2cc": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---tr-docsaba-2e3"
+    }
+  },
+  "/tr/docs-bc7": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---tr-docsd-71-184"
+  },
+  "/tr/docs-17d": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/tr/docs/faq-4a2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tr-docs-faq-111-7a9"
+  },
+  "/tr/docs/getting-started/add-m3u-playlist-5d3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tr-docs-getting-started-add-m-3-u-playlistfb-0-6c2"
+  },
+  "/tr/docs/getting-started/add-xtream-account-7e3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tr-docs-getting-started-add-xtream-accountfa-5-4a5"
+  },
+  "/tr/docs/getting-started/install-and-open-56e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tr-docs-getting-started-install-and-opend-12-2e9"
+  },
+  "/tr/docs/intro-fa8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tr-docs-introc-80-4e5"
+  },
+  "/tr/docs/troubleshooting/login-errors-131": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tr-docs-troubleshooting-login-errors-66-a-0cc"
+  },
+  "/tr/docs/troubleshooting/playback-issues-544": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tr-docs-troubleshooting-playback-issues-011-390"
+  },
+  "/tr/docs/troubleshooting/playlist-not-loading-3bc": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tr-docs-troubleshooting-playlist-not-loading-429-24e"
+  },
+  "/tr/docs/usage/appearance-and-theme-e82": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tr-docs-usage-appearance-and-themeb-4-e-79d"
+  },
+  "/tr/docs/usage/favorites-and-history-159": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tr-docs-usage-favorites-and-historya-1-f-0c8"
+  },
+  "/tr/docs/usage/live-tv-38c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tr-docs-usage-live-tvf-10-9ed"
+  },
+  "/tr/docs/usage/movies-and-series-88b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tr-docs-usage-movies-and-series-95-c-4bf"
+  },
+  "/tr/-90b": {
+    "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
+    "__context": {
+      "plugin": "plugin---tr-privacy-policya-74-120"
+    },
+    "config": "config---tr-5-e-9-039"
+  }
+}

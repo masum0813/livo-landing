@@ -3,144 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Livo IPTV</title>
+    <title>Livo Player</title>
     <meta name="description" content="Livo – IPTV player portal page for documentation and support in Turkish and English." />
     <meta name="theme-color" content="#05060a" />
 
-    <style>
-        :root {
-            --bg-main: #05060a;
-            --bg-card: #11131a;
-            --border-card: #26293a;
-            --text-main: #ffffff;
-            --text-muted: #a6a8bb;
-            --accent-grad: linear-gradient(135deg, #ff9500, #ff2faa, #a100ff, #4d5bff);
-        }
-
-        * { box-sizing: border-box; }
-
-        body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-            background: radial-gradient(circle at top left, #181b2b 0, #05060a 45%, #020308 100%);
-            color: var(--text-main);
-            padding: 0 16px 32px;
-        }
-
-        .shell {
-            max-width: 980px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            padding: 40px 0 24px;
-        }
-
-        .logo-wrap {
-            display: inline-flex;
-            padding: 12px;
-            border-radius: 24px;
-            background: rgba(0,0,0,0.4);
-            box-shadow: 0 18px 40px rgba(0,0,0,0.7);
-            margin-bottom: 12px;
-        }
-
-        .logo-wrap img {
-            width: 80px;
-            height: 80px;
-            border-radius: 20px;
-        }
-
-        h1 {
-            margin: 8px 0 4px;
-            font-size: 28px;
-        }
-
-        .subtitle {
-            margin: 0;
-            font-size: 14px;
-            color: var(--text-muted);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 20px;
-            margin-top: 26px;
-        }
-
-        @media (max-width: 720px) {
-            .grid { grid-template-columns: minmax(0, 1fr); }
-        }
-
-        .card {
-            background: radial-gradient(circle at top left, #1b1e2d 0, var(--bg-card) 45%, #090b12 100%);
-            border-radius: 18px;
-            padding: 18px 18px 20px;
-            border: 1px solid var(--border-card);
-            box-shadow: 0 16px 40px rgba(0,0,0,0.6);
-        }
-
-        .lang-label {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: .06em;
-            color: var(--text-muted);
-        }
-
-        .lang-title {
-            font-size: 20px;
-            margin: 4px 0 2px;
-        }
-
-        .lang-sub {
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-bottom: 14px;
-        }
-
-        .links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .link-pill {
-            display: inline-flex;
-            align-items: center;
-            padding: 7px 14px;
-            border-radius: 999px;
-            border: 1px solid rgba(255,255,255,0.18);
-            background: rgba(5,6,10,0.85);
-            color: var(--text-muted);
-            font-size: 13px;
-            text-decoration: none;
-        }
-
-        .link-pill.primary {
-            border: none;
-            background-image: var(--accent-grad);
-            color: #fff;
-            font-weight: 600;
-        }
-
-        .link-pill span.icon {
-            font-size: 14px;
-            margin-right: 6px;
-        }
-
-        footer {
-            margin-top: 26px;
-            text-align: center;
-            font-size: 12px;
-            color: var(--text-muted);
-        }
-        /* App badges */
-        .app-links { display:flex; justify-content:center; gap:12px; margin-bottom:12px; }
-        .app-links a img { height:44px; display:block; }
-        @media (max-width:420px) { .app-links a img { height:36px; } }
-    </style>
+    <link rel="stylesheet" href="shared/index.css" />
 </head>
 <body>
 <div class="shell">
@@ -151,6 +18,43 @@
         </div>
         <h1>Livo Documentation & Support</h1>
         <p class="subtitle">Choose your language to view marketing, support and policy pages.</p>
+        <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <div class="app-links hero-badges">
+            <a class="play" href="https://play.google.com/store/apps/details?id=com.livo.android" target="_blank" rel="noopener noreferrer">
+                <img src="shared/badges/GetItOnGooglePlay_Badge_Web_color_English.svg" alt="Get it on Google Play" />
+            </a>
+            <a class="apple" href="https://apps.apple.com/tr/app/livo-iptv/id6755977918" target="_blank" rel="noopener noreferrer">
+                <img src="shared/badges/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store" />
+            </a>
+            <a class="android-tv" href="#" target="_blank" rel="noopener noreferrer">
+                <img src="shared/badges/badge-android-tv.svg" alt="Android TV" />
+            </a>
+            <a class="apple-tv" href="#" target="_blank" rel="noopener noreferrer">
+                <img src="shared/badges/badge-apple-tv.svg" alt="Apple TV" />
+            </a>
+        </div>
+        <div class="hero-media">
+            <video class="hero-video" playsinline autoplay muted loop poster="shared/hero/hero-poster.svg">
+                <source src="shared/hero/hero-preview.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <img class="hero-screenshot" src="shared/hero/hero-screenshot.svg" alt="Hero screenshot" />
+            <script>
+                (function(){
+                    var video = document.querySelector('.hero-video');
+                    var img = document.querySelector('.hero-screenshot');
+                    if (!video) return;
+                    // show screenshot by default; hide if video can play
+                    function hideIfPlayable(){ img.style.display = 'none'; }
+                    function showIfError(){ img.style.display = 'block'; }
+                    img.style.display = 'block';
+                    video.addEventListener('canplay', hideIfPlayable);
+                    video.addEventListener('error', showIfError);
+                    // if video has readyState already
+                    if (video.readyState >= 3) hideIfPlayable();
+                })();
+            </script>
+        </div>
     </header>
 
     <main class="grid">
@@ -264,9 +168,10 @@
                 <img src="shared/AppleAppStore.png" alt="Download on the App Store" />
             </a>
         </div>
-        © 2026 Livo IPTV — This app does not provide any IPTV content or subscription.
+        © 2026 Livo Player — This app does not provide any IPTV content or subscription.
     </footer>
 
 </div>
+<script src="shared/theme.js" defer></script>
 </body>
 </html>

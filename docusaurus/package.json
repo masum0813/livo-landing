@@ -1,0 +1,38 @@
+{
+  "name": "livo-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run clear && node scripts/dev-server.mjs",
+    "start:proxy": "node scripts/dev-proxy.mjs",
+    "start:en": "DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus-en docusaurus start --locale en --port 3001 --no-open",
+    "start:tr": "DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus-tr docusaurus start --locale tr --port 3002 --no-open",
+    "start:single": "npm run clear && docusaurus start",
+    "build": "docusaurus build",
+    "serve": "docusaurus serve",
+    "clear": "rm -rf .docusaurus .docusaurus-en .docusaurus-tr build node_modules/.cache/webpack",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@docusaurus/core": "^3.8.1",
+    "@docusaurus/preset-classic": "^3.8.1",
+    "@mdx-js/react": "^3.1.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.577.0",
+    "prism-react-renderer": "^2.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "^3.8.1",
+    "@docusaurus/tsconfig": "^3.8.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "concurrently": "^9.1.2",
+    "http-proxy": "^1.18.1",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=18.0"
+  }
+}

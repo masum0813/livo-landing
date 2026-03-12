@@ -1,0 +1,26 @@
+{
+  "id": "troubleshooting/login-errors",
+  "title": "Login or credential errors",
+  "description": "Use this article for Xtream authentication failures.",
+  "source": "@site/docs/troubleshooting/login-errors.md",
+  "sourceDirName": "troubleshooting",
+  "slug": "/troubleshooting/login-errors",
+  "permalink": "/docs/troubleshooting/login-errors",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "sidebar_position": 10
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Playlist is not loading",
+    "permalink": "/docs/troubleshooting/playlist-not-loading"
+  },
+  "next": {
+    "title": "Playback issues",
+    "permalink": "/docs/troubleshooting/playback-issues"
+  }
+}

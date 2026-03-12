@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" rx="16" fill="#071018" />
+  <rect x="56" y="56" width="1168" height="608" rx="12" fill="#0b0b0f" />
+  <text x="92" y="120" font-family="Inter, Arial, sans-serif" font-size="28" fill="#fff">Livo — Sample Screenshot</text>
+  <rect x="92" y="160" width="560" height="320" rx="10" fill="#0f1116" />
+  <text x="108" y="190" font-family="Inter, Arial, sans-serif" font-size="14" fill="#a6a8bb">Replace with actual app screenshot (PNG)</text>
+</svg>

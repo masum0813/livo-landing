@@ -1,0 +1,437 @@
+{
+  "homepage.meta.title": {
+    "message": "Livo Player"
+  },
+  "homepage.meta.description": {
+    "message": "Livo IPTV oynatıcısı için tanıtım sitesi, destek merkezi, kullanım rehberleri ve ürün güncellemeleri."
+  },
+  "homepage.kicker": {
+    "message": "Livo ürün portalı"
+  },
+  "homepage.title": {
+    "message": "Canlı TV ve çalma listeleri için modern oynatıcı"
+  },
+  "homepage.subtitle": {
+    "message": "Çalma listelerinizi ekleyin, hızlı oynatmanın keyfini çıkarın ve telefon, tablet ya da TV'de izlemeye kaldığınız yerden devam edin."
+  },
+  "homepage.cta.docs": {
+    "message": "Dokümantasyonu aç"
+  },
+  "homepage.cta.support": {
+    "message": "Desteği aç"
+  },
+  "homepage.highlight.one": {
+    "message": "Ürün anlatımı için landing page"
+  },
+  "homepage.highlight.two": {
+    "message": "Kurulum, kullanım ve sorun giderme için dokümanlar"
+  },
+  "homepage.highlight.three": {
+    "message": "Özellikler ve sürüm notları için blog"
+  },
+  "homepage.features.setup.title": {
+    "message": "Kendi listelerini getir"
+  },
+  "homepage.features.setup.description": {
+    "message": "M3U listeleri ve Xtream hesapları ekleyin; canlı yayınları, filmleri ve dizileri tek bir temiz oynatıcı deneyiminde yönetin."
+  },
+  "homepage.features.support.title": {
+    "message": "Desteği dokümana dönüştür"
+  },
+  "homepage.features.support.description": {
+    "message": "Kurulum rehberlerini, sorun giderme yazılarını, SSS sayfalarını ve mağaza uyumluluğu içeriklerini tek bir içerik akışından yayınlayın."
+  },
+  "homepage.features.updates.title": {
+    "message": "Güncellemeleri daha hızlı yayınla"
+  },
+  "homepage.features.updates.description": {
+    "message": "Birden fazla statik HTML dosyasını elle düzenlemek yerine blogu sürüm notları ve yeni özellik duyuruları için kullanın."
+  },
+  "homepage.cta.primary": {
+    "message": "Kurulumun nasıl çalıştığını gör"
+  },
+  "homepage.cta.secondary": {
+    "message": "Destek merkezini aç"
+  },
+  "homepage.pill.continueWatching": {
+    "message": "İzlemeye Devam Et"
+  },
+  "homepage.pill.adFree": {
+    "message": "Reklamsız Deneyim"
+  },
+  "homepage.pill.m3u": {
+    "message": "M3U Desteği"
+  },
+  "homepage.pill.xtream": {
+    "message": "Xtream Codes Desteği"
+  },
+  "homepage.pill.multiDevice": {
+    "message": "Çoklu Cihaz Senkronizasyonu"
+  },
+  "homepage.pill.privacy": {
+    "message": "Gizlilik Odaklı"
+  },
+  "homepage.storeTrustLine": {
+    "message": "iPhone • iPad • Apple TV • Android • Android TV üzerinde çalışır"
+  },
+  "homepage.metric.one": {
+    "message": "ilk kaynağını eklemek için"
+  },
+  "homepage.metric.two": {
+    "message": "tek akışta desteklenir"
+  },
+  "homepage.metric.three": {
+    "message": "yardım ve ürün rehberleri için"
+  },
+  "homepage.preview.label": {
+    "message": "Günlük kullanım için tasarlandı"
+  },
+  "homepage.benefits.one.title": {
+    "message": "Listelerin sende, kontrol sende"
+  },
+  "homepage.benefits.one.body": {
+    "message": "Servis değiştirmenize veya karmaşık paneller öğrenmenize gerek kalmadan kendi M3U listelerinizi ve Xtream hesaplarınızı kullanın."
+  },
+  "homepage.benefits.two.title": {
+    "message": "Premium hissettiren bir oynatıcı"
+  },
+  "homepage.benefits.two.body": {
+    "message": "Hızlı gezinme, düzenli kategoriler, favoriler, geçmiş ve tema desteği günlük izleme deneyimini sadeleştirir."
+  },
+  "homepage.benefits.three.title": {
+    "message": "Gizlenmeyen, dönüştüren yardım"
+  },
+  "homepage.benefits.three.body": {
+    "message": "Kurulum rehberleri, sorun giderme, SSS ve güncellemeler /docs altında kalır; landing ise dönüşüme odaklanır."
+  },
+  "homepage.steps.one.title": {
+    "message": "Dakikalar içinde liste ekle"
+  },
+  "homepage.steps.one.body": {
+    "message": "M3U URL'sini yapıştırın veya Xtream bilgileriyle giriş yapın; kütüphaneniz anında görünsün."
+  },
+  "homepage.steps.two.title": {
+    "message": "Native uygulama gibi gezinin"
+  },
+  "homepage.steps.two.body": {
+    "message": "Canlı TV, filmler ve diziler arasında uzun kullanımlar için tasarlanmış temiz bir deneyimle geçiş yapın."
+  },
+  "homepage.steps.three.title": {
+    "message": "Sorunları sürtünmesiz çöz"
+  },
+  "homepage.steps.three.body": {
+    "message": "Oynatma veya giriş başarısız olursa destek ve sorun giderme rotaları tek tık uzağınızda olur."
+  },
+  "homepage.section.benefits.kicker": {
+    "message": "Livo neden farklı hissettiriyor"
+  },
+  "homepage.section.benefits.title": {
+    "message": "Dokümantasyon değil, dönüşüm için tasarlanmış bir landing"
+  },
+  "homepage.section.features.kicker": {
+    "message": "Günlük kullanım için tasarlandı"
+  },
+  "homepage.section.features.title": {
+    "message": "Modern izleme deneyimi için ihtiyacınız olan her şey"
+  },
+  "homepage.coreFeatures.continueWatching.title": {
+    "message": "Cihazlar Arasında İzlemeye Devam Et"
+  },
+  "homepage.coreFeatures.continueWatching.body": {
+    "message": "TV'de izlemeye başlayın, hesabınızla telefon veya tabletinizde kaldığınız yerden anında devam edin."
+  },
+  "homepage.coreFeatures.fastPlayback.title": {
+    "message": "Ultra Hızlı Oynatma"
+  },
+  "homepage.coreFeatures.fastPlayback.body": {
+    "message": "Akıcı kanal geçişleri ve optimize edilmiş oynatma performansı ile kesintisiz izleme deneyimi yaşayın."
+  },
+  "homepage.coreFeatures.playlists.title": {
+    "message": "Esnek Çalma Listesi Desteği"
+  },
+  "homepage.coreFeatures.playlists.body": {
+    "message": "Birden fazla çalma listesini sade ve modern bir arayüzde kolayca ekleyin ve yönetin."
+  },
+  "homepage.coreFeatures.sync.title": {
+    "message": "Güvenli Bulut Senkronizasyonu"
+  },
+  "homepage.coreFeatures.sync.body": {
+    "message": "Favorileriniz, izleme geçmişiniz ve çalma listeleriniz tüm cihazlarınız arasında güvenle senkronize edilir."
+  },
+  "homepage.coreFeatures.organization.title": {
+    "message": "Akıllı İçerik Organizasyonu"
+  },
+  "homepage.coreFeatures.organization.body": {
+    "message": "Kanalları, filmleri ve dizileri özelleştirilebilir kenar çubuğu grupları ile düzenleyin."
+  },
+  "homepage.coreFeatures.adFree.title": {
+    "message": "Reklamsız Deneyim"
+  },
+  "homepage.coreFeatures.adFree.body": {
+    "message": "Temiz bir arayüz ve rahatsız edici reklamlar olmadan içeriğinize odaklanın."
+  },
+  "homepage.section.features.cta.text": {
+    "message": "Livo'yu şimdi indirin ve daha akıllı izlemeye başlayın"
+  },
+  "homepage.section.features.cta.button": {
+    "message": "Livo'yu Edinin"
+  },
+  "homepage.section.ecosystem.kicker": {
+    "message": "Her ekran için tasarlandı"
+  },
+  "homepage.section.ecosystem.title": {
+    "message": "Tek hesap. Tüm ekranlarınız."
+  },
+  "homepage.section.ecosystem.body": {
+    "message": "Mobil, tablet ve TV'de kesintisiz bir deneyim yaşayın. Bir cihazda izlemeye başlayın ve diğerinde anında kaldığınız yerden devam edin."
+  },
+  "homepage.ecosystem.cards.kicker": {
+    "message": "Nasıl izlersiniz"
+  },
+  "homepage.ecosystem.bullet.one": {
+    "message": "Cihazlar arasında izlemeye devam edin"
+  },
+  "homepage.ecosystem.bullet.two": {
+    "message": "Favorilerinizi ve çalma listelerinizi senkronize edin"
+  },
+  "homepage.ecosystem.bullet.three": {
+    "message": "Her yerde aynı sade deneyimi yaşayın"
+  },
+  "homepage.ecosystem.device.mobile.title": {
+    "message": "Mobil Deneyim"
+  },
+  "homepage.ecosystem.device.mobile.body": {
+    "message": "Yoldayken izleyin ve senkronize çalma listeleriniz ile geçmişiniz sayesinde anında kaldığınız yerden devam edin."
+  },
+  "homepage.ecosystem.device.tablet.title": {
+    "message": "Tablet Deneyimi"
+  },
+  "homepage.ecosystem.device.tablet.body": {
+    "message": "Daha geniş izleme alanı, aynı sade düzen ve akıcı gezinme deneyimi."
+  },
+  "homepage.ecosystem.device.tv.title": {
+    "message": "Büyük Ekran Deneyimi"
+  },
+  "homepage.ecosystem.device.tv.body": {
+    "message": "Salonunuzda arkanıza yaslanın ve Livo'nun tam deneyiminin keyfini çıkarın."
+  },
+  "homepage.ecosystem.visual.header": {
+    "message": "İzlemeye devam et"
+  },
+  "homepage.ecosystem.visual.tag": {
+    "message": "Şimdi canlı"
+  },
+  "homepage.ecosystem.visual.title": {
+    "message": "Çalma listeleriniz sizinle kalır"
+  },
+  "homepage.ecosystem.visual.body": {
+    "message": "Evde TV'de izleyin, sonra kaldığınız yeri kaybetmeden mobilde devam edin."
+  },
+  "homepage.ecosystem.visual.queue.one.title": {
+    "message": "Favoriler senkronize"
+  },
+  "homepage.ecosystem.visual.queue.one.body": {
+    "message": "Tüm cihazlar arasında"
+  },
+  "homepage.ecosystem.visual.queue.two.title": {
+    "message": "Geçmiş korunur"
+  },
+  "homepage.ecosystem.visual.queue.two.body": {
+    "message": "Anında kaldığınız yerden devam edin"
+  },
+  "homepage.ecosystem.visual.phone.title": {
+    "message": "İzlemeye devam et"
+  },
+  "homepage.ecosystem.visual.phone.body": {
+    "message": "Tek dokunuşla sürdür"
+  },
+  "homepage.ecosystem.visual.tablet.title": {
+    "message": "Aynı sade düzen"
+  },
+  "homepage.ecosystem.visual.tablet.body": {
+    "message": "Her ekran boyutu için tasarlandı"
+  },
+  "homepage.section.sync.kicker": {
+    "message": "Sizin için senkronize"
+  },
+  "homepage.section.sync.title": {
+    "message": "Çalma listeleriniz sizinle kalır"
+  },
+  "homepage.section.sync.body": {
+    "message": "Favorileriniz, izleme geçmişiniz ve çalma listeleriniz hesabınıza güvenle senkronize edilir — böylece istediğiniz zaman, istediğiniz cihazda izlemeye devam edebilirsiniz. İzleme deneyiminiz sizinle hareket eder."
+  },
+  "homepage.sync.value.one": {
+    "message": "Kaldığınız yeri kaybetmeden izlemeye devam edin"
+  },
+  "homepage.sync.value.two": {
+    "message": "Favorilerinize her cihazdan anında erişin"
+  },
+  "homepage.sync.value.three": {
+    "message": "Çalma listeleriniz her zaman güncel ve düzenli kalsın"
+  },
+  "homepage.sync.visual.status": {
+    "message": "Senkronizasyon aktif"
+  },
+  "homepage.sync.visual.hero.title": {
+    "message": "İzlemeye devam et"
+  },
+  "homepage.sync.visual.hero.body": {
+    "message": "Kaldığınız yeri kaybetmeden başka bir cihazda devam edin."
+  },
+  "homepage.sync.visual.favorites.title": {
+    "message": "Favoriler"
+  },
+  "homepage.sync.visual.favorites.body": {
+    "message": "Her ekranda anında hazır"
+  },
+  "homepage.sync.visual.history.title": {
+    "message": "Geçmiş"
+  },
+  "homepage.sync.visual.history.body": {
+    "message": "Son izledikleriniz senkronize kalır"
+  },
+  "homepage.sync.visual.footer": {
+    "message": "Cihaz değiştirirken düşünmenize gerek yok"
+  },
+  "homepage.section.subscription.kicker": {
+    "message": "Planınızı seçin"
+  },
+  "homepage.section.subscription.title": {
+    "message": "Livo'nun tüm deneyimini açın"
+  },
+  "homepage.section.subscription.body": {
+    "message": "Livo'yu ücretsiz kullanın veya kesintisiz senkronizasyon, reklamsız izleme ve gelişmiş özellikler için Premium'a yükseltin."
+  },
+  "homepage.subscription.free.label": {
+    "message": "Ücretsiz plan"
+  },
+  "homepage.subscription.free.title": {
+    "message": "Ücretsiz"
+  },
+  "homepage.subscription.free.feature.one": {
+    "message": "Çalma listeleri ekleyin ve izleyin"
+  },
+  "homepage.subscription.free.feature.two": {
+    "message": "Temel oynatma deneyimi"
+  },
+  "homepage.subscription.free.feature.three": {
+    "message": "Cihazlar arası sınırlı kullanım"
+  },
+  "homepage.subscription.free.feature.four": {
+    "message": "Sınırlı senkronizasyon"
+  },
+  "homepage.subscription.free.cta": {
+    "message": "Ücretsiz Başla"
+  },
+  "homepage.subscription.premium.badge": {
+    "message": "En popüler"
+  },
+  "homepage.subscription.premium.microHeadline": {
+    "message": "Çoklu cihaz izleme için en iyi deneyim"
+  },
+  "homepage.subscription.premium.label": {
+    "message": "Premium plan"
+  },
+  "homepage.subscription.premium.title": {
+    "message": "Premium"
+  },
+  "homepage.subscription.premium.trialBadge": {
+    "message": "7 gün ücretsiz Premium deneme"
+  },
+  "homepage.subscription.premium.price": {
+    "message": "App Store ve Google Play abonelikleri üzerinden kullanılabilir"
+  },
+  "homepage.subscription.premium.feature.zero": {
+    "message": "Çoklu cihaz izleme için en iyi deneyim"
+  },
+  "homepage.subscription.premium.feature.one": {
+    "message": "Cihazlar arasında izlemeye devam et"
+  },
+  "homepage.subscription.premium.feature.two": {
+    "message": "Güvenli bulut senkronizasyonu"
+  },
+  "homepage.subscription.premium.feature.three": {
+    "message": "Reklamsız deneyim"
+  },
+  "homepage.subscription.premium.feature.four": {
+    "message": "Sınırsız çalma listesi"
+  },
+  "homepage.subscription.premium.feature.five": {
+    "message": "Öncelikli güncellemeler"
+  },
+  "homepage.subscription.premium.cta": {
+    "message": "Premium'a Geç"
+  },
+  "homepage.subscription.premium.footnote": {
+    "message": "İstediğiniz zaman iptal edin. Taahhüt yok."
+  },
+  "homepage.subscription.store.text": {
+    "message": "Ücretsiz başlayın. İstediğiniz zaman App Store veya Google Play üzerinden Premium'a geçin."
+  },
+  "homepage.section.showcase.kicker": {
+    "message": "Ürün sayfası gibi tasarlandı"
+  },
+  "homepage.section.showcase.title": {
+    "message": "Önemli olan her şey tek dokunuş uzağında"
+  },
+  "homepage.section.showcase.body": {
+    "message": "Ana sayfa deneyimi satar; kurulum, kullanım ve sorun giderme içerikleri ise /docs altında ayrı kalır."
+  },
+  "homepage.link.docs.title": {
+    "message": "Hızlı başlangıç"
+  },
+  "homepage.link.docs.body": {
+    "message": "Uygulamayı yükleyin, açın ve ilk kaynağınızı ekleyin"
+  },
+  "homepage.link.troubleshooting.title": {
+    "message": "Sorun giderme"
+  },
+  "homepage.link.troubleshooting.body": {
+    "message": "Giriş, yükleme ve oynatma sorunlarını daha hızlı çözün"
+  },
+  "homepage.link.blog.title": {
+    "message": "Ürün güncellemeleri"
+  },
+  "homepage.link.blog.body": {
+    "message": "Sürüm notlarını ve özellik duyurularını okuyun"
+  },
+  "homepage.section.showcase.badge": {
+    "message": "Livo deneyimi"
+  },
+  "homepage.stat.one.title": {
+    "message": "Canlı TV"
+  },
+  "homepage.stat.one.body": {
+    "message": "Kanallara ve kategorilere hızlı erişim"
+  },
+  "homepage.stat.two.title": {
+    "message": "Filmler ve Diziler"
+  },
+  "homepage.stat.two.body": {
+    "message": "Kütüphanenizin geri kalanı için birleşik gezinme"
+  },
+  "homepage.stat.three.title": {
+    "message": "Favoriler ve Geçmiş"
+  },
+  "homepage.stat.three.body": {
+    "message": "Daha az aramayla kaldığınız yerden devam edin"
+  },
+  "homepage.section.steps.kicker": {
+    "message": "Kurulumdan izlemeye"
+  },
+  "homepage.section.steps.title": {
+    "message": "İlk izlemeye üç adım"
+  },
+  "homepage.section.cta.kicker": {
+    "message": "Livo'yu denemeye hazır mısınız?"
+  },
+  "homepage.section.cta.title": {
+    "message": "Landing'den başlayın, yalnızca gerektiğinde dokümanlara inin"
+  },
+  "homepage.section.cta.primary": {
+    "message": "Dokümanları aç"
+  },
+  "homepage.section.cta.secondary": {
+    "message": "Desteğe git"
+  }
+}

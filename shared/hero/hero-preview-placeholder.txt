@@ -1,0 +1,5 @@
+This is a placeholder file. Add a short MP4 preview (5-8s, muted loop) at this path:
+
+shared/hero/hero-preview.mp4
+
+Recommended: H.264 baseline/main, 720p or 1080p, small bitrate (1.5-3 Mbps) for fast loading.

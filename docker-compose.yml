@@ -1,0 +1,25 @@
+services:
+  livo-docs-dev:
+    build:
+      context: .
+      target: dev
+    container_name: livo-docs-dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./docusaurus:/app/docusaurus
+      - /app/docusaurus/node_modules
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3000
+
+  livo-docs-prod:
+    image: ${IMAGE_NAME:-livo-landing}:${IMAGE_TAG:-latest}
+    build:
+      context: .
+      target: prod
+    container_name: livo-docs-prod
+    ports:
+      - "3001:3000"
+    profiles:
+      - prod

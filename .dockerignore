@@ -1,0 +1,10 @@
+.git
+.gitignore
+node_modules
+docusaurus/node_modules
+docusaurus/build
+docusaurus/.docusaurus
+docusaurus/.cache
+dist
+*.log
+.DS_Store

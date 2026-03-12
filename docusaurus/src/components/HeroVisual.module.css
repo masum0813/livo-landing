@@ -1,0 +1,184 @@
+.visualShell {
+  position: relative;
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(16, 53, 40, 0.07);
+  border-radius: 2rem;
+  background:
+    radial-gradient(circle at 78% 20%, rgba(150, 97, 255, 0.14), transparent 26%),
+    radial-gradient(circle at 18% 72%, rgba(255, 108, 186, 0.10), transparent 22%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 241, 234, 0.96));
+  box-shadow: 0 28px 80px rgba(124, 91, 62, 0.10);
+  isolation: isolate;
+}
+.visualGlowA,
+.visualGlowB {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(38px);
+}
+
+.visualGlowA {
+  top: 10%;
+  right: 7%;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 999px;
+  background: rgba(153, 102, 255, 0.14);
+}
+
+.visualGlowB {
+  left: 8%;
+  bottom: 8%;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 999px;
+  background: rgba(255, 102, 178, 0.08);
+}
+
+.deviceStage {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 1.22 / 1;
+  min-height: clamp(380px, 42vw, 500px);
+}
+
+.deviceFrame {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: transparent;
+  box-shadow: 0 28px 68px rgba(69, 49, 28, 0.16);
+}
+
+.tvFrame {
+  top: -4%;
+  right: -4%;
+  width: 92%;
+  z-index: 1;
+  transform: rotate(0.5deg);
+}
+
+.tabletFrame {
+  right: 15%;
+  bottom: 2%;
+  width: 36%;
+  z-index: 2;
+  opacity: 0.9;
+  transform: rotate(-3deg);
+  opacity: 0.88;
+  filter: saturate(0.95);
+}
+
+.phoneFrame {
+  left: -2%;
+  bottom: 12%;
+  width: 24%;
+  z-index: 3;
+  transform: rotate(7deg);
+}
+
+.screenWrap {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.landscapeScreenWrap {
+  aspect-ratio: 4300 / 2780;
+}
+
+.tabletScreenWrap {
+  aspect-ratio: 2640 / 1880;
+}
+
+.phoneScreenWrap {
+  aspect-ratio: 1470 / 3000;
+}
+
+.screenImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-repeat: no-repeat;
+}
+
+.tvImage {
+  object-position: center center;
+}
+
+.tabletImage {
+  object-position: center center;
+}
+
+.phoneImage {
+  object-position: center center;
+}
+
+@media (max-width: 996px) {
+  .visualShell {
+    width: 100%;
+    padding: 1.15rem;
+  }
+
+  .deviceStage {
+    aspect-ratio: 1.16 / 1;
+  }
+
+  .tvFrame {
+    width: 76%;
+    right: 1%;
+    transform-origin: top right;
+  }
+
+  .tabletFrame {
+    width: 35%;
+    right: 1%;
+    bottom: 1%;
+  }
+
+  .phoneFrame {
+    left: 0;
+    bottom: 2%;
+    width: 31%;
+  }
+}
+
+@media (max-width: 640px) {
+  .visualShell {
+    padding: 1rem;
+    border-radius: 1.5rem;
+  }
+
+  .deviceStage {
+    aspect-ratio: 1.04 / 1;
+  }
+
+  .tvFrame {
+    top: 4%;
+    right: 1%;
+    width: 74%;
+    transform-origin: top right;
+    transform: rotate(1deg);
+  }
+
+  .tabletFrame {
+    right: 1%;
+    bottom: 0;
+    width: 37%;
+    transform: rotate(-3deg);
+  }
+
+  .phoneFrame {
+    left: 0;
+    bottom: 1%;
+    width: 32%;
+    transform: rotate(7deg);
+  }
+}

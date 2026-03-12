@@ -1,0 +1,12 @@
+{
+  "type": "mdx",
+  "permalink": "/support",
+  "source": "@site/src/pages/support.mdx",
+  "title": "Support",
+  "description": "Support and troubleshooting for the Livo Player.",
+  "frontMatter": {
+    "title": "Support",
+    "description": "Support and troubleshooting for the Livo Player."
+  },
+  "unlisted": false
+}
