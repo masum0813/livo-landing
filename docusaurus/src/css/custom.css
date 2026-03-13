@@ -65,62 +65,20 @@
   background: var(--site-bg-gradient);
 }
 
-.footer {
-  background: var(--site-footer-gradient);
-  color: var(--ifm-font-color-base);
-}
-
-.footer__title,
-.footer__link-item,
-.footer__copyright {
-  color: var(--ifm-font-color-base);
-}
-
-.footer__link-item:is([href='https://x.com/LivoPlayer'], [href='https://www.instagram.com/livoplayer/']) {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 0;
-  line-height: 0;
-}
-
-.footer__link-item:is([href='https://x.com/LivoPlayer'], [href='https://www.instagram.com/livoplayer/'])::before {
-  content: '';
-  display: block;
-  width: 1.25rem;
-  height: 1.25rem;
-  background-color: currentColor;
-  mask-position: center;
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  -webkit-mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-}
-
-.footer__link-item:is([href='https://x.com/LivoPlayer'], [href='https://www.instagram.com/livoplayer/']) svg {
-  display: none;
-}
-
-.footer__link-item[href='https://x.com/LivoPlayer']::before {
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1227'%3E%3Cpath fill='black' d='M714.163 519.284 1160.89 0H1055.06L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.612-476.152 327.194 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894L144.011 79.694h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z'/%3E%3C/svg%3E");
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 1227'%3E%3Cpath fill='black' d='M714.163 519.284 1160.89 0H1055.06L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.612-476.152 327.194 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894L144.011 79.694h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z'/%3E%3C/svg%3E");
-}
-
-.footer__link-item[href='https://www.instagram.com/livoplayer/']::before {
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='2' y='2' width='20' height='20' rx='5' ry='5' fill='none' stroke='black' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='4.25' fill='none' stroke='black' stroke-width='2'/%3E%3Ccircle cx='17.5' cy='6.5' r='1.25' fill='black'/%3E%3C/svg%3E");
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='2' y='2' width='20' height='20' rx='5' ry='5' fill='none' stroke='black' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='4.25' fill='none' stroke='black' stroke-width='2'/%3E%3Ccircle cx='17.5' cy='6.5' r='1.25' fill='black'/%3E%3C/svg%3E");
-}
-
-.navbar__link,
-.footer__link-item {
+.navbar__link {
   color: var(--ifm-font-color-base);
 }
 
 .navbar__link--active {
-  color: var(--ifm-color-primary);
+  color: #176646;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.18em;
+}
+
+[data-theme='dark'] .navbar__link--active {
+  color: #8ff0c1;
 }
 
 [data-theme='dark'] .navbar-sidebar,

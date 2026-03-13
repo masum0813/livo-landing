@@ -1,12 +1,14 @@
+import {lazy, Suspense} from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import HeroVisual from '@site/src/components/HeroVisual';
-import SyncVisual from '@site/src/components/SyncVisual';
 import styles from './index.module.css';
 
-type SupportedLocale = 'en' | 'tr' | 'es' | 'zh';
+const SyncVisual = lazy(() => import('@site/src/components/SyncVisual'));
+
+type SupportedLocale = 'en' | 'tr';
 
 type BadgeSet = {
   googlePlay: string;
@@ -31,28 +33,18 @@ const BADGE_MAP: Record<SupportedLocale, BadgeSet> = {
       dark: 'Download_on_the_App_Store_Badge_TR_wht_RGB_100217.svg',
     },
   },
-  es: {
-    googlePlay: 'GetItOnGooglePlay_Badge_Web_color_Spanish.svg',
-    appStore: {
-      light: 'Download_on_the_App_Store_Badge_ES_RGB_blk_100217.svg',
-      dark: 'Download_on_the_App_Store_Badge_ES_RGB_wht_100217.svg',
-    },
-  },
-  zh: {
-    googlePlay: 'GetItOnGooglePlay_Badge_Web_color_Chinese-China.svg',
-    appStore: {
-      light: 'Download_on_the_App_Store_Badge_CNSC_RGB_blk_092917.svg',
-      dark: 'Download_on_the_App_Store_Badge_CNSC_RGB_wht_092917.svg',
-    },
-  },
 };
 
 function normalizeLocale(locale: string): SupportedLocale {
-  if (locale === 'tr' || locale === 'es' || locale === 'zh') {
+  if (locale === 'tr') {
     return locale;
   }
 
   return 'en';
+}
+
+function SyncVisualFallback(): JSX.Element {
+  return <div className={styles.syncVisualFallback} aria-hidden="true" />;
 }
 
 export default function Home(): JSX.Element {
@@ -169,7 +161,9 @@ export default function Home(): JSX.Element {
               </p>
             </div>
             <div className={styles.deviceVisualWrap}>
-              <SyncVisual />
+              <Suspense fallback={<SyncVisualFallback />}>
+                <SyncVisual />
+              </Suspense>
             </div>
           </div>
         </section>
@@ -191,7 +185,9 @@ export default function Home(): JSX.Element {
               </p>
             </div>
             <div className={styles.syncVisualWrap}>
-              <SyncVisual />
+              <Suspense fallback={<SyncVisualFallback />}>
+                <SyncVisual />
+              </Suspense>
             </div>
           </div>
         </section>

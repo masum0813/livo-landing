@@ -13,7 +13,7 @@ type DeviceShot = {
   sizes: string;
   alt: string;
   loading: 'eager' | 'lazy';
-  fetchPriority?: 'high' | 'low';
+  fetchpriority?: 'high' | 'low';
 };
 
 export default function HeroVisual(): JSX.Element {
@@ -33,7 +33,7 @@ export default function HeroVisual(): JSX.Element {
       sizes: '(max-width: 640px) 74vw, (max-width: 996px) 56vw, 42vw',
       alt: HERO_IMAGE_ASSETS.tv.alt,
       loading: 'eager',
-      fetchPriority: 'high',
+      fetchpriority: 'high',
     },
     {
       key: 'tablet',
@@ -47,7 +47,7 @@ export default function HeroVisual(): JSX.Element {
       sizes: '(max-width: 640px) 37vw, (max-width: 996px) 26vw, 16vw',
       alt: HERO_IMAGE_ASSETS.tablet.alt,
       loading: 'lazy',
-      fetchPriority: 'low',
+      fetchpriority: 'low',
     },
     {
       key: 'phone',
@@ -61,7 +61,7 @@ export default function HeroVisual(): JSX.Element {
       sizes: '(max-width: 640px) 32vw, (max-width: 996px) 22vw, 11vw',
       alt: HERO_IMAGE_ASSETS.phone.alt,
       loading: 'lazy',
-      fetchPriority: 'low',
+      fetchpriority: 'low',
     },
   ];
 
@@ -83,8 +83,8 @@ export default function HeroVisual(): JSX.Element {
                 width={shot.width}
                 height={shot.height}
                 loading={shot.loading}
-                fetchPriority={shot.fetchPriority}
                 decoding="async"
+                {...(shot.fetchpriority ? {fetchpriority: shot.fetchpriority} : {})}
               />
             </div>
           </figure>

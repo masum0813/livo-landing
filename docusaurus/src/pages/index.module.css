@@ -147,6 +147,17 @@
   align-self: start;
 }
 
+.syncVisualFallback {
+  width: 100%;
+  min-height: inherit;
+  border-radius: 1.75rem;
+  background:
+    radial-gradient(circle at top left, rgba(61, 220, 151, 0.12), rgba(61, 220, 151, 0) 38%),
+    radial-gradient(circle at bottom right, rgba(245, 179, 120, 0.1), rgba(245, 179, 120, 0) 32%),
+    rgba(255, 255, 255, 0.34);
+  border: 1px solid rgba(182, 194, 178, 0.16);
+}
+
 .deviceVisualWrap {
   min-height: 29rem;
 }
@@ -177,6 +188,14 @@
     linear-gradient(180deg, #16201d, #101714 72%);
   border-color: rgba(173, 203, 179, 0.08);
   box-shadow: 0 28px 90px rgba(10, 16, 28, 0.28);
+}
+
+[data-theme='dark'] .syncVisualFallback {
+  background:
+    radial-gradient(circle at top left, rgba(61, 220, 151, 0.16), rgba(61, 220, 151, 0) 38%),
+    radial-gradient(circle at bottom right, rgba(245, 179, 120, 0.12), rgba(245, 179, 120, 0) 32%),
+    rgba(23, 33, 40, 0.52);
+  border-color: rgba(173, 203, 179, 0.08);
 }
 
 @media (max-width: 996px) {
