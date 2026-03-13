@@ -54,3 +54,33 @@ Reason:
 Impact:
 
 - Dockerfile now defaults `BUILDPLATFORM` to `linux/amd64` to avoid parse-time failure.
+
+### Localize SEO landing pages from one source
+
+Status: accepted
+
+Reason:
+
+- English-only SEO page files caused drift and extra manual work for Turkish routes.
+- Marketing landing pages need EN/TR parity without maintaining separate implementations per route.
+
+Impact:
+
+- SEO landing pages now use a shared locale-aware component and a single EN/TR content map.
+- `/tr/...` versions are produced automatically from the same page key.
+- New SEO landing pages should be added through the shared localized content structure, not as standalone English-only MDX files.
+
+### Keep sitemap aligned with page routes
+
+Status: accepted
+
+Reason:
+
+- Marketing and SEO pages need to be discoverable immediately after they are added.
+- Missing sitemap entries create avoidable indexing lag and inconsistent SEO checks.
+
+Impact:
+
+- Docusaurus sitemap generation is the source of truth for page URLs.
+- Any page add/remove/change under `src/pages` must be followed by a build check that confirms `sitemap.xml` includes or removes the route as expected.
+- EN and TR routes should both be verified for localized SEO landing pages.

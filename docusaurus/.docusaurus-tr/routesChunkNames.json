@@ -42,19 +42,19 @@
       "plugin": "plugin---tr-docusaurus-debugb-38-07b"
     }
   },
-  "/tr/android-tv-iptv-player-deb": {
-    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+  "/tr/android-tv-iptv-player-e85": {
+    "__comp": "__comp---site-src-pages-android-tv-iptv-player-tsx-4-ae-0ef",
     "__context": {
       "plugin": "plugin---tr-android-tv-iptv-playera-74-d3b"
     },
-    "content": "content---tr-android-tv-iptv-playerc-62-168"
+    "config": "config---tr-android-tv-iptv-player-5-e-9-edc"
   },
-  "/tr/apple-tv-iptv-player-389": {
-    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+  "/tr/apple-tv-iptv-player-0e2": {
+    "__comp": "__comp---site-src-pages-apple-tv-iptv-player-tsxf-07-c81",
     "__context": {
       "plugin": "plugin---tr-android-tv-iptv-playera-74-d3b"
     },
-    "content": "content---tr-apple-tv-iptv-player-715-d99"
+    "config": "config---tr-android-tv-iptv-player-5-e-9-edc"
   },
   "/tr/blog-58c": {
     "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
@@ -134,12 +134,26 @@
     ],
     "__props": "__props---tr-blog-tags-web-3-ca-c3d"
   },
-  "/tr/m3u-iptv-player-6d0": {
-    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+  "/tr/iptv-player-bbf": {
+    "__comp": "__comp---site-src-pages-iptv-player-tsxfd-1-294",
     "__context": {
       "plugin": "plugin---tr-android-tv-iptv-playera-74-d3b"
     },
-    "content": "content---tr-m-3-u-iptv-player-7-b-2-1a1"
+    "config": "config---tr-android-tv-iptv-player-5-e-9-edc"
+  },
+  "/tr/m3u-iptv-player-bb9": {
+    "__comp": "__comp---site-src-pages-m-3-u-iptv-player-tsx-3-f-8-aed",
+    "__context": {
+      "plugin": "plugin---tr-android-tv-iptv-playera-74-d3b"
+    },
+    "config": "config---tr-android-tv-iptv-player-5-e-9-edc"
+  },
+  "/tr/m3u-player-3e4": {
+    "__comp": "__comp---site-src-pages-m-3-u-player-tsxdcc-3b3",
+    "__context": {
+      "plugin": "plugin---tr-android-tv-iptv-playera-74-d3b"
+    },
+    "config": "config---tr-android-tv-iptv-player-5-e-9-edc"
   },
   "/tr/privacy-policy-0b3": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
@@ -240,6 +254,6 @@
     "__context": {
       "plugin": "plugin---tr-android-tv-iptv-playera-74-d3b"
     },
-    "config": "config---tr-5-e-9-039"
+    "config": "config---tr-android-tv-iptv-player-5-e-9-edc"
   }
 }

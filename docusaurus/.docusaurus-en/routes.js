@@ -39,12 +39,12 @@ export default [
   },
   {
     path: '/android-tv-iptv-player',
-    component: ComponentCreator('/android-tv-iptv-player', 'fc9'),
+    component: ComponentCreator('/android-tv-iptv-player', '5c3'),
     exact: true
   },
   {
     path: '/apple-tv-iptv-player',
-    component: ComponentCreator('/apple-tv-iptv-player', 'a16'),
+    component: ComponentCreator('/apple-tv-iptv-player', 'ff4'),
     exact: true
   },
   {
@@ -83,8 +83,18 @@ export default [
     exact: true
   },
   {
+    path: '/iptv-player',
+    component: ComponentCreator('/iptv-player', '40d'),
+    exact: true
+  },
+  {
     path: '/m3u-iptv-player',
-    component: ComponentCreator('/m3u-iptv-player', '40e'),
+    component: ComponentCreator('/m3u-iptv-player', '8e1'),
+    exact: true
+  },
+  {
+    path: '/m3u-player',
+    component: ComponentCreator('/m3u-player', '656'),
     exact: true
   },
   {
