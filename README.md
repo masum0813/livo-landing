@@ -34,6 +34,8 @@ This repository is transitioning from a static HTML landing portal to a Docusaur
    This starts a single development endpoint at `http://localhost:3000`. English is served at `/` and Turkish is served at `/tr/`. Locale-specific dev processes are managed internally by the orchestrator and are not part of the public dev URL surface.
 4. Build the production output:
    `npm run build`
+5. Export the Docusaurus build to the repo-root `dist/` directory for `wrangler` or other static-host uploads:
+   `npm run build:dist`
 
 ## Docker
 

@@ -9,6 +9,7 @@
     "start:tr": "DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus-tr docusaurus start --locale tr --port 3002 --no-open",
     "start:single": "npm run clear && docusaurus start",
     "build": "docusaurus build",
+    "build:dist": "npm run build && node scripts/export-dist.mjs",
     "serve": "docusaurus serve",
     "clear": "rm -rf .docusaurus .docusaurus-en .docusaurus-tr build node_modules/.cache/webpack",
     "typecheck": "tsc"
