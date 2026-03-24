@@ -1,6 +1,8 @@
 *
 !Dockerfile
 !.dockerignore
+!iptv/
+!iptv/**
 !docusaurus/
 !docusaurus/**
 docusaurus/.docusaurus-en
