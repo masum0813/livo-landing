@@ -125,3 +125,7 @@ jobs:
             export HOST_PORT='${{ vars.HOST_PORT || '3002' }}'
             export SKIP_ENV_FILE=1
             ./deploy.sh "${{ env.IMAGE_NAME }}" "${{ github.ref_name }}-${{ github.run_number }}" "${{ env.APP_DIR }}"
+
+      - name: Smoke test playlist URL
+        run: |
+          curl --fail --show-error --silent --head "https://www.livoplayer.com/iptv/playlist.m3u"
