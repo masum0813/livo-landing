@@ -7,6 +7,15 @@ const config: Config = {
   favicon: 'img/livo-logo.png',
   url: 'https://www.livoplayer.com',
   baseUrl: '/',
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://www.googletagmanager.com',
+      },
+    },
+  ],
   organizationName: 'livo',
   projectName: 'livo-site',
   onBrokenLinks: 'throw',
@@ -53,6 +62,9 @@ const config: Config = {
           priority: 0.5,
           filename: 'sitemap.xml',
         },
+        // Canonical GA4 setup for the marketing site.
+        // Keep analytics configuration here instead of manually injecting
+        // gtag scripts into page templates or custom HTML.
         gtag: {
           trackingID: 'G-T6T0ZB0MCC',
           anonymizeIP: true,
