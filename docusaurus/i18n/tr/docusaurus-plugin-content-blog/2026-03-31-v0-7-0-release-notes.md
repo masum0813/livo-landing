@@ -24,7 +24,7 @@ Livo Player v0.7.0, telefon, tablet ve Android TV genelinde senkronizasyon, TV k
 - Tek ürün altında birden fazla base plan destekleyen subscription model refactor çalışması.
 - Çoklu form-factor Play Store yüklemeleri için Fastlane deploy lane ve screenshot organizasyonu.
 
-## Degisenler
+## Değişenler
 
 - Home ekran düzeni mobil ve TV genelinde sıkılaştırıldı; featured kartlar, tool kartlar, bölüm boşlukları ve Continue Watching sunumu güncellendi.
 - Continue Watching kartları artık metadata mevcutsa kanal logoları yerine çözümlenmiş film ve dizi posterlerini kullanıyor.
@@ -47,7 +47,7 @@ Livo Player v0.7.0, telefon, tablet ve Android TV genelinde senkronizasyon, TV k
 - Uygulama adi tum runtime locale'lerde "Livo IPTV" yerine "Livo Player" olarak guncellendi.
 - Movies/Series gezinme rotalari artik premium abonelige bagli degil; premium kisitlari yalnizca belirli ozelliklerde kaldi.
 
-## Duzeltilenler
+## Düzeltilenler
 
 - Film metadata cache'i uygulama dili değiştiğinde artık doğru şekilde yenileniyor.
 - TV Movie Detail cast içeriği D-pad gezinmesinde artık ekranda yarı gizli kalmıyor.
