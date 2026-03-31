@@ -53,6 +53,10 @@ const config: Config = {
           priority: 0.5,
           filename: 'sitemap.xml',
         },
+        gtag: {
+          trackingID: 'G-T6T0ZB0MCC',
+          anonymizeIP: true,
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
