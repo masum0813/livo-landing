@@ -7,15 +7,6 @@ const config: Config = {
   favicon: 'img/livo-logo.png',
   url: 'https://www.livoplayer.com',
   baseUrl: '/',
-  headTags: [
-    {
-      tagName: 'link',
-      attributes: {
-        rel: 'preconnect',
-        href: 'https://www.googletagmanager.com',
-      },
-    },
-  ],
   organizationName: 'livo',
   projectName: 'livo-site',
   onBrokenLinks: 'throw',
