@@ -57,7 +57,7 @@ const config: Config = {
         // Keep analytics configuration here instead of manually injecting
         // gtag scripts into page templates or custom HTML.
         gtag: {
-          trackingID: 'G-T6T0ZB0MCC',
+          trackingID: 'G-DK9CM7Y64E',
           anonymizeIP: true,
         },
         theme: {
