@@ -1,0 +1,257 @@
+.page {
+  overflow: hidden;
+}
+
+.heroSection {
+  padding: 3.5rem 0 2.5rem;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.heroCopy {
+  max-width: 42rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(61, 220, 151, 0.14);
+  color: var(--site-kicker-color);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  margin: 1rem 0;
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+}
+
+.heroSubtitle,
+.sectionBody,
+.comparisonBody,
+.faqAnswer,
+.panelText,
+.listItem {
+  margin: 0;
+  color: var(--site-text-secondary);
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.storeBadges {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.storeBadges a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.storeBadges img,
+.storeBadges picture {
+  display: block;
+  height: 3rem;
+  width: auto;
+}
+
+.heroNote {
+  margin: 0.9rem 0 0;
+  color: var(--site-text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.heroShowcase {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.section {
+  padding: 1rem 0 3.5rem;
+}
+
+.sectionHeader {
+  max-width: 47rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.kickerGrid,
+.comparisonGrid,
+.faqGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.kickerGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.comparisonGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.panel,
+.comparisonCard,
+.faqItem,
+.prosConsPanel {
+  border: 1px solid var(--site-border-color);
+  border-radius: 1.5rem;
+  background: var(--site-surface-card);
+  box-shadow: var(--site-shadow-soft);
+}
+
+.panel,
+.faqItem,
+.prosConsPanel {
+  padding: 1.35rem;
+}
+
+.comparisonCard {
+  padding: 1.5rem;
+}
+
+.panelTitle,
+.comparisonTitle,
+.faqItem h3,
+.prosConsTitle {
+  margin: 0 0 0.75rem;
+  font-size: 1.12rem;
+  line-height: 1.3;
+}
+
+.comparisonHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.comparisonTitle {
+  margin-bottom: 0.3rem;
+}
+
+.fitBadge {
+  display: inline-flex;
+  flex-shrink: 0;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(61, 220, 151, 0.12);
+  color: var(--site-kicker-color);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.metaLabel {
+  display: inline-block;
+  margin: 1rem 0 0.45rem;
+  color: var(--site-text-primary);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.list {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.listItem + .listItem {
+  margin-top: 0.45rem;
+}
+
+.prosConsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.linkRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.15rem;
+  margin-top: 1.15rem;
+}
+
+.ctaPanel {
+  padding: 2rem;
+  border-radius: 1.8rem;
+  background:
+    radial-gradient(circle at top left, rgba(61, 220, 151, 0.16), rgba(61, 220, 151, 0) 38%),
+    radial-gradient(circle at bottom right, rgba(245, 179, 120, 0.14), rgba(245, 179, 120, 0) 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(252, 248, 242, 0.96) 72%);
+  border: 1px solid rgba(182, 194, 178, 0.24);
+  box-shadow: 0 28px 90px rgba(118, 132, 113, 0.12);
+}
+
+[data-theme='dark'] .eyebrow,
+[data-theme='dark'] .fitBadge {
+  background: rgba(61, 220, 151, 0.18);
+}
+
+[data-theme='dark'] .ctaPanel {
+  background:
+    radial-gradient(circle at top left, rgba(61, 220, 151, 0.2), rgba(61, 220, 151, 0) 38%),
+    radial-gradient(circle at bottom right, rgba(245, 179, 120, 0.16), rgba(245, 179, 120, 0) 32%),
+    linear-gradient(180deg, #16201d, #101714 72%);
+  border-color: rgba(173, 203, 179, 0.08);
+  box-shadow: 0 28px 90px rgba(10, 16, 28, 0.28);
+}
+
+@media (max-width: 996px) {
+  .heroGrid,
+  .kickerGrid,
+  .comparisonGrid,
+  .prosConsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroShowcase {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroSection {
+    padding-top: 2.5rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(2.2rem, 10vw, 3.35rem);
+  }
+
+  .comparisonHeader {
+    flex-direction: column;
+  }
+
+  .ctaPanel {
+    padding: 1.4rem;
+    border-radius: 1.4rem;
+  }
+}

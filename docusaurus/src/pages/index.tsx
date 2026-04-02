@@ -210,13 +210,15 @@ export default function Home(): JSX.Element {
                 {locale === 'tr' ? (
                   <>
                     <Link to="/docs/setup">Kurulum</Link>, <Link to="/docs/playlists">oynatma listeleri</Link>{' '}
-                    ve <Link to="/docs/troubleshooting">sorun giderme</Link> sayfalarını inceleyin.
+                    , <Link to="/iptv-player-comparison">kıyaslama sayfası</Link> ve{' '}
+                    <Link to="/docs/troubleshooting">sorun giderme</Link> sayfalarını inceleyin.
                   </>
                 ) : (
                   <>
-                    Explore <Link to="/docs/setup">setup</Link>, <Link to="/docs/playlists">playlists</Link>{' '}
-                    and <Link to="/docs/troubleshooting">troubleshooting</Link> to get the most from
-                    the experience.
+                    Explore <Link to="/docs/setup">setup</Link>, <Link to="/docs/playlists">playlists</Link>,{' '}
+                    <Link to="/iptv-player-comparison">comparison</Link> and{' '}
+                    <Link to="/docs/troubleshooting">troubleshooting</Link> to get the most from the
+                    experience.
                   </>
                 )}
               </p>

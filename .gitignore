@@ -3,7 +3,8 @@
 __MACOSX/
 .AppleDouble
 .LSOverride
-Icon[]
+Icon[
+]
 
 # Thumbnails
 ._*
@@ -26,3 +27,8 @@ Temporary Items
 
 # Build outputs
 dist/
+
+# docusaurus
+docusaurus/.docusaurus-*/
+docusaurus/.docusaurus-en/
+docusaurus/.docusaurus-tr/
