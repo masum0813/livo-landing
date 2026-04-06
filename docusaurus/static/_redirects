@@ -1,0 +1,32 @@
+# Legacy English locale paths moved to the root locale.
+/en / 301
+/en/ / 301
+/en/index.html /index.html 301
+/en/support /support 301
+/en/support.html /support 301
+/en/privacy-policy /privacy-policy 301
+/en/privacy-policy.html /privacy-policy 301
+/en/terms /terms 301
+/en/terms.html /terms 301
+
+# Deferred Spanish pages should resolve to the current English equivalents.
+/es / 301
+/es/ / 301
+/es/index.html /index.html 301
+/es/support /support 301
+/es/support.html /support 301
+/es/privacy-policy /privacy-policy 301
+/es/privacy-policy.html /privacy-policy 301
+/es/terms /terms 301
+/es/terms.html /terms 301
+
+# Deferred Chinese pages should resolve to the current English equivalents.
+/zh / 301
+/zh/ / 301
+/zh/index.html /index.html 301
+/zh/support /support 301
+/zh/support.html /support 301
+/zh/privacy-policy /privacy-policy 301
+/zh/privacy-policy.html /privacy-policy 301
+/zh/terms /terms 301
+/zh/terms.html /terms 301

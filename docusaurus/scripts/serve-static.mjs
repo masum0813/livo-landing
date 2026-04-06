@@ -1,10 +1,11 @@
-import {createReadStream, existsSync, statSync} from 'node:fs';
+import {createReadStream, existsSync, readFileSync, statSync} from 'node:fs';
 import {createServer} from 'node:http';
 import {extname, join, normalize} from 'node:path';
 
 const HOST = process.env.HOST ?? '0.0.0.0';
 const PORT = Number(process.env.PORT ?? 3000);
 const ROOT = normalize(join(process.cwd(), 'build'));
+const REDIRECTS_PATH = normalize(join(ROOT, '_redirects'));
 
 const CONTENT_TYPES = {
   '.css': 'text/css; charset=utf-8',
@@ -21,6 +22,26 @@ const CONTENT_TYPES = {
   '.webp': 'image/webp',
   '.xml': 'application/xml; charset=utf-8',
 };
+
+function loadRedirects() {
+  if (!existsSync(REDIRECTS_PATH)) {
+    return new Map();
+  }
+
+  const redirectLines = readFileSync(REDIRECTS_PATH, 'utf8')
+    .split('\n')
+    .map((line) => line.trim())
+    .filter((line) => line && !line.startsWith('#'));
+
+  return new Map(
+    redirectLines
+      .map((line) => line.split(/\s+/))
+      .filter((parts) => parts.length >= 3)
+      .map(([from, to, status]) => [from, {to, status: Number(status)}]),
+  );
+}
+
+const REDIRECTS = loadRedirects();
 
 function resolvePath(urlPath) {
   const decoded = decodeURIComponent(urlPath.split('?')[0] || '/');
@@ -70,6 +91,8 @@ function sendFile(res, filePath, statusCode = 200) {
 
 const server = createServer((req, res) => {
   const method = req.method ?? 'GET';
+  const requestUrl = req.url || '/';
+  const pathname = decodeURIComponent(requestUrl.split('?')[0] || '/');
 
   if (method !== 'GET' && method !== 'HEAD') {
     res.writeHead(405, {'Content-Type': 'text/plain; charset=utf-8'});
@@ -77,7 +100,17 @@ const server = createServer((req, res) => {
     return;
   }
 
-  const filePath = resolvePath(req.url || '/');
+  const redirect = REDIRECTS.get(pathname);
+  if (redirect) {
+    res.writeHead(redirect.status, {
+      Location: redirect.to,
+      'Cache-Control': 'public, max-age=3600',
+    });
+    res.end();
+    return;
+  }
+
+  const filePath = resolvePath(requestUrl);
 
   if (filePath) {
     if (method === 'HEAD') {

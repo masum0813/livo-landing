@@ -91,7 +91,8 @@ jobs:
         run: |
           test -f deploy/docker-compose.yml
           test -f scripts/deploy.sh
-          ls -lah deploy/docker-compose.yml scripts/deploy.sh
+          test -f scripts/prune-old-images.sh
+          ls -lah deploy/docker-compose.yml scripts/deploy.sh scripts/prune-old-images.sh
 
       - name: Copy deploy files to server
         uses: appleboy/scp-action@v0.1.7
@@ -100,7 +101,7 @@ jobs:
           username: ${{ secrets.VM_USER }}
           key: ${{ secrets.VM_SSH_KEY }}
           port: ${{ secrets.VM_SSH_PORT || 22 }}
-          source: "deploy/docker-compose.yml,scripts/deploy.sh"
+          source: "deploy/docker-compose.yml,scripts/deploy.sh,scripts/prune-old-images.sh"
           target: ${{ env.APP_DIR }}
           strip_components: 1
 
@@ -116,6 +117,7 @@ jobs:
             mkdir -p "${{ env.APP_DIR }}"
             cd "${{ env.APP_DIR }}"
             chmod +x ./deploy.sh
+            chmod +x ./prune-old-images.sh
 
             if [ -n "${{ secrets.GHCR_USER }}" ] && [ -n "${{ secrets.GHCR_PAT }}" ]; then
               export GHCR_USER='${{ secrets.GHCR_USER }}'
@@ -126,3 +128,4 @@ jobs:
             export SKIP_ENV_FILE=1
             ./deploy.sh "${{ env.IMAGE_NAME }}" "${{ github.ref_name }}-${{ github.run_number }}" "${{ env.APP_DIR }}"
             curl --fail --show-error --silent --head "http://127.0.0.1:${HOST_PORT}/iptv/playlist.m3u"
+            ./prune-old-images.sh "${{ env.IMAGE_NAME }}" 3
