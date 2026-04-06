@@ -69,6 +69,7 @@ Deploy job:
 - copies `deploy/docker-compose.yml` and `scripts/deploy.sh` to the VM
 - optionally logs into GHCR on the VM using `GHCR_USER` and `GHCR_PAT`
 - runs `deploy.sh` with the resolved image name and tag
+- runs a post-deploy cleanup step that keeps only the newest 3 release-tagged Docker images for the deployed `IMAGE_NAME`
 
 ## Remote deploy script
 
@@ -92,4 +93,13 @@ Before changing deployment behavior, verify:
 - `.github/workflows/deploy.yml`
 - `deploy/docker-compose.yml`
 - `scripts/deploy.sh`
+- `scripts/prune-old-images.sh`
 - actual VM expectations in `deploy/README.md`
+
+## Deferred locale redirects
+
+Current production behavior intentionally treats Spanish and Chinese as deferred locales.
+
+- Legacy `/es/...` and `/zh/...` routes redirect to the current English canonical pages.
+- Legacy `/en/...` routes redirect to root English pages because English now lives at `/`.
+- If Spanish or Chinese are reintroduced later, review and remove these redirects before publishing the new locale routes.

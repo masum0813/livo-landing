@@ -84,3 +84,19 @@ Impact:
 - Docusaurus sitemap generation is the source of truth for page URLs.
 - Any page add/remove/change under `src/pages` must be followed by a build check that confirms `sitemap.xml` includes or removes the route as expected.
 - EN and TR routes should both be verified for localized SEO landing pages.
+
+### Redirect deferred ES and ZH routes to current EN pages
+
+Status: accepted
+
+Reason:
+
+- Docusaurus migration currently ships only EN and TR.
+- Legacy `es` and `zh` URLs were still indexed by Google and started returning invalid/outdated routes after the migration.
+- Search stability is more important than keeping dormant locale paths unresolved.
+
+Impact:
+
+- Legacy `es` and `zh` entry points are temporarily redirected to the current English canonical pages.
+- Legacy `en/...` locale-prefixed URLs are also redirected to root English routes because EN now lives at `/`.
+- Before reintroducing real Spanish or Chinese pages, remove or revise these redirects first; otherwise the new locale routes will be shadowed by the redirect layer.
