@@ -53,19 +53,13 @@ const config: Config = {
           priority: 0.5,
           filename: 'sitemap.xml',
         },
-        // Canonical GA4 setup for the marketing site.
-        // Keep analytics configuration here instead of manually injecting
-        // gtag scripts into page templates or custom HTML.
-        gtag: {
-          trackingID: 'G-DK9CM7Y64E',
-          anonymizeIP: true,
-        },
         theme: {
           customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
     ],
   ],
+  clientModules: ['./src/clientModules/lazyGtag.ts'],
   themeConfig: {
     image: 'img/livo-logo.png',
     navbar: {
