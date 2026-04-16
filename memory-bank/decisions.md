@@ -116,3 +116,21 @@ Impact:
 - `docusaurus/src/pages/index.tsx` remains the authoritative homepage implementation.
 - Build and deploy flows must not overwrite `build/index.html` or `build/tr/index.html` with `render-homepage.mjs`.
 - If homepage performance work is needed, it must be implemented inside the Docusaurus page/component path rather than through a separate static homepage renderer.
+
+## 2026-04-16
+
+### Preserve proper Turkish orthography in localized files
+
+Status: accepted
+
+Reason:
+
+- Turkish content under `docusaurus/i18n/tr/` lost readability and professionalism when locale-specific characters were flattened into ASCII.
+- Re-fixing `ç`, `ğ`, `ı`, `İ`, `ö`, `ş`, and `ü` after each content edit creates avoidable cleanup work.
+- EN and TR content quality should be treated as equally important for the public site.
+
+Impact:
+
+- Turkish localized content must use proper Turkish characters by default.
+- ASCII transliteration is not an acceptable fallback for normal TR copy in blog, docs, pages, or translation JSON files.
+- Any future content pass touching `docusaurus/i18n/tr/` should include a final Turkish spelling and diacritics review before completion.
