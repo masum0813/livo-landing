@@ -85,3 +85,37 @@
 [data-theme='dark'] .navbar-sidebar__backdrop {
   background: rgba(10, 17, 20, 0.72);
 }
+
+.navbarLocaleToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4.75rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--site-border-color);
+  border-radius: 999px;
+  background: var(--site-surface-panel);
+  color: var(--ifm-font-color-base);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.navbarLocaleToggle:hover {
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+  border-color: rgba(61, 220, 151, 0.42);
+  transform: translateY(-1px);
+}
+
+.navbar-sidebar .navbarLocaleToggle {
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 0.35rem;
+  padding: 0.8rem 0.95rem;
+  border-radius: 1rem;
+}

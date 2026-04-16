@@ -100,3 +100,19 @@ Impact:
 - Legacy `es` and `zh` entry points are temporarily redirected to the current English canonical pages.
 - Legacy `en/...` locale-prefixed URLs are also redirected to root English routes because EN now lives at `/`.
 - Before reintroducing real Spanish or Chinese pages, remove or revise these redirects first; otherwise the new locale routes will be shadowed by the redirect layer.
+
+### Keep the homepage sourced from `src/pages/index.tsx`
+
+Status: accepted
+
+Reason:
+
+- The designed homepage in Docusaurus must remain the single source of truth.
+- A post-build HTML override created drift between local development and production.
+- Performance optimizations should not replace or fork homepage content and layout.
+
+Impact:
+
+- `docusaurus/src/pages/index.tsx` remains the authoritative homepage implementation.
+- Build and deploy flows must not overwrite `build/index.html` or `build/tr/index.html` with `render-homepage.mjs`.
+- If homepage performance work is needed, it must be implemented inside the Docusaurus page/component path rather than through a separate static homepage renderer.

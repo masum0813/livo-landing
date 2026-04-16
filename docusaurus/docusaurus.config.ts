@@ -76,7 +76,7 @@ const config: Config = {
         {to: '/blog', label: 'Blog', position: 'left'},
         {to: '/support', label: 'Support', position: 'left'},
         {
-          type: 'localeDropdown',
+          type: 'custom-localeToggle',
           position: 'right',
         },
       ],
@@ -123,6 +123,10 @@ const config: Config = {
             {
               label: 'Instagram',
               href: 'https://www.instagram.com/livoplayer/',
+            },
+            {
+              label: 'TikTok',
+              href: 'https://www.tiktok.com/@livoplayer',
             },
           ],
         },

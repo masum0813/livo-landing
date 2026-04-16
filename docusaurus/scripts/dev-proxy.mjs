@@ -18,6 +18,10 @@ function isTurkishRequest(req) {
     return true;
   }
 
+  if (url === '/' || url.endsWith('.html')) {
+    return false;
+  }
+
   if (referer.includes('/tr')) {
     return true;
   }

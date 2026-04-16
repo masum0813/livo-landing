@@ -26,6 +26,7 @@
 - English is served at `/`.
 - Turkish is served at `/tr/`.
 - Production serves the built Docusaurus output through `npm run serve` in a container.
+- The homepage source of truth is `docusaurus/src/pages/index.tsx`; build scripts must not swap it with an alternate static renderer.
 
 ## Docker model
 

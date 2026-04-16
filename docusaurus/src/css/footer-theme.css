@@ -9,7 +9,11 @@
   color: var(--ifm-font-color-base);
 }
 
-.footer__link-item:is([href='https://x.com/LivoPlayer'], [href='https://www.instagram.com/livoplayer/']) {
+.footer__link-item:is(
+  [href='https://x.com/LivoPlayer'],
+  [href='https://www.instagram.com/livoplayer/'],
+  [href='https://www.tiktok.com/@livoplayer']
+) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +23,11 @@
   line-height: 0;
 }
 
-.footer__link-item:is([href='https://x.com/LivoPlayer'], [href='https://www.instagram.com/livoplayer/'])::before {
+.footer__link-item:is(
+  [href='https://x.com/LivoPlayer'],
+  [href='https://www.instagram.com/livoplayer/'],
+  [href='https://www.tiktok.com/@livoplayer']
+)::before {
   content: '';
   display: block;
   width: 1.25rem;
@@ -33,7 +41,11 @@
   -webkit-mask-size: contain;
 }
 
-.footer__link-item:is([href='https://x.com/LivoPlayer'], [href='https://www.instagram.com/livoplayer/']) svg {
+.footer__link-item:is(
+  [href='https://x.com/LivoPlayer'],
+  [href='https://www.instagram.com/livoplayer/'],
+  [href='https://www.tiktok.com/@livoplayer']
+) svg {
   display: none;
 }
 
@@ -45,4 +57,9 @@
 .footer__link-item[href='https://www.instagram.com/livoplayer/']::before {
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='2' y='2' width='20' height='20' rx='5' ry='5' fill='none' stroke='black' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='4.25' fill='none' stroke='black' stroke-width='2'/%3E%3Ccircle cx='17.5' cy='6.5' r='1.25' fill='black'/%3E%3C/svg%3E");
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='2' y='2' width='20' height='20' rx='5' ry='5' fill='none' stroke='black' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='4.25' fill='none' stroke='black' stroke-width='2'/%3E%3Ccircle cx='17.5' cy='6.5' r='1.25' fill='black'/%3E%3C/svg%3E");
+}
+
+.footer__link-item[href='https://www.tiktok.com/@livoplayer']::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M14.5 3c.38 2.03 1.63 3.56 3.5 4.08V10a7.44 7.44 0 0 1-3.5-1.02v6.26A5.24 5.24 0 1 1 9.26 10.1c.35 0 .69.03 1.02.1v2.92a2.36 2.36 0 1 0 1.36 2.12V3h2.86Z'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M14.5 3c.38 2.03 1.63 3.56 3.5 4.08V10a7.44 7.44 0 0 1-3.5-1.02v6.26A5.24 5.24 0 1 1 9.26 10.1c.35 0 .69.03 1.02.1v2.92a2.36 2.36 0 1 0 1.36 2.12V3h2.86Z'/%3E%3C/svg%3E");
 }

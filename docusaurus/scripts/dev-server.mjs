@@ -20,7 +20,15 @@ function isTurkishRequest(req) {
   const url = req.url || '/';
   const referer = req.headers.referer || '';
 
-  return url === '/tr' || url.startsWith('/tr/') || referer.includes('/tr');
+  if (url === '/tr' || url.startsWith('/tr/')) {
+    return true;
+  }
+
+  if (url === '/' || url.endsWith('.html')) {
+    return false;
+  }
+
+  return referer.includes('/tr');
 }
 
 function getTarget(req) {

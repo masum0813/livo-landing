@@ -1,7 +1,6 @@
 import {copyFileSync, existsSync, readdirSync, readFileSync, writeFileSync} from 'node:fs';
 import {dirname, extname, join, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {renderHomepages} from './render-homepage.mjs';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const SITE_DIR = resolve(SCRIPT_DIR, '..');
@@ -74,5 +73,4 @@ for (const manifestFile of manifestFiles) {
   process.stdout.write(`Synced ${manifestFile} to ${destinationPath}\n`);
 }
 
-renderHomepages(BUILD_DIR);
 optimizeRenderBlockingStyles(BUILD_DIR);
